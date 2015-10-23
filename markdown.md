@@ -17,7 +17,7 @@
 
 
 
-## 区块引用 blockquote##     // >
+## 区块引用 blockquote##   
 
     >markdown的内容就是对文本与段落的编辑，即通过更为简便的写法来替换一些常见的html标签与css语句。
 
