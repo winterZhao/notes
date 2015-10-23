@@ -4,6 +4,7 @@
     【git关注的是内容变化;不是内容本身】
     【--与后面的内容之间不要有空格】
 
+## 本地操作 ##
     cd d:        change directory  进入目录d盘
     mkdir 文件夹  make directory    生成(新建)文件夹
     pwd          print workding directory  打印当前文件夹
