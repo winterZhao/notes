@@ -1,5 +1,6 @@
-    我学习git参考的是廖雪峰老师的网站http://www.liaoxuefeng.com/wiki/0013739516305929606dd18361248578c67b8067c8c017b000
-    [git教程](http://www.liaoxuefeng.com/wiki/0013739516305929606dd18361248578c67b8067c8c017b000);
+
+    [参考git教程](http://www.liaoxuefeng.com/wiki/0013739516305929606dd18361248578c67b8067c8c017b000);
+
     【git关注的是内容变化;不是内容本身】
     【--与后面的内容之间不要有空格】
 
