@@ -5,20 +5,20 @@
     【--与后面的内容之间不要有空格】
 
 ## 本地操作 ##
-    cd d:     1   change directory                 进入目录d盘
-    mkdir 文件夹  make directory                   生成(新建)文件夹
-    pwd          print working directory  打印当前文件夹
-    git init                     初始化git仓库
-    git add 文件名                     添加到暂存区
-    git commit -m '本次操作注释'        添加到历史区
-    git status                     查看工作区、暂存区、历史区的状态区别
-    cat 文件名                      查看当前文件的内容
-    git diff                      查看不同区的文件内容区别
-    git log                      查看操作日志
-    git log --pretty=oneline     一行显示操作日志
-    git reset --hard 版本号        版本回退
-    git reflog                 记录每次历史提交记录
-    git checkout -- 文件名          撤销工作区文件修改
+    cd d:     1               change directory                 进入目录d盘
+    mkdir 文件夹               make directory                   生成(新建)文件夹
+    pwd                    print working directory             打印当前文件夹
+    git init                                                   初始化git仓库
+    git add 文件名                                              添加到暂存区
+    git commit -m '本次操作注释'                                 添加到历史区
+    git status                                                 查看工作区、暂存区、历史区的状态区别
+    cat 文件名                                                  查看当前文件的内容
+    git diff                                                   查看不同区的文件内容区别
+    git log                                                    查看操作日志
+    git log --pretty=oneline                                   一行显示操作日志
+    git reset --hard 版本号                                     版本回退
+    git reflog                                                 记录每次历史提交记录
+    git checkout -- 文件名                                      撤销工作区文件修改
     git reset HEAD 文件名 +git checkout --文件名     撤销暂存区文件，然后再撤销工作区文件
     撤销历史区的文件修改                 版本回退
     rm 文件名     remove               删除工作区文档
