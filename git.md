@@ -5,9 +5,9 @@
     【--与后面的内容之间不要有空格】
 
 ## 本地操作 ##
-    cd d:        change directory  进入目录d盘
-    mkdir 文件夹  make directory    生成(新建)文件夹
-    pwd          print workding directory  打印当前文件夹
+    cd d:     1   change directory                 进入目录d盘
+    mkdir 文件夹  make directory                   生成(新建)文件夹
+    pwd          print working directory  打印当前文件夹
     git init                     初始化git仓库
     git add 文件名                     添加到暂存区
     git commit -m '本次操作注释'        添加到历史区
