@@ -10,13 +10,13 @@
 
 
 ##Number##
-1.#####重要的属性:
+######重要的属性:
          parseFloat,parseInt(str,10);
-2.#####重要的方法 :
+######重要的方法 :
               toFixed():四舍五入到指定位数     var a = 12.23434;    console.log(a.toFixed(2));    //12.23;
               toString():转换为字符串;        console.log(a.toString());                     // '12.23434'
               valueOf() :获取当前值;          console.log(a.valueOf());                       //12.23434
-3.#####特殊:NaN :
+######特殊:NaN :
               not a number,数值型，表示不是一个数，还有一个判断是否为数值型的方法isNaN();
 
 ##String
