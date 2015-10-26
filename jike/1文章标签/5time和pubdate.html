@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>time元素与微格式</title>
+</head>
+<body>
+<time datetime="2015-10-10">2015-10-10</time>
+<time datetime="2015-10-10T20:00">2015-10-10</time>
+<time datetime="2015-10-10T20:00Z">2015-10-10</time>
+<time datetime="2015-10-10T20:00+09:00">2015-10-10</time>
+<!--t分割符，z标准格式，+时区时差-->
+
+<!--pubdate:明确表示当前发布的日期-->
+<article>
+    <header>
+        <h1>苹果</h1>
+        <p>发布日期
+        <time datetime="2015-10-10" pubdate="true">2015-10-10</time></p>
+       <p>
+           <time datetime="2015-10-12">2015-10-12</time>
+       </p>
+    </header>
+</article>
+
+
+
+</body>
+</html>
