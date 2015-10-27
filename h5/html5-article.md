@@ -23,23 +23,23 @@ HTML5新增元素/属性
 
 ##文章标签
 *  **article**: 一个页面可以使用多次，可以嵌套使用，可以表示插件；<br/>
-  ```html
-        <article>
-            <header>
-                <h1>小明</h1>
-                <p>Hello,欢迎来到我家</p>
-            </header>
-            <article>
-                <header>作者</header>
-                <p>评论</p>
-                <footer>time</footer>
-            </article>
-            <p>Hello</p>
-            <footer>
-                <p>这是底部</p>
-            </footer>
-        </article>
-  ```
+       ``` 
+              <article>
+                   <header>
+                       <h1>小明</h1>
+                       <p>Hello,欢迎来到我家</p>
+                   </header>
+                   <article>
+                       <header>作者</header>
+                       <p>评论</p>
+                       <footer>time</footer>
+                   </article>
+                   <p>Hello</p>
+                   <footer>
+                       <p>这是底部</p>
+                   </footer>
+               </article>
+       ```
 * **section**:
           进行内容分块，由标题和内容组成
           1.不要将section元素作为设置样式的页面容器,用div；
