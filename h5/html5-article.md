@@ -43,10 +43,9 @@ HTML5新增元素/属性
               <section>
                   <h1>苹果</h1>
                   <p>这是一个水果，可以吃，而且很好吃</p>
-
               </section>
           `
-* **aside**:附属信息部分，包含内容的引用，侧边栏，广告，导航条等等-->
+* **aside**:附属信息部分，包含内容的引用，侧边栏，广告，导航条等等<br/>
           `
                <aside>
                    <nav>
@@ -66,6 +65,7 @@ HTML5新增元素/属性
                   <li><a href="#">开发文档</a></li>
               </ul>
           </nav>
+          `
 * **time**
           `
                  <time datetime="2015-10-10">2015-10-10</time>
@@ -110,11 +110,11 @@ HTML5新增元素/属性
                 </address>
           `
 
-* **figure** :  插入配图
+* **figure** :  插入配图 <br/>
   **figcaption** :配图说明文字
           `
              <figure>
-                  <img src="shanghai_lupu_bridge.jpg" width="350" height="234" />
+                  <img src="shanghai_lupu_bridge.jpg" width="350" height="234" /><br>
                   <figcaption>黄浦江上的的卢浦大桥</figcaption>
              </figure>
 
