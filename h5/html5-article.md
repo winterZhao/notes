@@ -11,11 +11,5 @@ HTML5新增元素/属性
 
 2. ### hidden   隐藏;
 3. ### designMode     页面是否可编辑,只能在js中用on/off值
-    `
-       document.designMode = 'on'/'off' 【只能js里写;】
-    `
-    designMode与contenteditable的区别
-         contenteditable用于对局部元素进行可编辑设置,应用灵活;designMode用于对document进行可编辑设置；
 
-##文章标签
 
