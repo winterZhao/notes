@@ -11,9 +11,9 @@ HTML5新增元素/属性
 
 2. **hidden**   隐藏;
 3. **designMode**:  页面是否可编辑，在js里设置; 自动带语法和输入检查;<br/>
-       document.designMode = 'on'/'off' 【只能js里写;】<br/>
-    designMode与contenteditable的区别
-         contenteditable用于对局部元素进行可编辑设置,应用灵活;designMode用于对document进行可编辑设置；
+                    document.designMode = 'on'/'off' 【只能js里写;】<br/>
+               designMode与contenteditable的区别
+                    contenteditable用于对局部元素进行可编辑设置,应用灵活;designMode用于对document进行可编辑设置；
 4. **spellcheck**  input/textarea 对用户输入进行语法和输入检查,效果时灵时不灵的,不怎么好用);
 5. **tabIndex**    设置按tab键时的顺序;不能与designMode混用;
 
