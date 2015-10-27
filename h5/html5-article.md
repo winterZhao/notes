@@ -71,7 +71,7 @@ HTML5新增元素/属性
               </ul>
           </nav>
           `
-* **time**
+* **time** <br/>
   **pubdate** :明确表示当前发布的日期;
           `
                  <time datetime="2015-10-10">2015-10-10</time>
