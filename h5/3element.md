@@ -26,6 +26,10 @@
    <p>这是一段<mark>强调</mark>的文字</p>
 ```
 
+* **progress**:表示进度
+```html
+    <progress value="80" max="100"></progress>
+```
 * **meter**:规定范围内的数组量(meter的value在low与high之间为绿色,不在这个范围为黄色);
 ```html
     <meter value="95" max="100" min="0" low="20" high="90" optimum="80"></meter>
