@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        .canvas{
+            background-color: yellowgreen;
+        }
+    </style>
+</head>
+<body>
+<!--创建canvas deleloper.mozilla.org-->
+    <!--<canvas class="canvas" width="200px" height="200px"></canvas>-->
+
+
+    <script>
+        var CANVAS_WIDTH = 500,CANVAS_HEIGHT=500;
+        var myCanvas,context;
+        window.onload = function(){
+            createCanvas();
+//            drawRect();
+//            drawImage();
+//            drawCircle();
+//            draw();
+//            drawBez();
+//            linear();
+//            Radial()
+//            change();
+//            drawBoth()
+//            shadow()
+            drawImage1();
+        }
+        function createCanvas(){
+            document.body.innerHTML="<canvas id='myCanvas' width='"+CANVAS_WIDTH+"px' height='"+CANVAS_HEIGHT+"px'></canvas>";
+            myCanvas = document.getElementById('myCanvas');
+            if(myCanvas ==null){
+                return false;
+            }
+            context =myCanvas.getContext('2d');
+        }
+//绘制矩形
+        function drawRect(){
+            context.fillStyle = '#ff0000';
+//            context.rotate(45);
+//            context.translate(200,200);
+              context.scale(2,0.5);
+            context.fillRect(0,0,200,200);
+        }
+//绘制图片
+        function drawImage(){
+            var img = new Image();
+            img.src='1.jpg';
+            img.onload = function(){
+                context.drawImage(img,0,0);
+            }
+        }
+
+
+//绘制圆形
+        function drawCircle(){
+            context.fillStyle = 'yellow';
+            context.fillRect(0,0,400,400);
+            for(var i=0;i<=10;i++){
+                context.beginPath();
+                context.arc(i*25,i*25,i*10,0,Math.PI*2,true);
+//                context.closePath();  //如果不关闭路径，在绘制第二个之前会重新绘制第一个;绘制第三个之前重新绘制前两个;
+                context.fillStyle='rgba(255,0,0,0.25)';
+                context.fill();
+
+
+            }
+        }
+
+//moveTo:将光标放到指定点,lineTo(x,y);
+        function draw(){
+            context.fillStyle='orange';
+            context.fillRect(0,0,300,400);
+            var dx =150;
+            var dy=150;
+            var s=100;
+            context.beginPath();
+            context.fillStyle = 'rgb(100,255,100)';
+            context.strokeStyle = 'rgb(0,0,100)';
+            var x = Math.sin(0);
+            var y = Math.cos(0);
+            var dig = Math.PI/15 *11;
+            for(var i=0;i<30;i++){
+                var x = Math.sin(i*dig);
+                var y = Math.cos(i*dig);
+                context.lineTo(dx+x*s,dy+y*s);
+            }
+            context.closePath();
+            context.fill();
+            context.stroke();
+        }
+
+//绘制贝塞尔曲线; bezierCurveTo(x1,y1,x2,y2);
+        function drawBez(){
+            context.fillStyle = '#ccc';
+            context.fillRect(0,0,300,400);
+            var dx = 150;
+            var dy = 150;
+            var s=100;
+            context.beginPath();
+            context.fillStyle = 'rgb(100,255,100)';
+            var x = Math.sin(0);
+            var y = Math.cos(0);
+            var dig = Math.PI/15*11;
+            context.moveTo(dx,dy);
+            for(var i=0;i<30;i++){
+                var x = Math.sin(i*dig);
+                var y = Math.cos(i*dig);
+                context.bezierCurveTo(dx+x*s,dy+y*s-100,dx+x*s+100,dy+y*s,dx+x*s,dy+y*s);
+            }
+            context.closePath();
+            context.fill();
+            context.stroke();
+        }
+
+
+//绘制渐变图形(线性linearGradient和径向);
+//linear context.createLinearGradient(); addColorStop(offset,color)
+
+        function linear(){
+          var g1 = context.createLinearGradient(0,0,0,300);
+            g1.addColorStop(0,'rgb(255,255,0)');
+            g1.addColorStop(1,'rgb(0,255,255)');
+            context.fillStyle=g1;
+            context.fillRect(0,0,500,500);
+            var g2 = context.createLinearGradient(0,0,300,0);
+            g2.addColorStop(0,'rgba(0,0,255,0.5)');
+            g2.addColorStop(1,'rgba(255,255,0,0.5)');
+            for(var i=0;i<10;i++){
+                context.beginPath();
+                context.fillStyle=g2;
+                context.arc(i*25,i*25,i*10,0,Math.PI*2,true);
+                context.closePath();
+                context.fill();
+            }
+        }
+
+//径向渐变
+
+        function Radial(){
+            var g1 = context.createRadialGradient(400,0,0,400,0,400);
+            g1.addColorStop(0.1,'rgb(255,255,0)');
+            g1.addColorStop(0.3,'rgb(255,0,255)');
+            g1.addColorStop(0.1,'rgb(0,255,255)');
+            context.fillStyle=g1;
+            context.fillRect(0,0,500,500)
+        }
+
+//绘制变形图形 translate(x,y),rotate(deg),scale(x,y);
+        function change(){
+            context.fillStyle = '#eee';
+            context.fillRect(0,0,500,500);
+            context.translate(200,50);
+            context.fillStyle = 'rgba(255,0,0,0.25)';
+            for(var i=0;i<50;i++){
+                context.translate(25,25);
+                context.scale(.95,.95);
+                context.rotate(Math.PI/10);
+                context.fillRect(0,0,100,50);
+            }
+        }
+
+
+
+//改变坐标原点和坐标轴
+
+
+
+//图形组合;globalCompositeOperation
+      function drawBoth(){
+          var options = new Array(
+                  'source-atop','source-in','source-out','source-over','destination-atop','destination-in','destination-out','destination-over','lighter','copy','xor'
+          );
+          i=8;
+          context.fillStyle = 'blue';
+          context.fillRect(10,10,60,60);
+          context.globalCompositeOperation=options[i];
+          context.beginPath();
+          context.fillStyle = 'red';
+          context.arc(60,60,30,Math.PI*2,false);
+          context.fill();
+      }
+
+//添加阴影效果; shadowOffsetX/shadowOffsetY/shadowColor/shadowBlur(模糊范围);
+
+        function shadow(){
+            context.fillStyle = '#eee';
+            context.fillRect(0,0,500,500);
+            context.shadowOffsetX =10;
+            context.shadowOffsety =10;
+            context.shadowColor = 'rgba(100,100,100,0.5)';
+            context.shadowBlur = 7.5;
+            context.translate(0,50);
+            for(var i=0;i<3;i++){
+                context.translate(50,50);
+                star();
+                context.fill();
+            }
+        }
+
+//五角星
+        function star(){
+            var n = 0;
+            var dx = 100;
+            var dy = 0;
+            var s = 50;
+            context.beginPath();
+            context.fillStyle = 'rgba(255,0,0,0.5)';
+            var x = Math.sin(0);
+            var y = Math.cos(0);
+            var dig = Math.PI/5*4;
+            for(var i=0;i<5;i++){
+                var x = Math.sin(i*dig);
+                var y = Math.cos(i*dig);
+                context.lineTo(dx+x*s,dy+y*s);
+
+            }
+            context.closePath();
+        }
+
+
+//绘制图像;
+//        context.drawImage(img,x,y)
+//        context.drawImage(img,x,y,w,h)
+//        context.drawImage(img,x, y.sx,sy,sw,sh,dx,dy,dw,dh); //前为old后为new;
+       function drawImage1(){
+           context.fillStyle = '#eee';
+           context.fillRect(0,0,500,500);
+           var img = new Image();
+           img.src = '1.jpg';
+           img.onload = function(){
+               drawImage2(context,img);
+           }
+       }
+        function drawImage2(context,img){
+//            context.drawImage(img,0,0,100,100);
+//            context.drawImage(img,0,0);
+              context.drawImage(img,0,150,150,150,0,0,50,50);
+        }
+
+
+
+
+
+
+
+    </script>
+
+</body>
+</html>

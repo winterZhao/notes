@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<!--easel.js:处理canvas-->
+<!--tween.js:处理动画-->
+<!--sound.js：处理声音-->
+<!--preload.js：处理预加载-->
+<canvas id="canvas" width="500px" height="500px"></canvas>
+<script src="https://code.createjs.com/easeljs-0.8.1.min.js"></script>
+<script>
+    var canvas,stage,txt,count = 0;
+    window.onload = function(){
+        canvas = document.getElementById('canvas');
+        stage = new createjs.Stage(canvas);
+        txt = new createjs.Text("number—>0",'20px Arial',"#ff7700");
+        stage.addChild(txt);
+        createjs.Ticker.setFPS(30);
+        createjs.Ticker.addEventListener("tick",tick);
+    }
+    function tick(e){
+         count++;
+        txt.text = 'number—》'+count+"!";
+        stage.update();
+    }
+</script>
+</body>
+</html>

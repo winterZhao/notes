@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<!--客户端存储数据的两种方式:
+   localStorage:没有时间限制的数据存储;
+   sessionStorage:针对session的数据存储，浏览器一关闭就没有了；
+
+
+   与cookie对比：
+   cookie不适合大量数据的存储，一问他们由每个队服务器的请求来传递，这使得cookie速度慢效率低;
+
+-->
+
+<!--
+    localStorage:
+    chrome:resources/localStorage;
+-->
+<textarea stype="width:200px;height:200px;" id="ta"></textarea>
+<button id="btn" >save</button>
+<script>
+    var ta,btn;
+    window.onload = function(){
+        ta = document.getElementById('ta');
+        if(localStorage.text){
+            ta.value = localStorage.text;
+        }
+        btn = document.getElementById('btn');
+        btn.onclick = function(){
+          localStorage.text = ta.value;
+        }
+    }
+</script>
+
+
+
+<!--sessionStorage:针对一个session进行数据存储。当用户关闭浏览器窗口时，数据被删除;
+
+-->
+<span id="txt"></span>
+<button id="addbtn">Add</button>
+<script>
+    var num = 0;
+    var txt;
+    var btn;
+    window.onload = function(){
+        txt = document.getElementById('txt');
+        btn = document.getElementById('addbtn');
+        if(sessionStorage.num){
+            num = sessionStorage.num;
+        }
+        btn.onclick = function(){
+            num++;
+            sessionStorage.num  =num;
+            showNum();
+        }
+    }
+    function showNum(){
+        txt.innerHTML = num;
+    }
+</script>
+
+
+
+
+
+
+</body>
+</html>
