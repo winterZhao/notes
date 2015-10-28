@@ -18,7 +18,7 @@
 
 * **video**:标签video,source;<br/>
     属性: width;  height; autoplay; controls; loop; poster; preload ; src;
-    @preload : 是否福预加载视频  auto:当页面加载后载入整个视频;metadata当页面加载后只载入头信息;none：边播放边加载
+    @preload : 是否预加载视频  auto:当页面加载后载入整个视频;metadata当页面加载后只载入头信息;none：边播放边加载
 
    <video>
         <source src="beyond.mp3" controls type="audio/mpeg">
