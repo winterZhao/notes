@@ -65,7 +65,7 @@
 * **labels**:nodeList对象,代表该元素所绑定的标签元素所构成的集合;
 ```html
     <form action="" id="myForm">
-        <label for="text1" id="myLabel"></label>
+        <label for="text1" id="myLabel">姓名</label>
         <input type="text" id="text1"/>
         <input type="button" id="myButton" value="验证" onclick="validate()"/>
     </form>
