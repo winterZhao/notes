@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>表单验证</title>
+    <style>
+        /*input{*/
+            /*border:1px solid black;*/
+        /*}*/
+        #email:invalid{
+            border:1px solid red;
+        }
+
+    </style>
+</head>
+<body>
+<form action="" id="myForm">
+    <label for="email" >请输入邮箱</label>
+    <input  type="email" placeholder="请输入邮箱" id="email"/>
+    <input type="submit" value="提交" onclick="check()"/>
+</form>
+<script>
+    function check(){
+        var email = document.getElementById('email');
+        if(email.checkValidity()){
+             alert("ok");
+        } else {
+            alert("sorry");
+        }
+    }
+</script>
+</body>
+</html>
