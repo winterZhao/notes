@@ -1,6 +1,6 @@
 ###h5新增标签
 
-* **figure**:网页独立内容（音视图表等
+* **figure**:网页独立内容（音视图表等）
    **figcaption**:figure内的标题,从属于figure;一个figure只有一个figcaption
 ```html
     <figure>
@@ -31,7 +31,7 @@
     <meter value="95" max="100" min="0" low="20" high="90" optimum="80"></meter>
 ```
 
-* **ol**:@start:开始序列化,@reverse:是否倒叙
+* **ol**:@start:开始序列号,@reverse:是否倒叙
 ```html
     <ol start="5" reversed>
         <li>5个苹果</li>
