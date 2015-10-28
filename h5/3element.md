@@ -1,4 +1,6 @@
-## **figure**:网页独立内容（音视图表等
+###h5新增标签
+
+* **figure**:网页独立内容（音视图表等
    **figcaption**:figure内的标题,从属于figure;一个figure只有一个figcaption
 ```html
     <figure>
@@ -8,7 +10,7 @@
     </figure>
 ```
 
-## **details**:表示该元素子元素可以被打开;
+* **details**:表示该元素子元素可以被打开;
    **summary**:从属于details;
 ```html
    <details>
@@ -19,17 +21,17 @@
    </details>
 ```
 
-## **mark**:高亮表示强调；
+* **mark**:高亮表示强调；
 ```html
    <p>这是一段<mark>强调</mark>的文字</p>
 ```
 
-## **meter**:规定范围内的数组量(meter的value在low与high之间为绿色,不在这个范围为黄色);
+* **meter**:规定范围内的数组量(meter的value在low与high之间为绿色,不在这个范围为黄色);
 ```html
     <meter value="95" max="100" min="0" low="20" high="90" optimum="80"></meter>
 ```
 
-## **ol**:@start:开始序列化,@reverse:是否倒叙
+* **ol**:@start:开始序列化,@reverse:是否倒叙
 ```html
     <ol start="5" reversed>
         <li>5个苹果</li>
@@ -38,7 +40,7 @@
     </ol>
 ```
 
-## **cite**:作品的标题(行内显示);
+* **cite**:作品的标题(行内显示);
 ```html
    <p>我最喜欢的小说是<cite>平凡的世界</cite></p>
 ```
