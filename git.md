@@ -22,7 +22,7 @@
     git reset HEAD 文件名 +git checkout --文件名                 撤销暂存区文件，然后再撤销工作区文件
     撤销历史区的文件修改                                           版本回退
     rm 文件名     remove                                        删除工作区文档
-    git rm 文件名 +git commit                                   彻底删除文档
+    git rm 文件名 -f +git commit                                   彻底删除文档
     git checkout -- 文件名                                      工作区文档删除后，从历史区恢复
 
 
