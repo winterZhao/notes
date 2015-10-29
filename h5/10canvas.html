@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+
+    </style>
+</head>
+<body>
+<!--//canvas行内元素;-->
+<!--<canvas id="myCanvas" width="500" height="500" style="background-color: red;" ></canvas>-->
+<script>
+    var context;
+    window.onload = function(){
+          createCanvas();
+//        drawRect();             //画矩形
+//        drawImage()             //画图像
+//        drawCircle()            //画圆;
+//        drawline()              //画线;
+//        drawQua();              //画二次贝塞尔曲线;
+//        drawBez();              //画三次贝塞尔曲线
+//        linear();               //画线性渐变;
+//          radial();             //画放射性渐变;
+//        change();               //旋转，移动,伸缩
+//        drawBoth();             //图形组合
+          shadow()                //带阴影的五角星
+    };
+    function createCanvas(){
+        var canvas = document.createElement('canvas');
+        canvas.id = 'myCanvas';
+        document.body.appendChild(canvas);
+        var canvas  = document.getElementById('myCanvas');
+        if(!canvas){
+            return false;
+        }
+        canvas.width = '500';
+        canvas.height = '500';
+        context = canvas.getContext('2d');
+    }
+//绘制矩形
+    function drawRect(){
+        context.fillStyle = 'red';
+        context.fillRect(0,0,200,200);
+    }
+//绘制图片
+    function drawImage(){
+        var img = new Image();
+        img.src = '1.jpg';
+        img.onload = function(){
+            context.drawImage(img,0,0);
+        }
+    }
+//绘制圆形;
+    function drawCircle(){
+        context.fillStyle = 'rgba(255,100,0,0.2)';
+        for(var i=0;i<10;i++){
+            context.beginPath();
+            context.arc(i*25,i*25,i*10,0,Math.PI*2,true);
+            context.closePath();
+            context.fill();
+        }
+    }
+//绘制直线z(moveTo,lineTo);
+    function drawline(){
+        context.strokeStyle ='yellow';
+        context.beginPath();
+        context.moveTo(0,0);
+        context.lineTo(100,100);
+        context.stroke();
+        context.strokeStyle='red';
+        context.beginPath();  //注释掉则两根都会变成红色，beginPath的作用;或者直接在上面的stroke()后closePath（）闭合路径
+        context.moveTo(0,100);
+        context.lineTo(200,100);
+        context.stroke();
+        context.closePath();
+    }
+
+//绘制二次方贝塞尔曲线:quadraticCurveTo(x1,y1,x2,y2);
+    function drawQua(){
+        context.strokeStyle = 'red';
+        context.beginPath();
+        context.moveTo(0,200);
+        context.quadraticCurveTo(130,40,180,50);
+//        context.closePath();
+        context.stroke();
+
+    }
+
+//绘制三次方贝塞尔曲线:bezierCurveTo(x1,y1,x2,y2);
+    function drawBez(){
+        context.strokeStyle = 'blue';
+        context.beginPath();
+        context.bezierCurveTo(0,200,100,100,500,0);
+        context.stroke();
+    }
+
+//线性渐变:
+    function linear(){
+       var g1= context.createLinearGradient(0,0,200,0);
+
+        g1.addColorStop(0,'yellow');
+        g1.addColorStop(1,'purple');
+        context.fillStyle =g1;
+        context.fillRect(0,0,300,300);
+    }
+//放射性渐变
+    function radial(){
+        var g1 = context.createRadialGradient(0,0,70,100,100,50);
+        g1.addColorStop(0,'yellow');
+        g1.addColorStop(0.6,'purple');
+        g1.addColorStop(1,'green');
+        context.fillStyle = g1;
+        context.fillRect(0,0,300,300);
+    }
+
+
+//变形图形 translate(x,y);rotate(deg);scale(x,y);
+    function change(){
+            context.fillStyle = 'orange';
+            context.translate(25,25);
+            context.scale(2,0.5);
+            context.rotate(Math.PI/15);
+            context.fillRect(0,0,100,50);
+    }
+
+//图形组合
+    function drawBoth(){
+        var option = [
+            'source-atop','source-in','source-out','source-over','destination-atop','destination-in','destination-out','destination-over','lighter','copy','xor'
+        ];
+        i = 6;
+        context.fillStyle = 'orange';
+        context.fillRect(0,0,100,200);
+        context.globalCompositeOperation = option[i];
+        context.beginPath();
+        context.fillStyle = 'red';
+        context.arc(100,100,50,0,Math.PI*2,true);
+        context.fill();
+        context.closePath();
+    }
+//五角星【与底下的shadow相组合】
+    function star(){
+        var n = 0;
+        var dx = 100;
+        var dy = 0;
+        var s = 50;
+        context.beginPath();
+        context.fillStyle = 'rgba(255,0,0,0.5)';
+        var x = Math.sin(0);
+        var y = Math.cos(0);
+        var dig = Math.PI/5*4;
+        for(var i=0;i<5;i++){
+            var x = Math.sin(i*dig);
+            var y = Math.cos(i*dig);
+            context.lineTo(dx+x*s,dy+y*s);
+
+        }
+        context.closePath();
+    }
+
+//添加阴影:shadowOffsetX/shadowOffsetY/shadowColor/shadowBlur(模糊范围);
+    function shadow(){
+        context.fillStyle = '#eee';
+        context.fillRect(0,0,500,500);
+        context.shadowOffsetX =10;
+        context.shadowOffsety =10;
+        context.shadowColor = 'rgba(100,100,100,0.5)';
+        context.shadowBlur = 7.5;
+        context.translate(0,50);
+        for(var i=0;i<3;i++){
+            context.translate(50,50);
+            star();
+            context.fill();
+        }
+    }
+
+</script>
+
+</body>
+</html>
