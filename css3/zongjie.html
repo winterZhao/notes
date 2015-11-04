@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<script>
+//属性选择器:  [title]{color:red;}/[title = t]{color:red;}  <p title="t">我们</p>
+//clip:设置元素显示的形状;
+//    vertical-align: 设置元素垂直居中
+//css外边距合并问题:  相交取大值; 块级元素的垂直相邻外边距会合并， 行内元素的的左右外边距不会合并。同样地，浮动元素的外边距也不会合并。
+//设计时主体content的宽度直接设置为80%,自动居中即可！
+//word-break:no-wrap 文本自动换行 /keep-all  	 	只能在半角空格或连字符处换行。/break-all；允许在单词内换行。
+
+
+//如何引入服务器端字体?
+//      <style>
+//           @font-face{font-family:webFont;
+// src:local("Arial"),url("DejaVuSansMono-BoldOblique.ttf")format("truetype");font-weight:bold;}  //客户端有字体，先用客户端的，客户端没有，用服务器端的；
+//           div{font-family:webFont;}
+//      </style>
+
+
+//font-size-adjust:修改字体种类而保持字体尺寸不变 ：aspect值=line-height/font-size【0-1】
+
+//选择器:
+选择器性能:.id选择器（#myid）2.类选择器（.myclassname）3.标签选择器（div,h1,p）4.相邻选择器（h1+p）5.子选择器（ul < li）6.后代选择器（li a）7.通配符选择器（*）8.属性选择器（a[rel="external"]）9.伪类选择器（a:hover,li:nth-child）
+
+
+    1元素选择器 2类选择器
+    多类选择器 <div class="a1 a2"></a> .a1.a2{color:red;}
+    3ID选择器; 4后代选择器 5子元素选择器 ul>li   6相邻兄弟选择器(之后的弟弟,有相同的父元素) +;
+
+    7属性选择器 [attr*=val] 包含val字符串/[attr$=val]结束字符为val的/[attr^=val首字母为val的]
+    8结构性伪类选择器: 伪类选择器:link,visited,hover,active;
+      伪元素选择器:
+              p:first-line{}第一行;
+         first-letter{}首字母/首个汉子;
+         before:{content:"--"}
+         after:{content:"对列表的解释";
+                margin-left:10px;
+         }
+
+9 结构性伪类选择器:root修改根元素(html),【同时修改root和body,则body只负责内容，而root负责整个页面】
+not,empty【没有后代与内容】,target【跳转后的例如a标签】
+    <style>:root{}</style>
+    div * :not(h1){}
+    :empty{background-color:red;}
+    :target{background:red;}
+
+10 first-child last-child nth-child(4n+1) nth-last-child(从下往上数)/nth-child(even);【对所有子元素标签的奇数进行设置】
+
+11 nth-of-type  nth-last-of-type
+    h2:nth-of-type(odd){}对同类标签的奇数进行设置，
+
+
+12 only-child 选择器: 只有唯一子元素时可替代nth-child；
+
+
+13UI元素状态伪类元素选择器 17个:元素处于某种状态下起作用
+    hover/active/focus/enabled/disabled/read-only/checked【checkbox选中与否】/default/indeterminate/E::selection /invalid/valid/required/optional/in-range/
+
+<input type="text" disabled>
+    <script>text.disabled = "disabled"</script>
+
+
+14通用兄弟元素选择器;指定位于同一个父元素之中的某个元素之后的所有其他某个种类的兄弟元素所使用样式; div~p{}兄弟;
+ <div>
+     <div><p></p><p></p></div>
+     <p></p><p></p>
+ </div>
+
+
+
+
+
+
+#动画
+多列(报纸)每个浏览器都要写;
+.div{
+column-width
+column-count:3;  //3列
+column-gap:50px;  //列间距
+column-rule:5px outset #ff0000; //分割线
+
+
+}
+
+
+#布局
+flex bootstrap、meidia
+
+http://www.kuqin.com/shuoit/20150720/347128.html
+
+</script>
+</body>
+</html>
