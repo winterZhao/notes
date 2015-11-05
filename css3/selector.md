@@ -154,7 +154,8 @@ div:empty{border:1px solid red; }
     read-only/checked【checkbox选中与否】/default/indeterminate/E::selection/
     invalid/valid/required/optional/in-range/out-of-range……
 
-## 通用兄弟元素选择器 ##: 指定位于同一个父元素之中的某个元素之后的所有其他某个种类的兄弟元素所使用样式; div~p{}兄弟;
+## 通用兄弟元素选择器:
+    指定位于同一个父元素之中的某个元素之后的所有其他某个种类的兄弟元素所使用样式; div~p{}兄弟;
 ```html
 //css
   div~p{color:red;}
