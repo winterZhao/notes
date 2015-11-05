@@ -5,11 +5,11 @@
         【注:网络资料获取，仅限参考】
 ##id选择器
 ##类选择器
-        *类选择器 .a
-        *类标签选择器(特指): p.a;
-        *多类选择器:
+*类选择器 .a
+*类标签选择器(特指): p.a;
+*多类选择器:
 ```html
- //css
+
  .a{
      color:red;
  }
@@ -20,6 +20,7 @@
      font-weight:bold;
      background:black;
  }
+//css
 <div class="a b">我们都是好孩子</div>  //.a .b .a.b的css样式都能应用到;
 ```
 ##标签选择器
@@ -32,7 +33,7 @@
 ```
 
 
-##相邻选择器 + :当前元素的下一个元素;
+## 相邻选择器 ## + :当前元素的下一个元素;
 ```html
 //css
 div+p{color:red;}
@@ -70,17 +71,20 @@ div span{ color:red;}
 ```html
    :root{background:red;}
    body{ background:yellowgreen;}
+   //css
    <p>我们都是好孩子</p>          //p段落背景为绿色,整个页面背景为红色;
 ```
 * **:not**: *
 ```html
   div *:not(p){color:red;}
+  //css
   <div><p>我们都是好孩子</p> </div>          //不变红;
   <div><span>我们都是好孩子</span></div>     //变红
 ```
 * **:empty**: *
 ```html
 div:empty{border:1px solid red; }
+//css
 <div></div>                                //边框
 <div><p>我们都是好孩子</p> </div>
 <div></div>                                //边框
@@ -144,10 +148,12 @@ div:empty{border:1px solid red; }
 
 
 
-##UI元素状态伪类元素选择器##:元素处于某种状态下起作用
-    hover/active/focus/enabled/disabled【text的disabled属性是否选择】/read-only/checked【checkbox选中与否】/default/indeterminate/E::selection /invalid/valid/required/optional/in-range/out-of-range……
+##UI元素状态伪类元素选择器 ## :元素处于某种状态下起作用
+    hover/active/focus/enabled/disabled【text的disabled属性是否选择】/
+    read-only/checked【checkbox选中与否】/default/indeterminate/E::selection/
+    invalid/valid/required/optional/in-range/out-of-range……
 
-##通用兄弟元素选择器##:指定位于同一个父元素之中的某个元素之后的所有其他某个种类的兄弟元素所使用样式; div~p{}兄弟;
+## 通用兄弟元素选择器 ## :指定位于同一个父元素之中的某个元素之后的所有其他某个种类的兄弟元素所使用样式; div~p{}兄弟;
 ```html
 //css
   div~p{color:red;}
