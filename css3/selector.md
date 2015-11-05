@@ -33,7 +33,7 @@
 ```
 
 
-## 相邻选择器 ## + :当前元素的下一个元素;
+##相邻选择器 + :当前元素的下一个元素;
 ```html
 //css
 div+p{color:red;}
@@ -41,7 +41,7 @@ div+p{color:red;}
 <p>最最天真的孩子</p>
 ```
 
-##子元素选择器## : >
+##子元素选择器 : >
 ```html
 //css
 div>span{ color:red;}
@@ -148,12 +148,14 @@ div:empty{border:1px solid red; }
 
 
 
-##UI元素状态伪类元素选择器 ## :元素处于某种状态下起作用
+##UI元素状态伪类元素选择器 :
+       元素处于某种状态下起作用
     hover/active/focus/enabled/disabled【text的disabled属性是否选择】/
     read-only/checked【checkbox选中与否】/default/indeterminate/E::selection/
     invalid/valid/required/optional/in-range/out-of-range……
 
-## 通用兄弟元素选择器 ## :指定位于同一个父元素之中的某个元素之后的所有其他某个种类的兄弟元素所使用样式; div~p{}兄弟;
+## 通用兄弟元素选择器 :
+     指定位于同一个父元素之中的某个元素之后的所有其他某个种类的兄弟元素所使用样式; div~p{}兄弟;
 ```html
 //css
   div~p{color:red;}
