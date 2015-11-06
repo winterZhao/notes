@@ -26,7 +26,6 @@
 ```
 ##标签选择器
 
-[属性选择器](#a1)
 ```html
 
   [href]{color:yellow; }    //更为具体的可以为[href='localhost']{ color:red;}
@@ -116,9 +115,6 @@ div:empty{border:1px solid red; }
     <div>最最天真的孩子</div>
 ```
 
-
-
-<a name='a1'>
 * **nth-of-type  nth-last-of-type**: 对同一父元素下的同类标签的进行设置，
 ```html
  p:nth-of-type(odd){color:red;}
