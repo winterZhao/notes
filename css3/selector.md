@@ -5,9 +5,9 @@
         【注:网络资料获取，仅限参考;一般情况下我们使用class类处理器即可，其他做了解】
 ##id选择器
 ##类选择器
-*类选择器 .a
-*类标签选择器(特指): p.a;
-*多类选择器:
+    *类选择器 .a
+    *类标签选择器(特指): p.a;
+    *多类选择器:
 ```html
 
  .a{
@@ -27,8 +27,9 @@
 
 ##属性选择器
 ```html
-//css
+
   [href]{color:yellow; }    //更为具体的可以为[href='localhost']{ color:red;}
+//css
   <a href="localhost">点击</a>
 ```
 
@@ -38,7 +39,7 @@
 //css
 div+p{color:red;}
 <div class="a">我们都是好孩子</div>
-<p>最最天真的孩子</p>
+<p>最最天真的孩子</p>                        //变红;
 ```
 
 ##子元素选择器 : >
@@ -81,7 +82,7 @@ div span{ color:red;}
   <div><p>我们都是好孩子</p> </div>          //不变红;
   <div><span>我们都是好孩子</span></div>     //变红
 ```
-* **:empty**: *
+* **:empty**:
 ```html
 div:empty{border:1px solid red; }
 //css
@@ -96,8 +97,8 @@ div:empty{border:1px solid red; }
  //css效果，点击不同的跳转,两个p标签的背景轮流变色;
    <a href="#a1">跳转</a>
        <a href="#a2">跳转</a>
-   <p id="a1">我们都是好孩子</p>
-   <p id="a2">我们都是好孩子</p>
+   <p id="a1">我们都是好孩子</p>                //轮流变浅绿色
+   <p id="a2">我们都是好孩子</p>                //轮流变浅绿色
 ```
 
 * **first-child last-child nth-child(4n+1) nth-last-child(从下往上数)/nth-child(even);【对所有子元素标签中的特定进行设置】**
@@ -149,7 +150,7 @@ div:empty{border:1px solid red; }
 
 
 ##UI元素状态伪类元素选择器 :
-       元素处于某种状态下起作用
+    元素处于某种状态下起作用
     hover/active/focus/enabled/disabled【text的disabled属性是否选择】/
     read-only/checked【checkbox选中与否】/default/indeterminate/E::selection/
     invalid/valid/required/optional/in-range/out-of-range……
