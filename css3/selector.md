@@ -4,8 +4,7 @@
         id选择器（#myid）> 类选择器（.myclassname）> 标签选择器（div,h1,p）> 相邻选择器（h1+p）> 子选择器（ul>li）> 后代选择器（li a）> 通配符选择器（*）> 属性选择器（a[rel="external"]）> 伪类选择器（a:hover,li:nth-child）
         【注:网络资料获取，仅限参考;一般情况下我们使用class类处理器即可，其他做了解】
 ##id选择器
-
-[百度][https://www.baidu.com/]
+<a name='#a1'>属性选择器</a>
 ##类选择器
     *类选择器 .a
     *类标签选择器(特指): p.a;
@@ -27,7 +26,7 @@
 ```
 ##标签选择器
 
-##属性选择器
+[属性选择器](a1)
 ```html
 
   [href]{color:yellow; }    //更为具体的可以为[href='localhost']{ color:red;}
