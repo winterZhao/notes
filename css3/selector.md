@@ -26,7 +26,7 @@
 ```
 ##标签选择器
 
-[属性选择器](a1)
+[属性选择器](#a1)
 ```html
 
   [href]{color:yellow; }    //更为具体的可以为[href='localhost']{ color:red;}
