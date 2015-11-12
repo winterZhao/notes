@@ -44,32 +44,32 @@
 
 <a name='a2'>
 ##Text文本段落
-.lead	使段落突出显示
-.small	设定小文本 (设置为父文本的 85% 大小)
-.text-left	设定文本左对齐
-.text-center	设定文本居中对齐
-.text-right	设定文本右对齐
-.text-justify	设定文本对齐,段落中超出屏幕部分文字自动换行
-.text-nowrap	段落中超出屏幕部分不换行
-.text-lowercase	设定文本小写
-.text-uppercase	设定文本大写
-.list-unstyled	移除默认的列表样式，列表项中左对齐应用于`<ul>`元素和` <ol> `元素中。 这个类仅适用于直接子列表项 (如果需要移除嵌套的列表项，你需要在嵌套的列表中使用该样式)
-.list-inline	将所有列表项放置同一行
-.dl-horizontal	该类设置了浮动和偏移，应用于`<dl>`元素和` <dt> `元素中，
-.pre-scrollable	使`<pre>` 元素可滚动
-.`<code>`         如果您想要内联显示代码，那么您应该使用`<code>` 标签。
-.`<pre>`         如果代码需要被显示为一个独立的块元素或者代码有多行，那么您应该使用`<pre>` 标签。
+.lead	使段落突出显示<br/>
+.small	设定小文本 (设置为父文本的 85% 大小)<br/>
+.text-left	设定文本左对齐<br/>
+.text-center	设定文本居中对齐<br/>
+.text-right	设定文本右对齐<br/>
+.text-justify	设定文本对齐,段落中超出屏幕部分文字自动换行<br/>
+.text-nowrap	段落中超出屏幕部分不换行<br/>
+.text-lowercase	设定文本小写<br/>
+.text-uppercase	设定文本大写<br/>
+.list-unstyled	移除默认的列表样式，列表项中左对齐应用于`<ul>`元素和` <ol> `元素中。 这个类仅适用于直接子列表项<br/> (如果需要移除嵌套的列表项，你需要在嵌套的列表中使用该样式)<br/>
+.list-inline	将所有列表项放置同一行<br/>
+.dl-horizontal	该类设置了浮动和偏移，应用于`<dl>`元素和` <dt> `元素中，<br/>
+.pre-scrollable	使`<pre>` 元素可滚动<br/>
+.`<code>`         如果您想要内联显示代码，那么您应该使用`<code>` 标签。<br/>
+.`<pre>`         如果代码需要被显示为一个独立的块元素或者代码有多行，那么您应该使用`<pre>` 标签。<br/>
 
-##单个标签背景改变:
-.active	       对某一特定的行或单元格应用悬停颜色
-.success	   表示一个成功的或积极的动作
-.warning	   表示一个需要注意的警告
-.danger	       表示一个危险的或潜在的负面动作
+*单个标签背景改变*:<br/>
+.active	       对某一特定的行或单元格应用悬停颜色<br/>
+.success	   表示一个成功的或积极的动作<br/>
+.warning	   表示一个需要注意的警告<br/>
+.danger	       表示一个危险的或潜在的负面动作<br/>
 
 
 <a name='a3'>
 ##Table
-<table>	容纳以表格形式显示数据的元素。
+<table>	容纳以表格形式显示数据的元素。<br/>
 <thead>	表格标题行的容器元素（<tr>），用来标识表格列。
 <tbody>	表格主体中的表格行的容器元素（<tr>）。
 <tr>	一组出现在单行上的表格单元格的容器元素（<td> 或 <th>）。
