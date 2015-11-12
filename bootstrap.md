@@ -88,9 +88,9 @@
 ##form
 role='form'<br/>
 form.form-inline:  表单内的元素一行显示,左对齐;<br/>
-form.form-horizontal +label.control-label  【表单内的每一个标签组一行显示】<br/>
+`form`.form-horizontal +`label`.control-label  【表单内的每一个标签组一行显示】<br/>
 .form-group： 把标签和空间放在一个div中;<br/>
-.form-control:  向所有的文本元素<input>、<textarea> 和 <select> 添加<br/>
+.form-control: 向所有的文本元素`<input>`、`<textarea>` 和 `<select>` 添加<br/>
 .checkbox-inline/.radio-inline:   复选框、单选框一行显示;<br/>
 multiple = 'multiple'     选择框允许用户多选项;<br/>
 p.form-control-static    label后放置纯文本p标签<br/>
