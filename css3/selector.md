@@ -5,7 +5,6 @@
         【注:网络资料获取，仅限参考;一般情况下我们使用class类处理器即可，其他做了解】
 ##id选择器
 
-[百度][https://www.baidu.com/]
 ##类选择器
     *类选择器 .a
     *类标签选择器(特指): p.a;
@@ -27,7 +26,6 @@
 ```
 ##标签选择器
 
-##属性选择器
 ```html
 
   [href]{color:yellow; }    //更为具体的可以为[href='localhost']{ color:red;}
@@ -116,9 +114,6 @@ div:empty{border:1px solid red; }
     <p>我们都是好孩子</p>                 //变红
     <div>最最天真的孩子</div>
 ```
-
-
-
 
 * **nth-of-type  nth-last-of-type**: 对同一父元素下的同类标签的进行设置，
 ```html
