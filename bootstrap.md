@@ -12,7 +12,7 @@
 
 
 
-<a name='#a1'>
+<a name='a1'>
 ##布局(移动优先)
 .container  固定宽度，居中显示;
 .container-fluid     100%宽度(和上面不能同时使用);
@@ -42,7 +42,7 @@
 
 
 
-<a name='#a2'>
+<a name='a2'>
 ##Text文本段落
 .lead	使段落突出显示
 .small	设定小文本 (设置为父文本的 85% 大小)
@@ -67,7 +67,7 @@
 .danger	       表示一个危险的或潜在的负面动作
 
 
-<a name='#a3'>
+<a name='a3'>
 ##Table
 <table>	容纳以表格形式显示数据的元素。
 <thead>	表格标题行的容器元素（<tr>），用来标识表格列。
@@ -84,7 +84,7 @@
 .table-condensed   行高变小,显得紧凑;
 【将表格包裹在<div class='responsive'>响应式表格</div>】
 
-<a name='#a4'>
+<a name='a4'>
 ##form
 role='form'
 form.form-inline:  表单内的元素一行显示,左对齐;
@@ -98,7 +98,7 @@ p.form-control-static    label后放置纯文本p标签
 disabled    禁用;
 div.has-warning、 .has-error 或 .has-success     对父元素div添加相应的class即可使用验证状态。
 
-<a name='#a5'>
+<a name='a5'>
 ##button
 ###样式
 .btn	默认的/标准的按钮。
@@ -117,13 +117,13 @@ div.has-warning、 .has-error 或 .has-success     对父元素div添加相应�
 .active
 disabled
 
-<a name='#a6'>
+<a name='a6'>
 ##图片(img标签)
 .img-rounded               border-radius:6px;
 .img-circle                border-radius:500px;
 .img-thumbnail            增加边框和内边距;
 
-<a name='#a7'>
+<a name='a7'>
 ##帮助器类:
 <button class="close button">&times</button>  关闭按钮
 <span class="caret"></span>                   倒三角
@@ -135,7 +135,7 @@ disabled
 .center-block              居中内容块;
 .sr-only                 把元素对所有设备隐藏，除了屏幕阅读器。【适用于给搜索引擎看的东西而不是给人看的注释等】
 
-<a name='#a8'>
+<a name='a8'>
 ##visibility and print
 .visible-xs	              额外的小设备（小于 768px）可见
 .visible-sm	              小型设备（768 px 起）可见
@@ -148,7 +148,7 @@ disabled
 .visible-print	          可见，可打印
 .hidden-print	          只对浏览器可见，不可打印
 
-<a name='#a9'>
+<a name='a9'>
 ##字形图标
   比如购物车等;
    `<span class="glyphicon  glyphicon-search"></span>`
