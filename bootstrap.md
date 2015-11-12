@@ -1,14 +1,14 @@
 #Bootstrap
 ---
-.布局(#a1)
-.文本段落(#a2)
-.table(#a3)
-.form(#a4)
-.button(#a5)
-.图片(#a6)
-.帮助类(关闭按钮,下拉三角)(#a7)
-.visibility and print (#a8)
-.字形图标(#a9)
+*布局(#a1)
+*文本段落(#a2)
+*table(#a3)
+*form(#a4)
+*button(#a5)
+*图片(#a6)
+*帮助类(关闭按钮,下拉三角)(#a7)
+*visibility and print (#a8)
+*字形图标(#a9)
 
 
 
