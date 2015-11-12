@@ -53,9 +53,9 @@
 .text-nowrap	段落中超出屏幕部分不换行
 .text-lowercase	设定文本小写
 .text-uppercase	设定文本大写
-.list-unstyled	移除默认的列表样式，列表项中左对齐 ( <ul> 和 <ol> 中)。 这个类仅适用于直接子列表项 (如果需要移除嵌套的列表项，你需要在嵌套的列表中使用该样式)
+.list-unstyled	移除默认的列表样式，列表项中左对齐应用于`<ul>`元素和` <ol> `元素中。 这个类仅适用于直接子列表项 (如果需要移除嵌套的列表项，你需要在嵌套的列表中使用该样式)
 .list-inline	将所有列表项放置同一行
-.dl-horizontal	该类设置了浮动和偏移，应用于 <dl> 元素和 <dt> 元素中，
+.dl-horizontal	该类设置了浮动和偏移，应用于`<dl>`元素和` <dt> `元素中，
 .pre-scrollable	使 <pre> 元素可滚动 scrollable
 .<code>         如果您想要内联显示代码，那么您应该使用 <code> 标签。
 .<pre>          如果代码需要被显示为一个独立的块元素或者代码有多行，那么您应该使用 <pre> 标签。
