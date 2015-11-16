@@ -24,6 +24,9 @@
     rm 文件名     remove                                        删除工作区文档
     git rm 文件名 -f +git commit                                   彻底删除文档
     git checkout -- 文件名                                      工作区文档删除后，从历史区恢复
+    git rm 文件夹名  -r -f                                      删除文件夹
+
+
 
 
 ## 远程协作 ##
@@ -70,7 +73,13 @@
       git push origin --tags                                   推送所有标签
       git push origin：refs/tags/标签名                         远程删除标签
 
-
+##Github Pages
+1. 打开仓库/settings/launch automatic page generator/continue to layouts/publish page
+2. 将项目克隆到本地, git clone git@github.com:winterZhao/bootstrap3.git
+3. 进入gh-pages分支 git checkout -b gh-pages origin/gh-pages
+4. 删除gh-pages分支的所有内容: git rm -rf; git commit -m ''
+5. 将index.html文件放入其中;
+6. 提交到远程 git push origin gh-pages;
 
 
 
