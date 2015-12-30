@@ -40,17 +40,12 @@ Handlebars.js是一种模板引擎，是相对于字符串拼接、动态添加�
 </script>
 ```
 4.同js一样,这里也可以大胆的使用this来遍历each(其前面有with进入时)/或者是块元素里的行内元素 `<span>{{this.id}}</span>` <br/>
-
 5. `$('#main').html(myTemplate(data));`里的data;<br/>
 这里的data是传入模板引擎的数据,是模板引擎渲染的部分。如果data是数组,则模板引擎里以{{#each xx}}开始,{{/each}}结尾;<br/> 如果data是对象,则以{{#with xx}}开头,{{/with}}结尾。我们需要的往往是JSON数据里的dataList部分,可以通过 `var data = JSON.content.nodeList[0].nodeData.dataList;`直达我们所需要数据的最主要部分。<br/>
-
 6. 问:如果我只需要渲染ajax获得的一部分数据怎么办?
    答:这里的处理主要有两种方法:
    方法一:在传入data之前就先对data做处理。截取到所需要的数据,将整个JSON数据里所需要的不同纵深位置的数据都放到data一层里(通过数组push,对象加属性的方法);这样传入模板引擎的JSON数据实际上只有两层,会大大方便你的工作.
    方法二:简单的使用Handlebars里的if,复杂的使用Handlebars的Handlebars.registerHelper增加帮助函数;
-
-
-
 7.`$('#main').html(myTemplate(data));` 这里可以选择html,也可以选择append;具体视情况而定;
 8. Handlerbars.js可以通过`../`来返回上一层,也可以通过对象的`.属性`方式进入下一层;
 
