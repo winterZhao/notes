@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<table>
+    <thead><th><td>姓名</td><td>年龄</td><td>语文</td><td>数学</td><td>英语</td></th></thead>
+    <tbody id="tbody"></tbody>
+</table>
+
+<script src="//cdn.bootcss.com/jquery/1.11.2/jquery.min.js"></script>
+<script src="//cdn.bootcss.com/handlebars.js/4.0.5/handlebars.min.js"></script>
+<script id="my-template" type="text/x-handlebars-template">
+    {{#each this}}
+    <tr>
+        <td>{{name}}</td><td>{{age}}</td><td>{{ch}}</td><td>{{this.ma}}</td><td>{{en}}</td>
+    </tr>
+    {{/each}}
+</script>
+<script>
+    var JSON={
+        isEnd:false,
+        nodeData:[
+            {
+                name: '张三',
+                age:18,
+                score:{
+                    Chinese:80,
+                    Math:90,
+                    English:85
+                }
+
+            },
+            {
+                age:19,
+                score:{
+                    Chinese:50,
+                    Math:70,
+                    English:95
+                }
+
+            },
+            {
+                name: '王五',
+                age:20,
+                score:{
+                    Chinese:70,
+                    Math:60,
+                    English:55
+                }
+
+            }
+        ]
+    }
+
+
+    var data = JSON.nodeData;
+    var arr=[];
+    for(var i= 0,r=data.length;i<r;i++){
+        if(data[i].name){
+            data[i].ch=data[i].score.Chinese;
+            data[i].ma =data[i].score.Math;
+            data[i].en=data[i].score.English;
+            arr.push(data[i]);
+        }
+    }
+    console.log(arr);
+    var myTemplate = Handlebars.compile($('#my-template').html());
+    $('#tbody').html(myTemplate(arr))
+
+</script>
+</body>
+</html>
