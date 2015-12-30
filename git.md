@@ -26,7 +26,7 @@
     git checkout -- 文件名                                      工作区文档删除后，从历史区恢复
     rm 文件夹名 -r -f                                           删除文件夹及其子内容
     rm *                                                       删除该文件夹下的所有子内容;
-    git rm 文件夹名  -r -f                                      删除文件夹
+    git rm 文件夹名  -r -f   + git commit                        删除文件夹
 
 
 
