@@ -1,7 +1,7 @@
 #Handlebars.js
 Handlebars.js是一种模板引擎，是相对于字符串拼接、动态添加元素以及文档碎片等在js里添加html内容而提出来的。它的特点在于是写在html/php页面里，可以很方便的将php语句添加到模板引擎中，解决一些字符串拼接所不能解决的问题。比如打点。
 
-我是学习杨元的Handlebars.js的教程入门的。建议先看这里:!(http://www.cnblogs.com/iyangyuan/archive/2013/12/12/3471227.html)
+我是学习杨元的Handlebars.js的教程入门的。建议先看这里: <a href ="http://www.cnblogs.com/iyangyuan/archive/2013/12/12/3471227.html" target="_blank">Handlebars</a>  
 
 ##Handlebars的引入:
 1.先引入jquery;<br/>
