@@ -20,7 +20,7 @@ Handlebars.js是一种模板引擎，是相对于字符串拼接、动态添加�
      var url = '***';
     $.getJSON(url,function(JSON){
         var data = JSON.content.nodeList[0].nodeData.dataList;
-        var myTemplate = Handlebars.compile($("#collection-template").html());   //compile编译
+        var myTemplate = Handlebars.compile($("#my-template").html());   //compile编译
           $('#main').html(myTemplate(data));
     })
 ```
