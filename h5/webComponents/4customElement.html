@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>prototype和extends的区别</title>
+
+</head>
+<body>
+<!--<super-button>asdfs</super-button>-->
+<script>
+    //直接引用    //prototype页面html元素  <m-1></m-1>
+    var M1 = Object.create(HTMLElement.prototype);
+    M1.say = function(){
+        console.log('hello');
+    };
+    //使用自定义元素前，必须用document对象的registerElement方法登记该元素。该方法返回一个自定义元素的构造函数。
+    var m1 = document.registerElement('m-1',{
+        prototype : M1,
+    });
+    var smallM = new m1();
+    smallM.innerHTMl = 'family'
+    document.body.appendChild(smallM);
+    var s1 = document.querySelector('m-1');
+    console.dir(s1);
+    s1.say();
+
+
+
+
+
+
+    //间接引用   //页面html元素 <h1 is="m-2"></h1> //extends方法
+
+    var M2 = Object.create(HTMLElement.prototype);
+    //添加自定义属性1
+    M2.talk = 'zhangsna';
+    //添加自定义属性2
+    Object.defineProperty(M2,"talkName",{value:'lisi'});
+    M2.say = function(){
+        console.log('world');
+    };
+    //使用自定义元素前，必须用document对象的registerElement方法登记该元素。该方法返回一个自定义元素的构造函数。
+    var m2 = document.registerElement('m-2',{
+        prototype : M2,
+        extends : 'h1'  //创建的m1拥有html中 h1的所有属性方法
+    });
+    var smallM2 = new m2();
+    smallM2.innerHTMl = 'family';
+    document.body.appendChild(smallM2);
+    var s2 = document.querySelector('h1');
+    console.dir(s2);
+    s2.say();
+    console.log(s2.talk);
+    console.log(s2.talkName);
+
+
+
+
+
+
+
+    //间接引用的另一种写法;
+
+    var M3 = document.registerElement('m-3',{
+        prototype: Object.create(HTMLElement.prototype,{
+            name:{
+                value:'wangwu',
+            },
+            age:{
+                value:23,
+            },
+            //实例生成时触发
+            createdCallback:{
+                value:function(){
+                    console.log('created');
+                    this.innerHTML = 'This is createdCallback'
+                }
+            },
+            //实例插入HTML文档时触发
+            attachedCallback:{
+                value:function(){
+                    console.log('attachedCallback!');
+                    this.innerHTML = 'This is attachedCallback';
+                    setTimeout(function(){
+                        document.body.querySelector('h2').className= 'cool';
+                    },3000);
+                }
+            },
+            //实例从HTML文档移除时触发
+            detachedCallback:{
+                value:function(){
+                    console.log('detachedCallback!');
+                }
+            },
+            //实例的属性发生改变时触发
+            attributeChangedCallback:{
+                value : function(){
+                    console.log('attributeChangeCallback');
+                    this.innerHTML = "This is attributeChangeCallback!";
+                    setTimeout(function(){
+                        var s = document.querySelector('h2');
+                        document.body.removeChild(s);
+
+                    },3000);
+
+                }
+            }
+        }),
+        extends:'h2'
+    });
+    document.body.appendChild(new M3());
+
+</script>
+</body>
+</html>
