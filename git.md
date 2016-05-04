@@ -79,7 +79,7 @@
 1. 打开仓库/settings/launch automatic page generator/continue to layouts/publish page
 2. 将项目克隆到本地, git clone git@github.com:winterZhao/bootstrap3.git
 3. 进入gh-pages分支 git checkout -b gh-pages origin/gh-pages
-4. 删除gh-pages分支的所有内容: git rm -rf; git commit -m ''
+4. 删除gh-pages分支的所有内容: git rm 文件名 -r -f; git commit -m ''
 5. 将index.html文件放入其中;
 6. 提交到远程 git push origin gh-pages;
 
