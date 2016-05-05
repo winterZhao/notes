@@ -14,26 +14,57 @@
             width:600px;
             height:300px;
         }
+        .first{
+            background:url('images/1.jpg') no-repeat;
+        }
+        .second{
+            background:url('images/2.jpg') no-repeat;
+        }
+        .third{
+            background:url('images/3.jpg') no-repeat;
+        }
+        .fourth{
+            background:url('images/4.jpg') no-repeat;
+        }
+        .fifth{
+            background:url('images/5.jpg') no-repeat;
+        }
+        .sixth{
+            background:url('images/6.jpg') no-repeat;
+        }
+        .seventh{
+            background:url('images/7.jpg') no-repeat;
+        }
+        .eighth{
+            background:url('images/8.jpg') no-repeat;
+        }
+        .first{
+            background:url('images/9.jpg') no-repeat;
+        }
+        .ninth{
+            background:url('images/2.jpg') no-repeat;
+        }
         li{list-style-type:upper-latin;}
+        input{display:block;}
     </style>
 </head>
 <body>
 <div class="swiper-container" id="ceshi">
     <div class="swiper-wrapper">
-        <div class="swiper-slide" >
+        <div class="swiper-slide first" >
             <h2>吃货六级考试</h2>
         </div>
-        <div class="swiper-slide" >
+        <div class="swiper-slide second" >
             <h4>看图猜零食</h4>
             <img src="https://ss1.bdstatic.com/70cFuXSh_Q1YnxGkpoWK1HF6hhy/it/u=373961189,2289021108&fm=116&gp=0.jpg" alt=""/>
             <form action="" data-num="0">
-                <input type="radio" name="one" id="first" tabindex="1"/><label for="first">3+2</label><br/>
-                <input type="radio" name="one" id="second" tabindex="2"/><label for="second">奥利奥</label><br/>
-                <input type="radio" name="one" id="third" tabindex="3"/><label for="third">冰激凌</label><br/>
-                <input type="radio" name="one" id="fourth" tabindex="4"/><label for="fourth">榴莲糖</label><br/>
+                <input type="radio" name="one" id="first" tabindex="1"/><label for="first">3+2</label>
+                <input type="radio" name="one" id="second" tabindex="2"/><label for="second">奥利奥</label>
+                <input type="radio" name="one" id="third" tabindex="3"/><label for="third">冰激凌</label>
+                <input type="radio" name="one" id="fourth" tabindex="4"/><label for="fourth">榴莲糖</label>
             </form>
         </div>
-        <div class="swiper-slide">
+        <div class="swiper-slide third">
             <h4>谁叫黄飞鸿</h4>
             <form action="" data-num="1">
                 <input type="radio" name="two" id="fifth" tabindex="1"/><label for="fifth">毛豆</label>
@@ -41,7 +72,7 @@
                 <input type="radio" name="two" id="seventh" tabindex="3"/><label for="seventh">瓜子</label>
             </form>
         </div>
-        <div class="swiper-slide" >
+        <div class="swiper-slide fourth" >
             <h4>四川麻婆豆腐好吃又有名,他的创始人是</h4>
             <form action="" data-num="2">
                 <input type="radio" name="three" tabindex="1"/><label for="">王麻婆</label>
@@ -49,7 +80,7 @@
                 <input type="radio" name="three" tabindex="3"/><label for="">李麻婆</label>
             </form>
         </div>
-        <div class="swiper-slide">
+        <div class="swiper-slide fifth">
             <h4>你知道被誉为"川菜第一菜"的是</h4>
             <form action="" data-num="3">
                 <input type="radio" name="four"  tabindex="1"/><label for="">鱼香肉丝</label>
@@ -57,7 +88,7 @@
                 <input type="radio" name="four" tabindex="3"/><label for="">水煮肉片</label>
             </form>
         </div>
-        <div class="swiper-slide" >
+        <div class="swiper-slide sixth" >
             <h4>以下四道名菜属于全素菜的是</h4>
             <form action="" data-num="4">
                 <input type="radio" name="seven" tabindex="1"/><label for="">童子敬观音</label>
@@ -66,7 +97,7 @@
                 <input type="radio" name="seven" tabindex="4"/><label for="">鼎湖罗汉斋</label>
             </form>
         </div>
-        <div class="swiper-slide">
+        <div class="swiper-slide seventh">
             <h4>黄晓明代言了以下哪个零食品牌</h4>
             <form action="" data-num="5">
                 <input type="radio" name="eight" tabindex="1"/><label for="">三只松鼠</label>
@@ -75,7 +106,7 @@
                 <input type="radio" name="eight" tabindex="4"/><label for="">百草味</label>
             </form>
         </div>
-        <div class="swiper-slide" >
+        <div class="swiper-slide eighth" >
             <h4>农夫山泉PH值在哪个范围内</h4>
             <form action="" data-num="6">
                 <input type="radio" name="nine" tabindex="1"/><label for="">小于5</label>
@@ -84,7 +115,7 @@
                 <input type="radio" name="nine" tabindex="4"/><label for="">大于12.5</label>
             </form>
         </div>
-        <div class="swiper-slide">
+        <div class="swiper-slide ninth">
             <h4>以下说法错误的是</h4>
             <form action="" data-num="7">
                 <input type="radio" name="ten" tabindex="1"/><label for="">夫妻肺片无肺</label>
@@ -104,6 +135,9 @@
             direction:'vertical',
             allowSwipeToPrev : false,
             loop:false,
+            lazyLoading:true,
+            lazyLoadingInPrevNext:true,
+            lazyLoadingInPrevNextAmount :2 ,
         })
     };
     var Games = {
@@ -145,7 +179,7 @@
             } else if ( score < 40) {
                 _self.content = '吃货,你还在胎盘里';
             }
-            var str = '<div class="swiper-slide"><h4>'+_self.content+'</h4><img src="erweima.png"></div>'
+            var str = '<div class="swiper-slide"><h4>'+_self.content+'</h4><img src="images/erweima.png"></div>'
             document.querySelector('#submit').parentNode.innerHTML = str;
 
         }
