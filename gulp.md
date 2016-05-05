@@ -20,20 +20,35 @@ gulp.task('default',['testLess'])    //'default'入口, ['testLess']为下一步
 　　命令窗口`gulp`;
 
 4. 常用gulp插件
+5. 
 压缩html                    (gulp-htmlmin)
-自动添加css前缀              （gulp-autoprefixer）
+
+自动添加css前缀            （gulp-autoprefixer）
+
 less编译                    (gulp-less)
+
 sass的编译                  （gulp-ruby-sass）
+
 压缩css                    （gulp-minify-css）
+
 js代码校验                  （gulp-jshint）
+
 合并js文件                  （gulp-concat）
+
 压缩js代码                  （gulp-uglify）
+
 压缩图片                    （gulp-imagemin）
+
 图片裁剪                     (gulp-image-resize) `.pipe(imageResize({width:1000}))` [有点问题]
+
 将background图片合成雪碧图    (gulp-css-spriter);
+
 自动刷新页面                 （gulp-livereload）
+
 图片缓存，只有图片替换了才压缩  （gulp-cache）
+
 更改提醒                    （gulp-notify）
+
 清除文件                    （del）
 
 
