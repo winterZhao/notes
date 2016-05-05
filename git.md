@@ -33,6 +33,12 @@
 
 ## 远程协作 ##
     ssh-keygen -t rsa -C "邮箱名"                               创建SSH key
+  
+  将获得的public key添加在github账户上：
+
+　　　　 右上角点击头像-> 点击settings-> 点击SSH KEYS-> 点击ADD SSH KEYS-> 将获取的public key粘贴于此  
+    
+    
     git remote add origin git@github.com:winterZhao/notes.git  连接远程github
     git push -u origin master                                  第一次将本地库的所有内容推送到github上
     git push origin master                                     后期推送
