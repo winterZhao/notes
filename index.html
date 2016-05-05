@@ -182,7 +182,9 @@
                 _self.content = '吃货,你还在胎盘里';
             }
             var str = '<div class="swiper-slide"><h4>'+_self.content+'</h4><img src="images/erweima.png"></div>'
-            document.querySelector('#submit').parentNode.innerHTML = str;
+            var m = document.querySelector('#submit').parentNode;
+            m.className ="swiper-slide"
+            m.innerHTML = str;
 
         }
 
