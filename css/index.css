@@ -7,6 +7,9 @@
 .float-left{
     float:left;
 }
+.cur{
+    cursor:pointer;
+}
 img{height:100%;}
 .swiper-wrapper {
 }
@@ -20,12 +23,12 @@ img{height:100%;}
 /*题目通用*/
 .title{
     margin-top:40px;
-    font-size:36px;
+    font-size:28px;
     color:#ff9000;
     text-align:center;
 }
 .per-score {
-    margin-top:40px;
+    margin-top:60px;
     font-size:16px;
     color:#fff;
     text-align:center;
@@ -49,10 +52,6 @@ img{height:100%;}
     height:80%;
 }
 /*第三屏*/
-.third-title{
-    font-size:28px;
-}
-
 .third-list {
     margin:40px auto;
     width:80%;
@@ -82,9 +81,14 @@ img{height:100%;}
 .third-ti-option-inner {
     width:100%;
     height:100%;
-    background:url('../img/options_02.png') no-repeat;
-    background-position-x: 10px;
-    background-position-y: 3px;
+    /*background:url('../img/options_02.png') no-repeat;*/
+    /*background-position-x: 10px;*/
+    /*background-position-y: 3px;*/
+}
+.third-ti-option-inner img{
+    display:block;
+    margin:0 auto;
+    width:80%;
 }
 .third-ti-answer {
     flex:7;
@@ -92,10 +96,10 @@ img{height:100%;}
     padding-left:5%;
     padding-top:1%;
 }
-/*.third-ti-answer-inner {*/
-    /*width:100%;*/
-    /*height:100%;*/
-/*}*/
+.third-ti-answer-inner {
+    width:100%;
+    height:100%;
+}
 .option-text{
     font-size:14px;
     color:#ef5232;
@@ -149,4 +153,92 @@ img{height:100%;}
 .num {
     font-size:22px;
     line-height:3em;
+}
+.result {
+    display:none;
+    background:url('../img/final_03.png') no-repeat;
+    background-size:100% auto;
+}
+
+.assess {
+    margin:64px auto 0;
+    width:378px;
+    height:131px;
+    background:url('../img/assess_01.png') no-repeat;
+    background-position-x:0px;
+    background-position-y:20px;
+}
+.score {
+    position:absolute;
+    left:50%;
+    top:50%;
+    width:208px;
+    height:200px;
+    margin:-91px 0 0 -104px;
+    overflow:hidden;
+}
+.left {
+    width:104px;
+    height:100%;
+    margin-left:11px;
+    background:url('../img/number_02.png') no-repeat;
+    background-position-x: 20px ;
+    background-position-y:20px ;
+}
+.right {
+    margin-left:0px;
+    background-position-x: 20px ;
+}
+.play{
+    margin-top:50%;
+    margin-left:16%;
+    width:299px;
+    height:112px;
+    background:url('../img/again_02.png') no-repeat;
+    background-position-x: 20px;
+    background-position-y: 9px;
+}
+.bottom {
+    margin:53px auto;
+    width:100%;
+    height:80px;
+    text-align:center;
+}
+.left-btn{
+    margin-right:10%;
+    width:181px;
+    height:50px;
+    background:#e0c300;
+    border:3px solid #ffba00;
+    border-radius:19px;
+    box-shadow:1px 1px #6e2516;
+    color:#e83400;
+    font-size:36px;
+    line-height:44px;
+}
+.right-btn{
+    margin-left:0;
+    margin-right:2%;
+}
+.dialog{
+    display:none;
+    position:absolute;
+    left:0;
+    top:0;
+    width:100%;
+    height:100%;
+    background:rgba(0,0,0,0.5);
+}
+.share {
+    position:absolute;
+    right:7%;
+    top:5%;
+    width:225px;
+    height:144px;
+}
+.share img{
+    width:100%;
+}
+.show {
+    display:block;
 }
