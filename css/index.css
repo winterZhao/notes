@@ -1,0 +1,90 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing:border-box;
+    font-family:'微软雅黑';
+}
+.swiper-wrapper {
+}
+.home{background:url('../img/home_02.jpg') no-repeat;  }
+.question {
+    background:url('../img/tibg_02.jpg') no-repeat;
+}
+.bg-size{
+    background-size:100% 100%;
+}
+/*题目通用*/
+.title{
+    margin-top:18px;
+    font-size:36px;
+    color:#ff9000;
+    text-align:center;
+}
+.per-score {
+    margin-top:12px;
+    font-size:16px;
+    color:#fff;
+    text-align:center;
+}
+
+/*第一题*/
+.ti-pic {
+    height:120px;
+}
+.ti-pic-inner {
+    height:100%;
+    background:url('../img/ti1_01.png') no-repeat;
+    background-position-y:-346px;
+}
+.list-group-item {
+    padding:0;
+    margin-top:10px;
+    height:54px;
+    border:3px solid #ffba00;
+    border-radius:5px;
+    box-shadow:1px 1px #6e2516;
+}
+.ti-option{
+    height: 66px;
+    background:#00ff00;
+    border-right:2px solid #ffba00;
+    border-radius:5px;
+}
+.t1-option-inner {
+    height:100%;
+    background:url('../img/ti1_01.png') no-repeat;
+    background-position-y:-5px;
+    background-position-x:10px;
+}
+.t1-answer{
+    height:100%;
+    background:#fff;
+}
+.t1-answer-inner {
+    width:80%;
+    height:100%;
+    background:url('../img/ti1_01.png') no-repeat;
+    background-position-y:10px;
+    background-position-x:-132px;
+}
+/*第三屏*/
+.third-title{
+    margin-top:24px;
+    font-size:28px;
+}
+.third-per-score {
+    margin-top:20px;
+}
+.third-list {
+    width:80%;
+    margin:20px auto;
+    height:291px;
+    display:flex;
+    flex-flow:column;
+}
+.third-list-item{
+    flex:1;
+    width:100%;
+    background:#000;
+    list-style:none;
+}

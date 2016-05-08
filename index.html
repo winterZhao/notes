@@ -8,55 +8,46 @@
     <meta content="telephone=no" name="format-detection"/>
     <meta content="email=no" name="format-detection"/>
     <title></title>
+    <link rel="stylesheet" href="http://apps.bdimg.com/libs/bootstrap/3.3.4/css/bootstrap.min.css"/>
     <link href="//cdn.bootcss.com/Swiper/3.3.1/css/swiper.min.css" rel="stylesheet">
-    <script>
-        window.onload = function(){
-            var swiper = document.getElementById("swiper");
-            var scale = window.screen.height / window.screen.width;
-            swiper.style.height = document.body.clientWidth * scale + "px";
-            console.log(swiper.style.height);
-        };
-    </script>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing:border-box;
-        }
-        .swiper-wrapper {
-
-        }
-        .first{
-            background:url('img/home_02.jpg') no-repeat;
-        }
-        .bg-size{
-            background-size:100% 100%;
-        }
-        .erweima{width:70%;margin:0 auto;margin-top:20px;}
-    </style>
+    <link rel="stylesheet" href="css/index.css"/>
 </head>
 <body>
-<div class="swiper-container" id="swiper">
+<div class="swiper-container" id="ceshi">
     <div class="swiper-wrapper">
-        <div class="swiper-slide first bg-size">
+        <div class="swiper-slide home bg-size" >
+
         </div>
-        <div class="swiper-slide second bg-size" >
-            <h4>看图猜零食</h4>
-            <img src="https://ss1.bdstatic.com/70cFuXSh_Q1YnxGkpoWK1HF6hhy/it/u=373961189,2289021108&fm=116&gp=0.jpg" alt=""/>
-            <form action="" data-num="0">
-                <input type="radio" name="one" id="first" tabindex="1"/><label for="first">3+2</label><br/>
-                <input type="radio" name="one" id="second" tabindex="2"/><label for="second">奥利奥</label><br/>
-                <input type="radio" name="one" id="third" tabindex="3"/><label for="third">冰激凌</label><br/>
-                <input type="radio" name="one" id="fourth" tabindex="4"/><label for="fourth">榴莲糖</label><br/>
-            </form>
+        <div class="swiper-slide question bg-size" >
+            <h2 class="title">看图猜零食</h2>
+            <h5 class="per-score">本题为10分题</h5>
+            <div class="row ti-pic">
+                <div class="col-xs-8 col-sm-8 col-xs-offset-2 col-sm-offset-2 ti-pic-inner"></div>
+            </div>
+            <div class="row">
+                <ul class="col-xs-8 col-sm-8 col-xs-offset-2 col-sm-offset-2 list-group">
+                        <li class="list-group-item row">
+                            <div class="col-xs-3 col-sm-3 pull-left ti-option">
+                                <p class="t1-option-inner"></p>
+                            </div>
+                            <div class="col-xs-9 col-sm-9 pull-left t1-answer">
+                                <p class="t1-answer-inner"></p>
+                            </div>
+                        </li>
+                        <li class="list-group-item">Morbi leo risus</li>
+                        <li class="list-group-item">Porta ac consectetur ac</li>
+                        <li class="list-group-item">Vestibulum at eros</li>
+                </ul>
+            </div>
         </div>
-        <div class="swiper-slide third bg-size">
-            <h4>谁叫黄飞鸿</h4>
-            <form action="" data-num="1">
-                <input type="radio" name="two" id="fifth" tabindex="1"/><label for="fifth">毛豆</label><br/>
-                <input type="radio" name="two" id="sixth" tabindex="2"/><label for="sixth">花生</label><br/>
-                <input type="radio" name="two" id="seventh" tabindex="3"/><label for="seventh">瓜子</label><br/>
-            </form>
+        <div class="swiper-slide question bg-size">
+            <h2 class="title third-title">又名"甸果"的是</h2>
+            <h5 class="per-score third-per-score">本题为10分题</h5>
+            <ul class="third-list">
+                <li class="third-list-item"></li>
+                <li class="third-list-item"></li>
+                <li class="third-list-item"></li>
+            </ul>
         </div>
         <div class="swiper-slide fourth bg-size" >
             <h4>四川麻婆豆腐好吃又有名,他的创始人是</h4>
@@ -115,23 +106,25 @@
 </div>
 <script src="//cdn.bootcss.com/Swiper/3.3.1/js/swiper.min.js"></script>
 <script>
-    Games.init();
-    var mySwiper = new Swiper('.swiper-container',{
-        width:window.innerWidth,
-        height:window.innerHeight,
-        direction:'vertical',
-        allowSwipeToPrev : false,
-        loop:false,
-        lazyLoading:true,
-        lazyLoadingInPrevNext:true,
-        lazyLoadingInPrevNextAmount :1,
-    })
+    window.onload = function(){
+        Games.init();
+        var mySwiper = new Swiper('.swiper-container',{
+            width:window.innerWidth,
+            height:window.innerHeight,
+            direction:'vertical',
+            allowSwipeToPrev : false,
+            loop:false,
+            lazyLoading:true,
+            lazyLoadingInPrevNext:true,
+            lazyLoadingInPrevNextAmount :1,
+        })
+    };
     var Games = {
         answerNum:[2,2,2,2,4,1,2,2],
         totalScore:0,
         init:function(){
-            document.querySelector('#ceshi').addEventListener('touchend',Games.judge.bind(this),false);
-            document.querySelector('#submit').addEventListener('touchend',Games.getCoupon.bind(this),false);
+             document.querySelector('#ceshi').addEventListener('touchend',Games.judge.bind(this),false);
+             document.querySelector('#submit').addEventListener('touchend',Games.getCoupon.bind(this),false);
         },
         judge:function(e){
             var _self = this,target = e.target,parent = e.target.parentNode;
@@ -139,10 +132,10 @@
             if(parent.nodeName.toLowerCase() == 'form'){
                 var number = Number(parent.dataset['num']);
                 if(target.type == 'radio') {
-                    var s = target.getAttribute('tabindex');
-                    if(Games.answerNum[number] == s){
-                        _self.totalScore +=10;
-                    }
+                      var s = target.getAttribute('tabindex');
+                      if(Games.answerNum[number] == s){
+                          _self.totalScore +=10;
+                      }
                 }
                 console.log(_self.totalScore);
             }
