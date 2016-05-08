@@ -8,7 +8,7 @@
     <meta content="telephone=no" name="format-detection"/>
     <meta content="email=no" name="format-detection"/>
     <title></title>
-    <link rel="stylesheet" href="http://apps.bdimg.com/libs/bootstrap/3.3.4/css/bootstrap.min.css"/>
+    <!--<link rel="stylesheet" href="http://apps.bdimg.com/libs/bootstrap/3.3.4/css/bootstrap.min.css"/>-->
     <link href="//cdn.bootcss.com/Swiper/3.3.1/css/swiper.min.css" rel="stylesheet">
     <link rel="stylesheet" href="css/index.css"/>
 </head>
@@ -19,26 +19,51 @@
 
         </div>
         <div class="swiper-slide question bg-size" >
-            <h2 class="title">看图猜零食</h2>
-            <h5 class="per-score">本题为10分题</h5>
-            <div class="row ti-pic">
-                <div class="col-xs-8 col-sm-8 col-xs-offset-2 col-sm-offset-2 ti-pic-inner"></div>
+            <h2 class="title five-title ">看图猜零食</h2>
+            <h5 class="per-score third-per-score">本题为10分题</h5>
+            <div class="first-main-pic">
+                <img src="img/pic_03.png" alt=""/>
             </div>
-            <div class="row">
-                <ul class="col-xs-8 col-sm-8 col-xs-offset-2 col-sm-offset-2 list-group">
-                        <li class="list-group-item row">
-                            <div class="col-xs-3 col-sm-3 pull-left ti-option">
-                                <p class="t1-option-inner"></p>
-                            </div>
-                            <div class="col-xs-9 col-sm-9 pull-left t1-answer">
-                                <p class="t1-answer-inner"></p>
-                            </div>
-                        </li>
-                        <li class="list-group-item">Morbi leo risus</li>
-                        <li class="list-group-item">Porta ac consectetur ac</li>
-                        <li class="list-group-item">Vestibulum at eros</li>
-                </ul>
-            </div>
+            <ul class="third-list first-list">
+                <li class="third-list-item">
+                    <div class="third-ti-option">
+                        <div class="third-ti-option-inner"></div>
+                    </div>
+                    <div class="third-ti-answer">
+                            <img class="first-pic" src="img/3and2_02.png" alt=""/>
+                    </div>
+                </li>
+                <li class="third-list-item">
+                    <div class="third-ti-option">
+                        <div class="third-ti-option-inner"></div>
+                    </div>
+                    <div class="third-ti-answer">
+                        <div class="third-ti-answer-inner">
+                            <img class="first-pic" src="img/aoliao_03.jpg" alt=""/>
+                        </div>
+                    </div>
+                </li>
+                <li class="third-list-item">
+                    <div class="third-ti-option">
+                        <div class="third-ti-option-inner lanmei-pic"></div>
+                    </div>
+                    <div class="third-ti-answer">
+                        <div class="third-ti-answer-inner">
+                            <img class="first-pic" src="img/cream_03.jpg" alt=""/>
+                        </div>
+                    </div>
+                </li>
+                <li class="third-list-item">
+                    <div class="third-ti-option">
+                        <div class="third-ti-option-inner pipa-pic"></div>
+                    </div>
+                    <div class="third-ti-answer">
+                        <div class="third-ti-answer-inner">
+                            <img class="first-pic" src="img/liulian_07.jpg" alt=""/>
+                        </div>
+                    </div>
+                </li>
+            </ul>
         </div>
         <div class="swiper-slide question bg-size">
             <h2 class="title third-title">又名"甸果"的是</h2>
@@ -79,58 +104,254 @@
                 </li>
             </ul>
         </div>
-        <div class="swiper-slide fourth bg-size" >
-            <h4>四川麻婆豆腐好吃又有名,他的创始人是</h4>
-            <form action="" data-num="2">
-                <input type="radio" name="three" tabindex="1"/><label for="">王麻婆</label><br/>
-                <input type="radio" name="three" tabindex="2"/><label for="">陈麻婆</label><br/>
-                <input type="radio" name="three" tabindex="3"/><label for="">李麻婆</label><br/>
-            </form>
+        <div class="swiper-slide question bg-size" >
+            <h2 class="title four-title">四川麻婆豆腐好吃又有名,他的创始人是</h2>
+            <h5 class="per-score third-per-score">本题为10分题</h5>
+            <ul class="third-list">
+                <li class="third-list-item">
+                    <div class="third-ti-option">
+                        <div class="third-ti-option-inner"></div>
+                    </div>
+                    <div class="third-ti-answer">
+                        <div class="third-ti-answer-inner option-text four-option-text">王麻婆
+                        </div>
+                    </div>
+                </li>
+                <li class="third-list-item">
+                    <div class="third-ti-option">
+                        <div class="third-ti-option-inner lanmei-pic"></div>
+                    </div>
+                    <div class="third-ti-answer">
+                        <div class="third-ti-answer-inner option-text four-option-text">陈麻婆
+                        </div>
+                    </div>
+                </li>
+                <li class="third-list-item">
+                    <div class="third-ti-option">
+                        <div class="third-ti-option-inner pipa-pic"></div>
+                    </div>
+                    <div class="third-ti-answer">
+                        <div class="third-ti-answer-inner option-text four-option-text">李麻婆
+                        </div>
+                    </div>
+                </li>
+            </ul>
         </div>
-        <div class="swiper-slide fifth bg-size">
-            <h4>你知道被誉为"川菜第一菜"的是</h4>
-            <form action="" data-num="3">
-                <input type="radio" name="four"  tabindex="1"/><label for="">鱼香肉丝</label><br/>
-                <input type="radio" name="four" tabindex="2"/><label for="">回锅肉</label><br/>
-                <input type="radio" name="four" tabindex="3"/><label for="">水煮肉片</label><br/>
-            </form>
+        <div class="swiper-slide question bg-size">
+            <h2 class="title five-title ">延缓脑神经衰老,增强记忆力，抗癌,减轻眼疲劳的水果是?</h2>
+            <h5 class="per-score third-per-score">本题为10分题</h5>
+            <ul class="third-list">
+                <li class="third-list-item">
+                    <div class="third-ti-option">
+                        <div class="third-ti-option-inner"></div>
+                    </div>
+                    <div class="third-ti-answer">
+                        <div class="third-ti-answer-inner">
+                            <span class="option-text float-left">提子</span>
+                            <img src="img/tizi_08.png" alt=""/>
+                        </div>
+                    </div>
+                </li>
+                <li class="third-list-item">
+                    <div class="third-ti-option">
+                        <div class="third-ti-option-inner lanmei-pic"></div>
+                    </div>
+                    <div class="third-ti-answer">
+                        <div class="third-ti-answer-inner">
+                            <span class="option-text float-left">莲雾</span>
+                            <img src="img/lianwu.png" alt=""/>
+                        </div>
+                    </div>
+                </li>
+                <li class="third-list-item">
+                    <div class="third-ti-option">
+                        <div class="third-ti-option-inner pipa-pic"></div>
+                    </div>
+                    <div class="third-ti-answer">
+                        <div class="third-ti-answer-inner">
+                            <span class="option-text float-left">蓝莓</span>
+                            <img src="img/lanmei.png" alt=""/>
+                        </div>
+                    </div>
+                </li>
+            </ul>
         </div>
-        <div class="swiper-slide sixth bg-size" >
-            <h4>以下四道名菜属于全素菜的是</h4>
-            <form action="" data-num="4">
-                <input type="radio" name="seven" tabindex="1"/><label for="">童子敬观音</label><br/>
-                <input type="radio" name="seven" tabindex="2"/><label for="">八仙过海闹罗汉</label><br/>
-                <input type="radio" name="seven" tabindex="3"/><label for="">佛跳墙</label><br/>
-                <input type="radio" name="seven" tabindex="4"/><label for="">鼎湖罗汉斋</label><br/>
-            </form>
+        <div class="swiper-slide question bg-size" >
+            <h2 class="title four-title">以下四道名菜属于全素菜的是</h2>
+            <h5 class="per-score third-per-score">本题为10分题</h5>
+            <ul class="third-list six-list">
+                <li class="third-list-item">
+                    <div class="third-ti-option">
+                        <div class="third-ti-option-inner"></div>
+                    </div>
+                    <div class="third-ti-answer">
+                        <div class="third-ti-answer-inner option-text four-option-text baxian">童子敬观音
+                        </div>
+                    </div>
+                </li>
+                <li class="third-list-item">
+                    <div class="third-ti-option">
+                        <div class="third-ti-option-inner lanmei-pic"></div>
+                    </div>
+                    <div class="third-ti-answer">
+                        <div class="third-ti-answer-inner option-text four-option-text baxian">八仙过海闹罗汉
+                        </div>
+                    </div>
+                </li>
+                <li class="third-list-item">
+                    <div class="third-ti-option">
+                        <div class="third-ti-option-inner pipa-pic"></div>
+                    </div>
+                    <div class="third-ti-answer">
+                        <div class="third-ti-answer-inner option-text four-option-text baxian">佛跳墙
+                        </div>
+                    </div>
+                </li>
+                <li class="third-list-item">
+                    <div class="third-ti-option">
+                        <div class="third-ti-option-inner pipa-pic"></div>
+                    </div>
+                    <div class="third-ti-answer">
+                        <div class="third-ti-answer-inner option-text four-option-text baxian">鼎湖罗汉斋
+                        </div>
+                    </div>
+                </li>
+            </ul>
         </div>
-        <div class="swiper-slide seventh bg-size">
-            <h4>黄晓明代言了以下哪个零食品牌</h4>
-            <form action="" data-num="5">
-                <input type="radio" name="eight" tabindex="1"/><label for="">三只松鼠</label><br/>
-                <input type="radio" name="eight" tabindex="2"/><label for="">德芙巧克力</label><br/>
-                <input type="radio" name="eight" tabindex="3"/><label for="">MM豆</label><br/>
-                <input type="radio" name="eight" tabindex="4"/><label for="">百草味</label><br/>
-            </form>
+        <div class="swiper-slide question bg-size">
+            <h2 class="title five-title ">黄晓明代言了以下哪个零食品牌</h2>
+            <h5 class="per-score third-per-score">本题为10分题</h5>
+            <ul class="third-list six-list">
+                <li class="third-list-item">
+                    <div class="third-ti-option">
+                        <div class="third-ti-option-inner"></div>
+                    </div>
+                    <div class="third-ti-answer">
+                        <div class="third-ti-answer-inner">
+                            <span class="option-text float-left">良品铺子</span>
+                            <img src="img/liangpinpuzi_03.png" alt=""/>
+                        </div>
+                    </div>
+                </li>
+                <li class="third-list-item">
+                    <div class="third-ti-option">
+                        <div class="third-ti-option-inner lanmei-pic"></div>
+                    </div>
+                    <div class="third-ti-answer">
+                        <div class="third-ti-answer-inner">
+                            <span class="option-text float-left">可爱多</span>
+                            <img src="img/keaiduo_03.png" alt=""/>
+                        </div>
+                    </div>
+                </li>
+                <li class="third-list-item">
+                    <div class="third-ti-option">
+                        <div class="third-ti-option-inner pipa-pic"></div>
+                    </div>
+                    <div class="third-ti-answer">
+                        <div class="third-ti-answer-inner">
+                            <span class="option-text float-left">MM豆</span>
+                            <img src="img/mmdou_03.png" class="mmdou-pic" alt=""/>
+                        </div>
+                    </div>
+                </li>
+                <li class="third-list-item">
+                    <div class="third-ti-option">
+                        <div class="third-ti-option-inner pipa-pic"></div>
+                    </div>
+                    <div class="third-ti-answer">
+                        <div class="third-ti-answer-inner">
+                            <span class="option-text float-left">百草味</span>
+                            <img src="img/baicaowei_03.png" alt=""/>
+                        </div>
+                    </div>
+                </li>
+            </ul>
         </div>
-        <div class="swiper-slide eighth bg-size">
-            <h4>农夫山泉PH值在哪个范围内</h4>
-            <form action="" data-num="6">
-                <input type="radio" name="nine" tabindex="1"/><label for="">小于5</label><br/>
-                <input type="radio" name="nine" tabindex="2"/><label for="">大于6.8小于7.8</label><br/>
-                <input type="radio" name="nine" tabindex="3"/><label for="">大于8小于12.5</label><br/>
-                <input type="radio" name="nine" tabindex="4"/><label for="">大于12.5</label><br/>
-            </form>
+        <div class="swiper-slide question bg-size">
+            <h2 class="title four-title">农夫山泉PH值在哪个范围内</h2>
+            <h5 class="per-score third-per-score">本题为20分题</h5>
+            <ul class="third-list six-list">
+                <li class="third-list-item">
+                    <div class="third-ti-option">
+                        <div class="third-ti-option-inner"></div>
+                    </div>
+                    <div class="third-ti-answer">
+                        <div class="third-ti-answer-inner option-text four-option-text num">小于5
+                        </div>
+                    </div>
+                </li>
+                <li class="third-list-item">
+                    <div class="third-ti-option">
+                        <div class="third-ti-option-inner lanmei-pic"></div>
+                    </div>
+                    <div class="third-ti-answer">
+                        <div class="third-ti-answer-inner option-text four-option-text num">大于6.8小于7.8
+                        </div>
+                    </div>
+                </li>
+                <li class="third-list-item">
+                    <div class="third-ti-option">
+                        <div class="third-ti-option-inner pipa-pic"></div>
+                    </div>
+                    <div class="third-ti-answer">
+                        <div class="third-ti-answer-inner option-text four-option-text num">大于8小于12.5
+                        </div>
+                    </div>
+                </li>
+                <li class="third-list-item">
+                    <div class="third-ti-option">
+                        <div class="third-ti-option-inner pipa-pic"></div>
+                    </div>
+                    <div class="third-ti-answer">
+                        <div class="third-ti-answer-inner option-text four-option-text num">大于12.5
+                        </div>
+                    </div>
+                </li>
+            </ul>
         </div>
-        <div class="swiper-slide ninth bg-size">
-            <h4>以下说法错误的是</h4>
-            <form action="" data-num="7">
-                <input type="radio" name="ten" tabindex="1"/><label for="">夫妻肺片无肺</label><br/>
-                <input type="radio" name="ten" tabindex="2"/><label for="">北京炒肝无肝</label><br/>
-                <input type="radio" name="ten" tabindex="3"/><label for="">广东肠粉无肠</label><br/>
-                <input type="radio" name="ten" tabindex="3"/><label for="">太原头脑无脑</label><br/>
-            </form>
-            <input type="button" id="submit" value="提交"/>
+        <div class="swiper-slide question bg-size">
+            <h2 class="title four-title">以下说法错误的是</h2>
+            <h5 class="per-score third-per-score">本题为20分题</h5>
+            <ul class="third-list six-list">
+                <li class="third-list-item">
+                    <div class="third-ti-option">
+                        <div class="third-ti-option-inner"></div>
+                    </div>
+                    <div class="third-ti-answer">
+                        <div class="third-ti-answer-inner option-text four-option-text num">夫妻肺片无肺
+                        </div>
+                    </div>
+                </li>
+                <li class="third-list-item">
+                    <div class="third-ti-option">
+                        <div class="third-ti-option-inner lanmei-pic"></div>
+                    </div>
+                    <div class="third-ti-answer">
+                        <div class="third-ti-answer-inner option-text four-option-text num">北京炒肝无肝
+                        </div>
+                    </div>
+                </li>
+                <li class="third-list-item">
+                    <div class="third-ti-option">
+                        <div class="third-ti-option-inner pipa-pic"></div>
+                    </div>
+                    <div class="third-ti-answer">
+                        <div class="third-ti-answer-inner option-text four-option-text num">广东肠粉无肠
+                        </div>
+                    </div>
+                </li>
+                <li class="third-list-item">
+                    <div class="third-ti-option">
+                        <div class="third-ti-option-inner pipa-pic"></div>
+                    </div>
+                    <div class="third-ti-answer">
+                        <div class="third-ti-answer-inner option-text four-option-text num">太原头脑无脑
+                        </div>
+                    </div>
+                </li>
+            </ul>
+
         </div>
     </div>
 </div>
@@ -154,7 +375,7 @@
         totalScore:0,
         init:function(){
              document.querySelector('#ceshi').addEventListener('touchend',Games.judge.bind(this),false);
-             document.querySelector('#submit').addEventListener('touchend',Games.getCoupon.bind(this),false);
+//             document.querySelector('#submit').addEventListener('touchend',Games.getCoupon.bind(this),false);
         },
         judge:function(e){
             var _self = this,target = e.target,parent = e.target.parentNode;
