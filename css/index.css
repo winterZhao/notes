@@ -239,6 +239,51 @@ img{height:100%;}
 .share img{
     width:100%;
 }
+
+/*彈窗是否提交*/
+.main {
+    position:absolute;
+    top:50%;
+    margin-top:-146px;
+    width:100%;
+    height:293px;
+    /*background:url('../img/rightbg_01.png') no-repeat;*/
+}
+.main img {
+    width:100%;
+}
+.close {
+    position:absolute;
+    right:0;
+    top:-57px;
+    width:80px;
+    height:106px;
+    background:url('../img/close_04.png') no-repeat;
+    /*background-position-x: -1210px;*/
+    /*background-position-y: -94px;*/
+}
+img.content-pic {
+    position:absolute;
+    left:20%;
+    top:14%;
+    width:50%;
+    height:147px;
+}
+
+img.assign {
+    position:absolute;
+    left:50%;
+    top:50%;
+    margin:61px 0 0 -20%;
+    width:40%;
+    height:45px;
+
+}
+
 .show {
     display:block;
+}
+
+.red {
+    color:black;
 }
