@@ -1,3 +1,4 @@
+'use strict';
 window.onload = function(){
     Games.init();
     var mySwiper = new Swiper('.swiper-container',{
@@ -78,9 +79,19 @@ var Games = {
                 str+='<img src="img/chihuo1_01.png" alt=""/> </div> <div class="score"> <div class="float-left left"> <img src="img/one_03.png" alt="img"/> </div> <div class="float-left left"> <img src="img/zero_02.png" alt="img"/></div></div>';
             }
 
-            str+='<div class="play cur"> <img src="img/again_02.png" alt=""/> </div> <div class="bottom"> <button class="float-left left-btn cur">我要刷分</button> <button class="float-left left-btn right-btn cur">抓人来考</button> </div> <div class="dialog"> <div class="share"> <img src="img/share_02.png" alt=""/> </div></div></div>'
+            str+='<div class="play cur"> <img src="img/again_02.png" alt=""/> </div> <div class="bottom"> <button class="float-left left-btn cur" id="shuafen">我要刷分</button> <button class="float-left left-btn right-btn cur" id="share">抓人来考</button> </div> <div class="dialog"> <div class="share"> <img src="img/share_02.png" alt=""/> </div></div></div>'
 
             $('.swiper-wrapper').html(str);
+
+            $('.play').on('click',function(){
+                window.open('https://www.baidu.com');
+            });
+            $('#shuafen').on('click',function(){
+                window.reload();
+            });
+            $('#share').on('click',function(){
+                   $('.dialog').addClass('show')
+            })
 
         }
 
