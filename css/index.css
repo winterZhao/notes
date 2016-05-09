@@ -22,7 +22,7 @@ img{height:100%;}
 }
 /*题目通用*/
 .title{
-    margin-top:10%;
+    margin-top:7%;
     font-size:28px;
     color:#ff9000;
     text-align:center;
@@ -188,7 +188,7 @@ img{height:100%;}
 .score {
     width:36%;
     height:106px;
-    margin:22% 0 0 32%;
+    margin:29% 0 0 32%;
     overflow:hidden;
     background:rgba(0,0,0,0.4);
 }
