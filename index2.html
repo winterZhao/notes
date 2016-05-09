@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1" />
+    <meta content="yes" name="apple-mobile-web-app-capable"/>
+    <meta content="black" name="apple-mobile-web-app-status-bar-style"/>
+    <meta content="telephone=no" name="format-detection"/>
+    <meta content="email=no" name="format-detection"/>
+    <title></title>
+    <link href="//cdn.bootcss.com/Swiper/3.3.1/css/swiper.min.css" rel="stylesheet">
+    <script>
+        window.onload = function(){
+            var swiper = document.getElementById("swiper");
+            var scale = window.screen.height / window.screen.width;
+            swiper.style.height = document.body.clientWidth * scale + "px";
+            console.log(swiper.style.height);
+        };
+    </script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing:border-box;
+        }
+        .swiper-wrapper {
+
+        }
+        .first{
+            background:url('img/home_02.jpg') no-repeat;
+        }
+        .bg-size{
+            background-size:100% 100%;
+        }
+        .erweima{width:70%;margin:0 auto;margin-top:20px;}
+    </style>
+</head>
+<body>
+<div class="swiper-container" id="swiper">
+    <div class="swiper-wrapper">
+        <div class="swiper-slide first bg-size">
+        </div>
+        <div class="swiper-slide second bg-size" >
+            <h4>看图猜零食</h4>
+            <img src="https://ss1.bdstatic.com/70cFuXSh_Q1YnxGkpoWK1HF6hhy/it/u=373961189,2289021108&fm=116&gp=0.jpg" alt=""/>
+            <form action="" data-num="0">
+                <input type="radio" name="one" id="first" tabindex="1"/><label for="first">3+2</label><br/>
+                <input type="radio" name="one" id="second" tabindex="2"/><label for="second">奥利奥</label><br/>
+                <input type="radio" name="one" id="third" tabindex="3"/><label for="third">冰激凌</label><br/>
+                <input type="radio" name="one" id="fourth" tabindex="4"/><label for="fourth">榴莲糖</label><br/>
+            </form>
+        </div>
+        <div class="swiper-slide third bg-size">
+            <h4>谁叫黄飞鸿</h4>
+            <form action="" data-num="1">
+                <input type="radio" name="two" id="fifth" tabindex="1"/><label for="fifth">毛豆</label><br/>
+                <input type="radio" name="two" id="sixth" tabindex="2"/><label for="sixth">花生</label><br/>
+                <input type="radio" name="two" id="seventh" tabindex="3"/><label for="seventh">瓜子</label><br/>
+            </form>
+        </div>
+        <div class="swiper-slide fourth bg-size" >
+            <h4>四川麻婆豆腐好吃又有名,他的创始人是</h4>
+            <form action="" data-num="2">
+                <input type="radio" name="three" tabindex="1"/><label for="">王麻婆</label><br/>
+                <input type="radio" name="three" tabindex="2"/><label for="">陈麻婆</label><br/>
+                <input type="radio" name="three" tabindex="3"/><label for="">李麻婆</label><br/>
+            </form>
+        </div>
+        <div class="swiper-slide fifth bg-size">
+            <h4>你知道被誉为"川菜第一菜"的是</h4>
+            <form action="" data-num="3">
+                <input type="radio" name="four"  tabindex="1"/><label for="">鱼香肉丝</label><br/>
+                <input type="radio" name="four" tabindex="2"/><label for="">回锅肉</label><br/>
+                <input type="radio" name="four" tabindex="3"/><label for="">水煮肉片</label><br/>
+            </form>
+        </div>
+        <div class="swiper-slide sixth bg-size" >
+            <h4>以下四道名菜属于全素菜的是</h4>
+            <form action="" data-num="4">
+                <input type="radio" name="seven" tabindex="1"/><label for="">童子敬观音</label><br/>
+                <input type="radio" name="seven" tabindex="2"/><label for="">八仙过海闹罗汉</label><br/>
+                <input type="radio" name="seven" tabindex="3"/><label for="">佛跳墙</label><br/>
+                <input type="radio" name="seven" tabindex="4"/><label for="">鼎湖罗汉斋</label><br/>
+            </form>
+        </div>
+        <div class="swiper-slide seventh bg-size">
+            <h4>黄晓明代言了以下哪个零食品牌</h4>
+            <form action="" data-num="5">
+                <input type="radio" name="eight" tabindex="1"/><label for="">三只松鼠</label><br/>
+                <input type="radio" name="eight" tabindex="2"/><label for="">德芙巧克力</label><br/>
+                <input type="radio" name="eight" tabindex="3"/><label for="">MM豆</label><br/>
+                <input type="radio" name="eight" tabindex="4"/><label for="">百草味</label><br/>
+            </form>
+        </div>
+        <div class="swiper-slide eighth bg-size">
+            <h4>农夫山泉PH值在哪个范围内</h4>
+            <form action="" data-num="6">
+                <input type="radio" name="nine" tabindex="1"/><label for="">小于5</label><br/>
+                <input type="radio" name="nine" tabindex="2"/><label for="">大于6.8小于7.8</label><br/>
+                <input type="radio" name="nine" tabindex="3"/><label for="">大于8小于12.5</label><br/>
+                <input type="radio" name="nine" tabindex="4"/><label for="">大于12.5</label><br/>
+            </form>
+        </div>
+        <div class="swiper-slide ninth bg-size">
+            <h4>以下说法错误的是</h4>
+            <form action="" data-num="7">
+                <input type="radio" name="ten" tabindex="1"/><label for="">夫妻肺片无肺</label><br/>
+                <input type="radio" name="ten" tabindex="2"/><label for="">北京炒肝无肝</label><br/>
+                <input type="radio" name="ten" tabindex="3"/><label for="">广东肠粉无肠</label><br/>
+                <input type="radio" name="ten" tabindex="3"/><label for="">太原头脑无脑</label><br/>
+            </form>
+            <input type="button" id="submit" value="提交"/>
+        </div>
+    </div>
+</div>
+<script src="//cdn.bootcss.com/Swiper/3.3.1/js/swiper.min.js"></script>
+<script>
+    Games.init();
+    var mySwiper = new Swiper('.swiper-container',{
+        width:window.innerWidth,
+        height:window.innerHeight,
+        direction:'vertical',
+        allowSwipeToPrev : false,
+        loop:false,
+        lazyLoading:true,
+        lazyLoadingInPrevNext:true,
+        lazyLoadingInPrevNextAmount :1,
+    })
+    var Games = {
+        answerNum:[2,2,2,2,4,1,2,2],
+        totalScore:0,
+        init:function(){
+            document.querySelector('#ceshi').addEventListener('touchend',Games.judge.bind(this),false);
+            document.querySelector('#submit').addEventListener('touchend',Games.getCoupon.bind(this),false);
+        },
+        judge:function(e){
+            var _self = this,target = e.target,parent = e.target.parentNode;
+
+            if(parent.nodeName.toLowerCase() == 'form'){
+                var number = Number(parent.dataset['num']);
+                if(target.type == 'radio') {
+                    var s = target.getAttribute('tabindex');
+                    if(Games.answerNum[number] == s){
+                        _self.totalScore +=10;
+                    }
+                }
+                console.log(_self.totalScore);
+            }
+        },
+        getCoupon:function(){
+            console.log(1);
+            alert(2);
+            var _self = this;
+            var score = _self.totalScore;
+            if (score == 100) {
+                _self.content = '我真的还想再吃500年';
+            } else if (score >= 90 && score < 100) {
+                _self.content = '吃货,放开那个盘子';
+            } else if (score >= 80 && score < 90) {
+                _self.content = '根本停不下来';
+            } else if (score >= 60 && score < 80) {
+                _self.content = '身未动嘴已远';
+            } else if (score >= 40 && score < 60) {
+                _self.content = '吃货你去哪儿了';
+            } else if ( score < 40) {
+                _self.content = '吃货,你还在胎盘里';
+            }
+            var str = '<div class="swiper-slide"><h4>'+_self.content+'</h4><img src="images/erweima.png"></div>'
+            var m = document.querySelector('#submit').parentNode;
+            m.className ="swiper-slide"
+            m.innerHTML = str;
+
+        }
+
+    }
+</script>
+</body>
+</html>
