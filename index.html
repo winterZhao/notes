@@ -16,7 +16,6 @@
 <div class="swiper-container" id="ceshi">
 
     <div class="swiper-wrapper">
-
         <div class="swiper-slide home bg-size" ></div>
         <div class="swiper-slide question bg-size" >
             <h2 class="title">看图猜零食</h2>
@@ -360,7 +359,7 @@
                 </li>
             </ul>
         </div>
-        <div class="swiper-slide question bg-size">
+        <div class="swiper-slide question bg-size" id="last-ti">
             <h2 class="title four-title">以下说法错误的是</h2>
             <h5 class="per-score third-per-score">本题为20分题</h5>
             <ul id ="seven" class="third-list six-list-height" data-ti="7">
@@ -409,7 +408,7 @@
                     </div>
                 </li>
             </ul>
-            <div class="dialog">
+            <div class="dialog right-dialog">
                 <div class="main">
                     <img src="img/rightbg_01.png" alt=""/>
                     <div class="close cur"></div>
@@ -417,32 +416,63 @@
                     <img class="assign" src="img/assign_04.png" alt=""/>
                 </div>
             </div>
+            <div class="dialog wrong-dialog">
+                <div class="main">
+                    <img src="img/wrong_01.png" alt=""/>
+                    <div class="close cur"></div>
+                    <img class="content-pic" src="img/right_02.png" alt=""/>
+                    <img class="assign" src="img/assign_04.png" alt=""/>
+                </div>
+            </div>
         </div>
+
         <div class="swiper-slide result show bg-size">
-            <div class="assess">
-                <img src="img/chihuo6_02.png" alt=""/>
-            </div>
-            <div class="score">
-                <div class="float-left left">
-                    <img src="img/zero_02.png" alt="img"/>
+                <div class="assess">
+                    <img src="img/chihuo6_02.png" alt=""/>
                 </div>
-                <div class="float-left left">
-                    <img src="img/zero_02.png" alt="img"/>
+                <div class="score">
+                    <div class="float-left zero-img">
+                        <img src="img/zero_02.png" alt="img"/>
+                    </div>
                 </div>
-            </div>
-            <div class="play cur">
-                <img src="img/again_02.png" alt=""/>
-            </div>
-            <div class="bottom">
-                <button class="float-left left-btn cur">我要刷分</button>
-                <button class="float-left left-btn right-btn cur">抓人来考</button>
-            </div>
-            <div class="dialog">
-                <div class="share">
-                    <img src="img/share_02.png" alt=""/>
+                <div class="play cur">
+                    <img src="img/again_02.png" alt=""/>
                 </div>
-            </div>
+                <div class="bottom">
+                    <button class="float-left left-btn cur">我要刷分</button>
+                    <button class="float-left left-btn right-btn cur">抓人来考</button>
+                </div>
+                <div class="dialog">
+                    <div class="share">
+                        <img src="img/share_02.png" alt=""/>
+                    </div>
+                </div>
         </div>
+
+
+        <!--<div class="swiper-slide result show bg-size">-->
+            <!--<div class="assess">-->
+                <!--<img src="img/chihuo6_02.png" alt=""/>-->
+            <!--</div>-->
+            <!--<div class="score">-->
+                <!--<div class="float-left one-img">-->
+                    <!--<img src="img/zero_02.png" alt="img"/>-->
+                <!--</div>-->
+            <!--</div>-->
+            <!--<div class="play cur">-->
+                <!--<img src="img/again_02.png" alt=""/>-->
+            <!--</div>-->
+            <!--<div class="bottom">-->
+                <!--<button class="float-left left-btn cur">我要刷分</button>-->
+                <!--<button class="float-left left-btn right-btn cur">抓人来考</button>-->
+            <!--</div>-->
+            <!--<div class="dialog">-->
+                <!--<div class="share">-->
+                    <!--<img src="img/share_02.png" alt=""/>-->
+                <!--</div>-->
+            <!--</div>-->
+        <!--</div>-->
+
     </div>
 </div>
 <script src="js/jquery-1.12.3.min.js"></script>

@@ -172,6 +172,8 @@ img{height:100%;}
     line-height:4em;
 }
 .result {
+    width:100%;
+    /*height:100%;*/
     display:none;
     background:url('../img/final_03.png') no-repeat;
     background-size:100% auto;
@@ -186,7 +188,9 @@ img{height:100%;}
     width:100%;
 }
 .score {
-    width:36%;
+    width:32%;
+    padding-top:6%;
+    padding-left:5%;
     height:106px;
     margin:21% 0 0 32%;
     overflow:hidden;
@@ -198,10 +202,17 @@ img{height:100%;}
 }
 .left img {
     height:70%;
-    margin-left:5%;
-    margin-top:23%;
 }
-
+.one-img {
+    margin:18% 0 0 2%;
+    height:65%
+}
+.one-img img {
+    height:70%;
+}
+.zero-img{
+    
+}
 .play{
     margin-top: 25px;
     margin-left:26%;

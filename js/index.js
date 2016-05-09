@@ -24,6 +24,7 @@ var Games = {
                     var userAnswer = $(this).data('answer');
                     var ti = Number($(this).parent().data('ti'));
                     var target = _self.answerNum[ti];
+
                     if(userAnswer == target){
                         if(ti == 6 || ti == 7){
                             _self.totalScore += 20;
@@ -32,37 +33,54 @@ var Games = {
                         }
                     }
                     if(ti == 7) {
-                        var m = $(this).parent('#seven').siblings('.dialog')
-                         m.addClass('show');
-                         $('.assign').click(function(){
-                             m.removeClass('show');
-                             $('.result').addClass('show');
-                         })
+                        if ( userAnswer == target ) {
+                            var m = $(this).parent('#seven').siblings('.right-dialog')
+                            m.addClass('show');
+                        } else {
+                            var n = $(this).parent('#seven').siblings('.wrong-dialog')
+                            n.addClass('show');
+                        }
+                        $('.assign').click(function(){
+                            //_self.getCoupon();
+                        })
                     }
 
                 })
             });
         },
         getCoupon:function(){
-            var _self = this;
+            var _self = this,str;
+            str+='<div class="swiper-slide result show bg-size"><div class="assess">';
+
             var score = _self.totalScore;
-            if (score == 100) {
-                _self.content = '我真的还想再吃500年';
-            } else if (score >= 90 && score < 100) {
-                _self.content = '吃货,放开那个盘子';
-            } else if (score >= 80 && score < 90) {
-                _self.content = '根本停不下来';
-            } else if (score >= 60 && score < 80) {
-                _self.content = '身未动嘴已远';
-            } else if (score >= 40 && score < 60) {
-                _self.content = '吃货你去哪儿了';
-            } else if ( score < 40) {
-                _self.content = '吃货,你还在胎盘里';
+
+            if(score == 100){
+                str +=' <img src="img/chihuo4_03.png" alt=""/></div><div class="score"><div class="float-left one-img"><img src="img/one_03.png" alt="img"/> </div><div class="float-left one-img"><img src="img/zero_02.png" alt="img"/></div><div class="float-left one-img"><img src="img/zero_02.png" alt="img"/></div></div>'
+            } else  if (score == 90){
+                str+='<img src="img/chihuo3_03.png" alt=""/> </div> <div class="score"> <div class="float-left left"> <img src="img/nine_03.png" alt="img"/> </div> <div class="float-left left"> <img src="img/zero_02.png" alt="img"/></div></div>';
+            } else if(score == 80 ) {
+                str+='<img src="img/chihuo6_02.png" alt=""/> </div> <div class="score"> <div class="float-left left"> <img src="img/eight_03.png" alt="img"/> </div> <div class="float-left left"> <img src="img/zero_02.png" alt="img"/></div></div>';
+            } else if(score == 70) {
+                str+='<img src="img/chihuo5_02.png" alt=""/> </div> <div class="score"> <div class="float-left left"> <img src="img/seven_03.png" alt="img"/> </div> <div class="float-left left"> <img src="img/zero_02.png" alt="img"/></div></div>';
+            } else if (score == 60) {
+                str+='<img src="img/chihuo5_02.png" alt=""/> </div> <div class="score"> <div class="float-left left"> <img src="img/six_03.png" alt="img"/> </div> <div class="float-left left"> <img src="img/zero_02.png" alt="img"/></div></div>';
+            } else if (score == 50 ) {
+                str+='<img src="img/chihuo2_02.png" alt=""/> </div> <div class="score"> <div class="float-left left"> <img src="img/five_03.png" alt="img"/> </div> <div class="float-left left"> <img src="img/zero_02.png" alt="img"/></div></div>';
+            } else if (score == 40) {
+                str+='<img src="img/chihuo2_02.png" alt=""/> </div> <div class="score"> <div class="float-left left"> <img src="img/four_03.png" alt="img"/> </div> <div class="float-left left"> <img src="img/zero_02.png" alt="img"/></div></div>';
+            } else if (score == 30) {
+                str+='<img src="img/chihuo1_01.png" alt=""/> </div> <div class="score"> <div class="float-left left"> <img src="img/three_03.png" alt="img"/> </div> <div class="float-left left"> <img src="img/zero_02.png" alt="img"/></div></div>';
+            } else if (score == 20){
+                str+='<img src="img/chihuo1_01.png" alt=""/> </div> <div class="score"> <div class="float-left left"> <img src="img/two_03.png" alt="img"/> </div> <div class="float-left left"> <img src="img/zero_02.png" alt="img"/></div></div>';
+            } else if (score == 10){
+                str+='<img src="img/chihuo1_01.png" alt=""/> </div> <div class="score"> <div class="float-left left"> <img src="img/one_03.png" alt="img"/> </div> <div class="float-left left"> <img src="img/zero_02.png" alt="img"/></div></div>';
+            } else if(score == 0){
+                str+='<img src="img/chihuo1_01.png" alt=""/> </div> <div class="score"> <div class="float-left left"> <img src="img/one_03.png" alt="img"/> </div> <div class="float-left left"> <img src="img/zero_02.png" alt="img"/></div></div>';
             }
-            var str = '<div class="swiper-slide"><h4>'+_self.content+'</h4><img src="images/erweima.png"></div>'
-            var m = document.querySelector('#submit').parentNode;
-            m.className ="swiper-slide"
-            m.innerHTML = str;
+
+            str+='<div class="play cur"> <img src="img/again_02.png" alt=""/> </div> <div class="bottom"> <button class="float-left left-btn cur">我要刷分</button> <button class="float-left left-btn right-btn cur">抓人来考</button> </div> <div class="dialog"> <div class="share"> <img src="img/share_02.png" alt=""/> </div></div></div>'
+
+            $('.swiper-wrapper').html(str);
 
         }
 
