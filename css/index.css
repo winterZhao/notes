@@ -22,7 +22,7 @@ img{height:100%;}
 }
 /*题目通用*/
 .title{
-    margin-top:28px;
+    margin-top:6%;
     font-size:28px;
     color:#ff9000;
     text-align:center;
@@ -33,27 +33,8 @@ img{height:100%;}
     color:#fff;
     text-align:center;
 }
-
-/*第一题*/
-.first-main-pic {
-    width:70%;
-    margin:0 auto;
-    height:116px;
-}
-.first-main-pic img{
-    width:100%;height:146px;
-}
-.swiper-slide .first-list {
-    height: 346px;
-}
-.first-pic {
-    margin-top:5px;
-    width:70%;
-    height:80%;
-}
-/*第三屏*/
 .third-list {
-    margin:40px auto;
+    margin:20px auto;
     width:80%;
     height:291px;
     display:flex;
@@ -61,7 +42,7 @@ img{height:100%;}
     justify-content:space-between;
 }
 .third-list-item{
-    height:78px;
+    height:77px;
     width:100%;
     list-style:none;
     background:white;
@@ -81,14 +62,12 @@ img{height:100%;}
 .third-ti-option-inner {
     width:100%;
     height:100%;
-    /*background:url('../img/options_02.png') no-repeat;*/
-    /*background-position-x: 10px;*/
-    /*background-position-y: 3px;*/
 }
 .third-ti-option-inner img{
     display:block;
-    margin:0 auto;
+    margin: 13px auto;
     width:80%;
+    height:47px;
 }
 .third-ti-answer {
     flex:7;
@@ -109,6 +88,35 @@ img{height:100%;}
     font-weight:700;
     text-align:center;
 }
+/*第一题*/
+.first-main-pic {
+    width:70%;
+    margin:0 auto;
+    height:24%;
+}
+.first-main-pic img{
+    width:100%;height:146px;
+}
+.swiper-slide .first-list {
+    height: 46%;
+}
+.first-item {
+    height:51px;
+}
+.third-ti-option-inner .first-face{
+   margin:2px auto;
+   height:36px;
+}
+.first-pic {
+    margin-top:5px;
+    width:69%;
+    height:80%;
+}
+/*第三题*/
+.ti2-fruit {
+    margin-top:1%;
+    height:89%;
+}
 .lanmei-pic{
     background-position-y: -74px;
 }
@@ -118,6 +126,8 @@ img{height:100%;}
 
 /*第四题*/
 .four-title {
+    width:65%;
+    margin:24px auto;
     font-size:16px;
     font-weight:700;
 }
@@ -129,20 +139,27 @@ img{height:100%;}
 
 /*第五题*/
 .five-title {
-    width:65%;
+    width:67%;
     font-size:16px;
-    margin:40px auto 0;
+    margin:17px auto 0;
     font-weight:700;
 }
 /*第六题*/
-.six-list {
-    height:386px;
+.six-list-height {
+    margin:11px auto;
+    height:360px;
 }
 .baxian {
-    font-size:22px;
-    line-height:3em;
+    font-size:16px;
+    line-height:4em;
 }
 /*第七题*/
+.seven-title {
+    width:42%;
+}
+.store-pic {
+    height:95%;
+}
 .mmdou-pic {
     margin-top:10px;
     margin-left:10px;
@@ -151,8 +168,8 @@ img{height:100%;}
 }
 /*第八题*/
 .num {
-    font-size:22px;
-    line-height:3em;
+    font-size:16px;
+    line-height:4em;
 }
 .result {
     display:none;
