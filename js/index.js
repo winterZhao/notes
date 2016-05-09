@@ -16,7 +16,6 @@ var Games = {
         totalScore:0,
         init:function(){
             this.judge();
-
         },
         judge:function(){
             var _self = this;
@@ -32,7 +31,7 @@ var Games = {
                             _self.totalScore += 10;
                         }
                     }
-                    if(ti == 7 ) {
+                    if(ti == 7) {
                         var m = $(this).parent('#seven').siblings('.dialog')
                          m.addClass('show');
                          $('.assign').click(function(){

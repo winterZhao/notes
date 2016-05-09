@@ -127,7 +127,7 @@ img{height:100%;}
 /*第四题*/
 .four-title {
     width:65%;
-    margin:24px auto;
+    margin:10% auto 0;
     font-size:16px;
     font-weight:700;
 }
@@ -141,7 +141,7 @@ img{height:100%;}
 .five-title {
     width:67%;
     font-size:16px;
-    margin:17px auto 0;
+    margin:10% auto 0;
     font-weight:700;
 }
 /*第六题*/
@@ -178,64 +178,58 @@ img{height:100%;}
 }
 
 .assess {
-    margin:64px auto 0;
-    width:378px;
-    height:131px;
-    background:url('../img/assess_01.png') no-repeat;
-    background-position-x:0px;
-    background-position-y:20px;
+    margin:48px auto 0;
+    width:80%;
+    height:58px;
+}
+.assess img {
+    width:100%;
 }
 .score {
-    position:absolute;
-    left:50%;
-    top:50%;
-    width:208px;
-    height:200px;
-    margin:-91px 0 0 -104px;
+    width:36%;
+    height:106px;
+    margin:22% 0 0 32%;
     overflow:hidden;
+    background:rgba(0,0,0,0.4);
 }
 .left {
-    width:104px;
+    width:50%;
     height:100%;
-    margin-left:11px;
-    background:url('../img/number_02.png') no-repeat;
-    background-position-x: 20px ;
-    background-position-y:20px ;
+    /*margin-left:20px;*/
 }
-.right {
-    margin-left:0px;
-    background-position-x: 20px ;
+.left img {
+    height:70%;
+    margin-left:5%;
+    margin-top:23%;
 }
+
 .play{
-    margin-top:50%;
-    margin-left:16%;
-    width:299px;
-    height:112px;
-    background:url('../img/again_02.png') no-repeat;
-    background-position-x: 20px;
-    background-position-y: 9px;
+    margin-top: 25px;
+    margin-left:26%;
+    width:60%;
+    height:56px;
+}
+.play img {
+    height:100%;
 }
 .bottom {
-    margin:53px auto;
-    width:100%;
-    height:80px;
+    margin:72px auto;
+    width:88%;
     text-align:center;
 }
 .left-btn{
-    margin-right:10%;
-    width:181px;
-    height:50px;
+    width:39%;
+    height:40px;
     background:#e0c300;
     border:3px solid #ffba00;
-    border-radius:19px;
+    border-radius:13px;
     box-shadow:1px 1px #6e2516;
     color:#e83400;
-    font-size:36px;
-    line-height:44px;
+    font-size:22px;
+    line-height:38px;
 }
 .right-btn{
-    margin-left:0;
-    margin-right:2%;
+    margin-left:20%;
 }
 .dialog{
     display:none;
@@ -276,8 +270,6 @@ img{height:100%;}
     width:80px;
     height:106px;
     background:url('../img/close_04.png') no-repeat;
-    /*background-position-x: -1210px;*/
-    /*background-position-y: -94px;*/
 }
 img.content-pic {
     position:absolute;
