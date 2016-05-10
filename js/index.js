@@ -19,7 +19,7 @@ var Games = {
             var _self = this;
             var timer = setTimeout(function(){
                 _self.bindSlide();
-            },2000);
+            },4000);
             $('.arrow').on('touchend',function(){
                 clearTimeout(timer);
                 _self.bindSlide();
@@ -127,13 +127,14 @@ var Games = {
                 window.open('https://www.baidu.com');
             });
             $('#shuafen').on('touchend',function(){
-                console.log(1);
                 mySwiper.unlockSwipes();
                 mySwiper.slideTo(0, 100, false);
                 mySwiper.lockSwipes();
 
                 _self.totalScore = 0;
-                console.log( _self.totalScore);
+                var timer = setTimeout(function(){
+                    _self.bindSlide();
+                },4000);
             });
             $('#share').on('touchend',function(){
                 $('.dialog').addClass('show');
@@ -141,10 +142,6 @@ var Games = {
                     $('.dialog').removeClass('show');
                 },2000);
             });
-            //$('#dialog').addClass('touchend',function(){
-            //    console.log(1);
-            //    $('.dialog').removeClass('show');
-            //});
         }
     }
 Games.init();
