@@ -22,7 +22,8 @@ img{height:100%;}
 }
 
 .arrow {
-    margin:384px auto;
+    margin:0 auto;
+    margin-top:105%;
     width:85px;
     height:71px;
     background:url('../img/arrow.png') no-repeat;
@@ -31,7 +32,7 @@ img{height:100%;}
     -webkit-animation:my-move 5s infinite;
 }
 @keyframes my-move {
-    
+
 }
 /*题目通用*/
 .title{
