@@ -18,7 +18,7 @@ var Games = {
         init:function(){
             var _self = this;
             $('.arrow').on('touchend',function(){
-                mySwiper.slideNext();
+                _self.bindSlide();
             })
             $('#ceshi .third-list-item').on('touchend',_self.analysis.bind(this));
         },
@@ -28,7 +28,7 @@ var Games = {
             if(_self.ti == 7 ){
                 _self.getCoupon();
             };
-            mySwiper.slideNext();
+            _self.bindSlide();
             _self.cancelBind();
 
         },
@@ -38,7 +38,7 @@ var Games = {
             if(_self.ti == 7 ){
                 _self.getCoupon();
             }
-            mySwiper.slideNext();
+            _self.bindSlide();
             _self.cancelBind();
         },
         cancelBind:function(){
@@ -48,7 +48,14 @@ var Games = {
             $('.next').off('touchend',_self.wrongShow);
             $('.close').off('touchend',_self.wrongShow);
         },
+        //滑到下一屏并取消滑动;
+        bindSlide:function(){
+            mySwiper.unlockSwipes();
+            mySwiper.slideNext();
+            mySwiper.lockSwipes();
+        },
         analysis:function(e){
+            mySwiper.lockSwipes();
             var _self = this,target = $(e.target);
             var userAnswer = target.parents('li.third-list-item').data('answer');
             _self.ti = Number(target.parents('ul.third-list').data('ti'));
@@ -119,11 +126,16 @@ var Games = {
                 console.log(1);
                 mySwiper.unlockSwipes();
                 mySwiper.slideTo(0, 100, false);
+                mySwiper.lockSwipes();
+
                 _self.totalScore = 0;
                 console.log( _self.totalScore);
             });
             $('#share').on('touchend',function(){
-                $('.dialog').addClass('show')
+                $('.dialog').addClass('show');
+            });
+            $('#dialog').addClass('touchend',function(){
+                $('.dialog').removeClass('show');
             })
         }
     }
