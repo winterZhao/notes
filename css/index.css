@@ -24,23 +24,23 @@ img{height:100%;}
 .arrow {
     margin:0 auto;
     margin-top:451px;
-    width:85px;
+    width:140px;
     height:71px;
-    background:url('../img/arrow.png') no-repeat;
+    background:url('../img/start.png') no-repeat;
     background-size:contain;
-    -webkit-animation:my-move 2s ease infinite;
-    animation:my-move 2s ease infinite;
+    /*-webkit-animation:my-move 2s ease infinite;*/
+    /*animation:my-move 2s ease infinite;*/
 }
-@keyframes my-move {
-    0%   {margin-top:451px;}
-    50%  {margin-top:471px;}
-    100% {margin-top:451px;}
-}
-@-webkit-keyframes my-move {
-    0%   {margin-top:451px;}
-    50%  {margin-top:471px;}
-    100% {margin-top:451px;}
-}
+/*@keyframes my-move {*/
+    /*0%   {margin-top:451px;}*/
+    /*50%  {margin-top:471px;}*/
+    /*100% {margin-top:451px;}*/
+/*}*/
+/*@-webkit-keyframes my-move {*/
+    /*0%   {margin-top:451px;}*/
+    /*50%  {margin-top:471px;}*/
+    /*100% {margin-top:451px;}*/
+/*}*/
 
 /*题目通用*/
 .title{
