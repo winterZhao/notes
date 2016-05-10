@@ -19,7 +19,7 @@ var Games = {
             var _self = this;
             var timer = setTimeout(function(){
                 _self.bindSlide();
-            },4000);
+            },6000);
             $('.arrow').on('touchend',function(){
                 clearTimeout(timer);
                 _self.bindSlide();
@@ -132,9 +132,6 @@ var Games = {
                 mySwiper.lockSwipes();
 
                 _self.totalScore = 0;
-                var timer = setTimeout(function(){
-                    _self.bindSlide();
-                },4000);
             });
             $('#share').on('touchend',function(){
                 $('.dialog').addClass('show');
