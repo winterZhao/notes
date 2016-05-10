@@ -45,7 +45,7 @@ var Games = {
                             //_self.getCoupon();
                         })
                     }
-
+                    mySwiper.slideNext();
                 })
             });
         },
