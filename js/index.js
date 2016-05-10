@@ -115,7 +115,7 @@ var Games = {
 
             $('.assess').html(str1);
             $('.score').html(str2);
-            
+
             $('.play').on('click',function(){
                 window.open('https://www.baidu.com');
             });

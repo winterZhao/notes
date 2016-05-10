@@ -20,6 +20,19 @@ img{height:100%;}
 .bg-size{
     background-size:100% 100%;
 }
+
+.arrow {
+    margin:384px auto;
+    width:85px;
+    height:71px;
+    background:url('../img/arrow.png') no-repeat;
+    background-size:contain;
+    animation:mymove 5s infinite;
+    -webkit-animation:my-move 5s infinite;
+}
+@keyframes my-move {
+    
+}
 /*题目通用*/
 .title{
     margin-top:28px;
@@ -154,7 +167,7 @@ img{height:100%;}
 }
 /*第六题*/
 .six-title {
-    margin-top:25px;
+    margin-top:42px;
 }
 .six-list-height {
     margin:11px auto;
@@ -222,11 +235,13 @@ img{height:100%;}
     height:70%;
 }
 .zero-img{
-    
+    width:53%;
+    height:100%;
+    margin-left:32%;
 }
 .play{
     margin-top: 25px;
-    margin-left:26%;
+    margin-left:30%;
     width:60%;
     height:56px;
 }
@@ -295,9 +310,9 @@ img{height:100%;}
 }
 img.content-pic {
     position:absolute;
-    left:20%;
+    left:27%;
     top:14%;
-    width:50%;
+    width:43%;
     height:114px;
 }
 
