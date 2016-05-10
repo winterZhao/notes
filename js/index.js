@@ -17,10 +17,11 @@ var Games = {
         ti:0,
         init:function(){
             var _self = this;
-            //var timer = setTimeout(function(){
-            //    _self.bindSlide();
-            //},6000);
+            var timer = setTimeout(function(){
+                _self.bindSlide();
+            },5000);
             $('.arrow').on('touchend',function(){
+                window.clearTimeout(timer);
                 _self.bindSlide();
             })
             $('#ceshi .third-list-item').on('touchend',_self.analysis.bind(this));
