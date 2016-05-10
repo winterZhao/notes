@@ -145,6 +145,9 @@ img{height:100%;}
     font-weight:700;
 }
 /*第六题*/
+.six-title {
+    margin-top:25px;
+}
 .six-list-height {
     margin:11px auto;
     height:360px;
