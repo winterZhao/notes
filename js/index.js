@@ -19,7 +19,7 @@ var Games = {
             var _self = this;
             var timer = setTimeout(function(){
                 _self.bindSlide();
-            },5000);
+            },10000);
             $('.arrow').on('touchend',function(){
                 window.clearTimeout(timer);
                 _self.bindSlide();

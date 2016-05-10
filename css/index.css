@@ -334,11 +334,32 @@ img.assign {
 
 }
 
-/*@media screen and (min-width: 350px) {*/
-    /*.score {*/
-        /*margin-top:30%;*/
-    /*}*/
-/*}*/
+@media screen and (max-width: 350px) {
+    .arrow {
+        margin-top:396px;
+    }
+
+    @keyframes my-move {
+        0%   {margin-top:396px;}
+        50%  {margin-top:416px;}
+        100% {margin-top:396px;}
+    }
+    @-webkit-keyframes my-move {
+        0%   {margin-top:396px;}
+        50%  {margin-top:416px;}
+        100% {margin-top:396px;}
+    }
+    .play {
+        margin-left:27%;
+    }
+    .score {
+        padding-left:0;
+        margin:77px 0 0 34%;
+
+    }
+
+
+}
 
 
 .show {
