@@ -88,6 +88,7 @@ var Games = {
             if (score ==  100){
                 str1 ='<img src="img/chihuo4_03.png" alt=""/>';
                 str2 ='<div class="float-left one-img"><img src="img/one_03.png" alt="img"/> </div><div class="float-left one-img"><img src="img/zero_02.png" alt="img"/></div><div class="float-left one-img"><img src="img/zero_02.png" alt="img"/></div>';
+                $('.score').addClass('handred');
             }else  if (score == 90) {
                 str1 = '<img src="img/chihuo3_03.png" alt=""/>';
                 str2 = '<div class="float-left left"> <img src="img/nine_03.png" alt="img"/> </div> <div class="float-left left"> <img src="img/zero_02.png" alt="img"/></div>';
