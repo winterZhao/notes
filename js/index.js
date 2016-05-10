@@ -1,7 +1,5 @@
 'use strict';
-window.onload = function(){
 
-};
 var mySwiper = new Swiper('.swiper-container',{
     width:window.innerWidth,
     height:window.innerHeight,
@@ -19,7 +17,10 @@ var Games = {
         ti:0,
         init:function(){
             var _self = this;
-            $('#ceshi .third-list-item').on('click',_self.analysis.bind(this));
+            $('.arrow').on('touchend',function(){
+                mySwiper.slideNext();
+            })
+            $('#ceshi .third-list-item').on('touchend',_self.analysis.bind(this));
         },
         rightShow:function(){
             var _self = this;
@@ -42,10 +43,10 @@ var Games = {
         },
         cancelBind:function(){
             var _self = this;
-            $('.next').off('click',_self.show);
-            $('.close').off('click',_self.show);
-            $('.next').off('click',_self.wrongShow);
-            $('.close').off('click',_self.wrongShow);
+            $('.next').off('touchend',_self.show);
+            $('.close').off('touchend',_self.show);
+            $('.next').off('touchend',_self.wrongShow);
+            $('.close').off('touchend',_self.wrongShow);
         },
         analysis:function(e){
             var _self = this,target = $(e.target);
@@ -61,12 +62,12 @@ var Games = {
                     _self.totalScore += 10;
                 }
                 $('.right-dialog').addClass('show');
-                $('.next').on('click',_self.rightShow.bind(this));
-                $('.close').on('click',_self.rightShow.bind(this));
+                $('.next').on('touchend',_self.rightShow.bind(this));
+                $('.close').on('touchend',_self.rightShow.bind(this));
             } else {
                 $('.wrong-dialog').addClass('show');
-                $('.next').on('click',_self.wrongShow.bind(this));
-                $('.close').on('click',_self.wrongShow.bind(this));
+                $('.next').on('touchend',_self.wrongShow.bind(this));
+                $('.close').on('touchend',_self.wrongShow.bind(this));
 
             };
         },
@@ -111,7 +112,7 @@ var Games = {
             $('.assess').html(str1);
             $('.score').html(str2);
 
-            $('.play').on('click',function(){
+            $('.play').on('touchend',function(){
                 window.open('https://www.baidu.com');
             });
             $('#shuafen').on('touchend',function(){
@@ -121,7 +122,7 @@ var Games = {
                 _self.totalScore = 0;
                 console.log( _self.totalScore);
             });
-            $('#share').on('click',function(){
+            $('#share').on('touchend',function(){
                 $('.dialog').addClass('show')
             })
         }

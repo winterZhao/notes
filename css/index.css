@@ -28,10 +28,15 @@ img{height:100%;}
     height:71px;
     background:url('../img/arrow.png') no-repeat;
     background-size:contain;
-    animation:mymove 2s infinite;
     -webkit-animation:my-move 2s ease infinite;
+    animation:my-move 2s ease infinite;
 }
 @keyframes my-move {
+    0%   {margin-top:451px;}
+    50%  {margin-top:471px;}
+    100% {margin-top:451px;}
+}
+@-webkit-keyframes my-move {
     0%   {margin-top:451px;}
     50%  {margin-top:471px;}
     100% {margin-top:451px;}
@@ -299,7 +304,6 @@ img{height:100%;}
     margin-top:-146px;
     width:100%;
     height:293px;
-    /*background:url('../img/rightbg_01.png') no-repeat;*/
 }
 .main img {
     width:100%;
@@ -313,13 +317,13 @@ img{height:100%;}
     background:url('../img/close_04.png') no-repeat;
     background-size:contain;
 }
-img.content-pic {
-    position:absolute;
-    left:27%;
-    top:14%;
-    width:43%;
-    height:114px;
-}
+/*img.content-pic {*/
+    /*position:absolute;*/
+    /*left:27%;*/
+    /*top:14%;*/
+    /*width:43%;*/
+    /*height:114px;*/
+/*}*/
 
 img.assign {
     position:absolute;
