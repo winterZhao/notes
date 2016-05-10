@@ -16,47 +16,67 @@ var mySwiper = new Swiper('.swiper-container',{
 var Games = {
         answerNum:[2,2,2,3,4,1,2,2],
         totalScore:0,
-        init:function(){
-            this.judge();
-        },
-        judge:function(){
-            var _self = this;
-            $('#ceshi .third-list-item').each(function(){
-                $(this).click(function(){
-                    var userAnswer = $(this).data('answer');
-                    var ti = Number($(this).parent().data('ti'));
-                    var target = _self.answerNum[ti];
+        ti:0,
+        isRepeatSlide:false,
 
-                    if(userAnswer == target){
-                        if(ti == 6 || ti == 7){
-                            _self.totalScore += 20;
-                        } else {
-                            _self.totalScore += 10;
-                        }
-                    }
-                    if(ti == 7) {
-                        mySwiper.lockSwipes();
-                        if ( userAnswer == target ) {
-                            var m = $(this).parent('#seven').siblings('.right-dialog');
-                            m.addClass('show');
-                        } else {
-                            var n = $(this).parent('#seven').siblings('.wrong-dialog');
-                            n.addClass('show');
-                        }
-                        $('.assign').click(function(){
-                             _self.getCoupon();
-                        });
-                        $('.close').click(function(){
-                            _self.getCoupon();
-                        })
-                    }
-                    mySwiper.slideNext();
-                })
-            });
+        init:function(){
+            var _self = this;
+            $('#ceshi .third-list-item').on('click',_self.analysis.bind(this));
+        },
+        rightShow:function(){
+            console.log(1)
+            var _self = this;
+            $('.right-dialog').removeClass('show');
+            if(_self.ti == 7 ){
+                _self.getCoupon();
+            };
+            mySwiper.slideNext();
+            $('.next').off('click',_self.show);
+            $('.close').off('click',_self.show);
+            $('.next').off('click',_self.wrongShow);
+            $('.close').off('click',_self.wrongShow);
+
+        },
+        wrongShow:function(){
+            console.log(2)
+            var _self = this;
+            $('.wrong-dialog').removeClass('show');
+            if(_self.ti == 7 ){
+                _self.getCoupon();
+            }
+            mySwiper.slideNext();
+            $('.next').off('click',_self.show);
+            $('.close').off('click',_self.show);
+            $('.next').off('click',_self.wrongShow);
+            $('.close').off('click',_self.wrongShow);
+        },
+        analysis:function(e){
+            var _self = this,target = $(e.target);
+            var userAnswer = target.parents('li.third-list-item').data('answer');
+            _self.ti = Number(target.parents('ul.third-list').data('ti'));
+            console.error(_self.ti);
+            var ti = _self.ti;
+            var rightNumber = _self.answerNum[ti];
+
+            if(userAnswer == rightNumber){
+                if(ti == 6 || ti == 7){
+                    _self.totalScore += 20;
+                } else {
+                    _self.totalScore += 10;
+                }
+                $('.right-dialog').addClass('show');
+                $('.next').on('click',_self.rightShow.bind(this));
+                $('.close').on('click',_self.rightShow.bind(this));
+            } else {
+                $('.wrong-dialog').addClass('show');
+                $('.next').on('click',_self.wrongShow.bind(this));
+                $('.close').on('click',_self.wrongShow.bind(this));
+
+            };
         },
         getCoupon:function(){
-            var _self = this,str1,str2;
 
+            var _self = this,str1,str2;
             var score = _self.totalScore;
             if (score ==  100){
                 str1 ='<img src="img/chihuo4_03.png" alt=""/>';
@@ -95,9 +115,7 @@ var Games = {
 
             $('.assess').html(str1);
             $('.score').html(str2);
-            mySwiper.unlockSwipes();
-            mySwiper.slideNext();
-
+            
             $('.play').on('click',function(){
                 window.open('https://www.baidu.com');
             });

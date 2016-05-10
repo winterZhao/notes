@@ -88,6 +88,14 @@ img{height:100%;}
     font-weight:700;
     text-align:center;
 }
+.main .next {
+    position:absolute;
+    left:50%;
+    top:72%;
+    margin :-10px 0 0 -25%;
+    width:50%;
+    height:43px;
+}
 /*第一题*/
 .first-main-pic {
     width:70%;
