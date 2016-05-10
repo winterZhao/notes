@@ -55,6 +55,9 @@ img{height:100%;}
     color:#fff;
     text-align:center;
 }
+.third-per-score {
+
+}
 .third-list {
     margin:20px auto;
     width:80%;
@@ -222,10 +225,10 @@ img{height:100%;}
 }
 .score {
     width:32%;
-    padding-top:6%;
+    /*padding-top:6%;*/
     padding-left:5%;
     height:106px;
-    margin:21% 0 0 32%;
+    margin:92px 0 0 32%;
     overflow:hidden;
 }
 .left {
