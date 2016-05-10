@@ -17,7 +17,11 @@ var Games = {
         ti:0,
         init:function(){
             var _self = this;
+            var timer = setTimeout(function(){
+                _self.bindSlide();
+            },2000);
             $('.arrow').on('touchend',function(){
+                clearTimeout(timer);
                 _self.bindSlide();
             })
             $('#ceshi .third-list-item').on('touchend',_self.analysis.bind(this));
@@ -133,10 +137,14 @@ var Games = {
             });
             $('#share').on('touchend',function(){
                 $('.dialog').addClass('show');
+                setTimeout(function(){
+                    $('.dialog').removeClass('show');
+                },2000);
             });
-            $('#dialog').addClass('touchend',function(){
-                $('.dialog').removeClass('show');
-            })
+            //$('#dialog').addClass('touchend',function(){
+            //    console.log(1);
+            //    $('.dialog').removeClass('show');
+            //});
         }
     }
 Games.init();
