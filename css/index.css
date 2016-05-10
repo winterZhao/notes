@@ -275,18 +275,19 @@ img{height:100%;}
 }
 .close {
     position:absolute;
-    right:0;
-    top:-57px;
-    width:80px;
-    height:106px;
+    right:16px;
+    top:-26px;
+    width:55px;
+    height:52px;
     background:url('../img/close_04.png') no-repeat;
+    background-size:contain;
 }
 img.content-pic {
     position:absolute;
     left:20%;
     top:14%;
     width:50%;
-    height:147px;
+    height:114px;
 }
 
 img.assign {
