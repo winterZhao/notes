@@ -40,7 +40,7 @@ var Games = {
             var _self = this;
             $('.wrong-dialog').removeClass('show');
             if(_self.ti == 7 ){
-                //_self.getCoupon();
+                _self.getCoupon();
             }
             _self.bindSlide();
             _self.cancelBind();

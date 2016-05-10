@@ -218,13 +218,11 @@ img{height:100%;}
 .assess {
     margin:48px auto 0;
     width:80%;
-    height:83px;
-    background:url('../img/chihuo.png') no-repeat;
-    background-position-x: 20px;
+    height:58px;
 }
-/*.assess img {*/
-    /*width:100%;*/
-/*}*/
+.assess img {
+    width:100%;
+}
 .score {
     width:32%;
     /*padding-top:6%;*/
