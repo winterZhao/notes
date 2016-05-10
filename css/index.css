@@ -23,17 +23,20 @@ img{height:100%;}
 
 .arrow {
     margin:0 auto;
-    margin-top:105%;
+    margin-top:451px;
     width:85px;
     height:71px;
     background:url('../img/arrow.png') no-repeat;
     background-size:contain;
-    animation:mymove 5s infinite;
-    -webkit-animation:my-move 5s infinite;
+    animation:mymove 2s infinite;
+    -webkit-animation:my-move 2s ease infinite;
 }
 @keyframes my-move {
-
+    0%   {margin-top:451px;}
+    50%  {margin-top:471px;}
+    100% {margin-top:451px;}
 }
+
 /*题目通用*/
 .title{
     margin-top:28px;
