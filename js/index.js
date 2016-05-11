@@ -135,16 +135,15 @@ var Games = {
             });
             $('#share').on('touchend',function(){
                 $('.dialog').addClass('show');
-                //setTimeout(function(){
-                //    $('.dialog').removeClass('show');
-                //},2000);
-            });
+                _self.shareToFriends('hello world','乖孩子',null,'https://winterzhao.github.io/notes');
 
-            _self.shareToFriends('hello world','乖孩子','https://github.com/winterZhao/notes/blob/gh-pages/img/yuansu.png','https://winterzhao.github.io/notes')
+                setTimeout(function(){
+                    $('.dialog').removeClass('show');
+                },2000);
+            });
 
         },
         shareToFriends:function(shareTitle,shareDesc,shareImg,url){
-            alert(2)
                 function share(){
                     WeixinJSBridge.on('menu:share:appmessage',function(argv){
                         WeixinJSBridge.invoke('sendAppMessage',{
