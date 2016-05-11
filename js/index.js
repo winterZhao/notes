@@ -135,11 +135,53 @@ var Games = {
             });
             $('#share').on('touchend',function(){
                 $('.dialog').addClass('show');
+                //_self.shareToFriends('hello world','乖孩子',null,'https://winterzhao.github.io/notes');
+
+                weiXin.weixinShare('hello world','乖孩子','https://github.com/winterZhao/notes/blob/gh-pages/img/logo.png');
+
                 setTimeout(function(){
                     $('.dialog').removeClass('show');
                 },2000);
             });
-        },
 
+        },
+        shareToFriends:function(shareTitle,shareDesc,shareImg,url){
+                function share(){
+                    WeixinJSBridge.on('menu:share:appmessage',function(argv){
+                        WeixinJSBridge.invoke('sendAppMessage',{
+                            "img_width":"120",
+                            "img_height":"120",
+                            "title":shareTitle,
+                            "link":url,
+                            "desc":shareDesc,
+                            "img_url":shareImg
+                        },function(res){
+                            $('.dialog').removeClass('show');
+                        });
+                    });
+                    WeixinJSBridge.on('menu:share:timeline',function(argv){
+                        WeixinJSBridge.invoke('shareTimeline',{
+                            "img_width":"120",
+                            "img_height":"120",
+                            "title":shareTitle,
+                            "link":url,
+                            "desc":shareDesc,
+                            "img_url":shareImg
+                        },function(res){
+                            $('.dialog').removeClass('show');
+                        });
+                    });
+                    WeixinJSBridge.on('menu:share:weibo',function(argv){
+                        WeixinJSBridge.invoke('shareWeibo',{
+                            "title":shareTitle,
+                            "link":url,
+                        },function(res){
+                            $('.dialog').removeClass('show');
+                        });
+                    });
+                }
+                share();
+
+        }
     }
 Games.init();
