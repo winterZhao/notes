@@ -218,7 +218,7 @@ img{height:100%;}
 .assess {
     margin:46px auto 0;
     width:80%;
-    height:62px;
+    height:65px;
     background:url('../img/chihuo.png') no-repeat;
     background-position-x: 12px;
     background-position-y: -26px;
@@ -381,13 +381,33 @@ img.assign {
 
 }
 
-@media screen and (max-width: 350px) {
-   .title {
-       margin-top:33px;
-   }
+@media screen and (min-width: 414px) {
+    .title {
+        margin-top:33px;
+    }
+    .arrow {
+        margin-top:656px;
+    }
+
+    @keyframes my-move {
+        0%   {margin-top:656px;}
+        50%  {margin-top:676px;}
+        100% {margin-top:656px;}
+    }
+    @-webkit-keyframes my-move {
+        0%   {margin-top:656px;}
+        50%  {margin-top:676px;}
+        100% {margin-top:656px;}
+    }
+    .play {
+        margin-left:27%;
+    }
+    .score {
+        padding-left:0;
+        margin:77px 0 0 34%;
+
+    }
 }
-
-
 
 .show {
     display:block;
