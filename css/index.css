@@ -220,23 +220,23 @@ img{height:100%;}
     width:80%;
     height:62px;
     background:url('../img/chihuo.png') no-repeat;
-    background-position-x: 7px;
+    background-position-x: 12px;
     background-position-y: -26px;
 }
 .chihuo1 {
-    background-position-x: -1419px;
+    background-position-x: -1414px;
 }
 .chihuo2 {
-    background-position-x: -1141px;
+    background-position-x: -1136px;
 }
 .chihuo4 {
-    background-position-x: -275px;
+    background-position-x: -270px;
 }
 .chihuo6 {
-    background-position-x: -569px;
+    background-position-x: -564px;
 }
 .chihuo5 {
-    background-position-x: -856px;
+    background-position-x: -851px;
 }
 
 
@@ -380,6 +380,13 @@ img.assign {
 
 
 }
+
+@media screen and (max-width: 350px) {
+   .title {
+       margin-top:33px;
+   }
+}
+
 
 
 .show {
