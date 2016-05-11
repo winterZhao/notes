@@ -1,0 +1,439 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing:border-box;
+    font-family:'微软雅黑';
+}
+.float-left{
+    float:left;
+}
+.cur{
+    cursor:pointer;
+}
+img{height:100%;}
+.swiper-wrapper {
+}
+.home{background:url('../img/home_02.jpg') no-repeat;  }
+.question {
+    background:url('../img/tibg_02.jpg') no-repeat;
+}
+.bg-size{
+    background-size:100% 100%;
+}
+.yuansu {
+    position:absolute;
+    left:0;
+    top:60px;
+    width:100px;
+    height:150px;
+    background:url('../img/yuansu.png') no-repeat;
+    background-size:contain;
+    transform-origin:top;
+    -webkit-transform-origin:top;
+    -webkit-animation:my-rotate 2s ease infinite;
+    animation:my-rotate 2s ease infinite;
+}
+@keyframes my-rotate {
+    0%   {transform:rotate(30deg);}
+    50%  {transform:rotate(-30deg);}
+    100% {transform:rotate(30deg);}
+}
+@-webkit-keyframes my-rotate {
+    0%   {-webkit-transform:rotate(30deg);}
+    50%  {-webkit-transform:rotate(-30deg);}
+    100% {-webkit-transform:rotate(30deg);}
+}
+.arrow {
+    margin:0 auto;
+    margin-top:451px;
+    width:140px;
+    height:71px;
+    background:url('../img/start.png') no-repeat;
+    background-size:contain;
+    -webkit-animation:my-move 2s ease infinite;
+    animation:my-move 2s ease infinite;
+}
+@keyframes my-move {
+    0%   {margin-top:451px;}
+    50%  {margin-top:471px;}
+    100% {margin-top:451px;}
+}
+@-webkit-keyframes my-move {
+    0%   {margin-top:451px;}
+    50%  {margin-top:471px;}
+    100% {margin-top:451px;}
+}
+
+/*题目通用*/
+.title{
+    margin-top:30px;
+    font-size:28px;
+    color:#ff9000;
+    text-align:center;
+}
+.per-score {
+    margin-top:19px;
+    font-size:16px;
+    color:#fff;
+    text-align:center;
+}
+.third-per-score {
+
+}
+.third-list {
+    margin:20px auto;
+    width:80%;
+    height:291px;
+    display:flex;
+    flex-flow:column;
+    justify-content:space-between;
+}
+.third-list-item{
+    height:77px;
+    width:100%;
+    list-style:none;
+    background:white;
+    border:3px solid #ffba00;
+    border-radius:5px;
+    box-shadow:1px 1px #6e2516;
+    display:flex;
+    flex-flow:row;
+}
+.third-ti-option {
+    flex:5;
+    height:100%;
+    background:#ef5232;
+    border:2px solid #ffba00;
+    border-radius:5px;
+}
+.third-ti-option-inner {
+    width:100%;
+    height:100%;
+}
+.third-ti-option-inner img{
+    display:block;
+    margin: 13px auto;
+    width:80%;
+    height:47px;
+}
+.third-ti-answer {
+    flex:7;
+    height:100%;
+    padding-left:5%;
+    padding-top:1%;
+}
+.third-ti-answer-inner {
+    width:100%;
+    height:100%;
+}
+.option-text{
+    font-size:14px;
+    color:#ef5232;
+    padding-left:5%;
+    padding-right:5%;
+    line-height:5em;
+    font-weight:700;
+    text-align:center;
+}
+.main .next {
+    position:absolute;
+    left:50%;
+    top:72%;
+    margin :-10px 0 0 -25%;
+    width:50%;
+    height:54px;
+}
+/*第一题*/
+.first-main-pic {
+    width:70%;
+    margin:0 auto;
+    height:24%;
+}
+.first-main-pic img{
+    width:100%;height:146px;
+}
+.swiper-slide .first-list {
+    height: 46%;
+}
+.first-item {
+    height:51px;
+}
+.third-ti-option-inner .first-face{
+   margin:2px auto;
+   height:36px;
+}
+.first-pic {
+    margin-top:5px;
+    width:69%;
+    height:80%;
+}
+/*第三题*/
+.ti2-fruit {
+    margin-top:1%;
+    height:89%;
+}
+.lanmei-pic{
+    background-position-y: -74px;
+}
+.pipa-pic{
+    background-position-y: -141px;
+}
+
+/*第四题*/
+.four-title {
+    width:65%;
+    margin:29px auto 0;
+    font-size:16px;
+    font-weight:700;
+}
+.four-option-text {
+    font-size:22px;
+    line-height:3em;
+}
+
+
+/*第五题*/
+.five-title {
+    width:67%;
+    font-size:16px;
+    margin:27px auto 0;
+    font-weight:700;
+}
+/*第六题*/
+.six-title {
+    margin-top:42px;
+}
+.six-list-height {
+    margin:11px auto;
+    height:360px;
+}
+.baxian {
+    font-size:16px;
+    line-height:4em;
+}
+.four-meal {
+    margin-top:25px;
+}
+/*第七题*/
+.seven-title {
+    width:42%;
+}
+.store-pic {
+    height:95%;
+}
+.mmdou-pic {
+    margin-top:10px;
+    margin-left:10px;
+    width:40%;
+    height:60%;
+}
+/*第八题*/
+.num {
+    font-size:16px;
+    line-height:4em;
+}
+.result {
+    width:100%;
+    display:none;
+    background:url('../img/final_02.png') no-repeat;
+    /*background-position-y: -45px;*/
+    background-size:100% 100%;
+}
+
+.assess {
+    margin:46px auto 0;
+    width:80%;
+    height:65px;
+    background:url('../img/chihuo.png') no-repeat;
+    background-position-x: 17px;
+    background-position-y: -26px;
+}
+.chihuo1 {
+    background-position-x: -1409px;
+}
+.chihuo2 {
+    background-position-x: -1131px;
+}
+.chihuo4 {
+    background-position-x: -265px;
+}
+.chihuo6 {
+    background-position-x: -559px;
+}
+.chihuo5 {
+    background-position-x: -845px;
+}
+
+
+/*.assess img {*/
+    /*width:100%;*/
+/*}*/
+.score {
+    width:32%;
+    /*padding-top:6%;*/
+    padding-left:5%;
+    height:106px;
+    margin:63px 0 0 32%;
+    overflow:hidden;
+}
+.handred {
+    margin-top:80px;
+}
+.left {
+    width:50%;
+    height:100%;
+    /*margin-left:20px;*/
+}
+.left img {
+    height:70%;
+}
+.one-img {
+    margin:0 0 0 2%;
+    height:65%
+}
+.one-img img {
+    height:62%;
+}
+.zero-img{
+    width:53%;
+    height:100%;
+    margin-top:-14px;
+    margin-left:19%;
+}
+.zero-img img{
+    height:80%;
+}
+.play{
+    margin-top: 20px;
+    margin-left:30%;
+    width:60%;
+    height:56px;
+}
+.play img {
+    height:100%;
+}
+.bottom {
+    margin:102px auto;
+    width:88%;
+    text-align:center;
+}
+.left-btn{
+    width:39%;
+    height:40px;
+    background:#e0c300;
+    border:3px solid #ffba00;
+    border-radius:13px;
+    box-shadow:1px 1px #6e2516;
+    color:#e83400;
+    font-size:22px;
+    line-height:38px;
+}
+.right-btn{
+    margin-left:20%;
+}
+.dialog{
+    display:none;
+    position:absolute;
+    left:0;
+    top:0;
+    width:100%;
+    height:100%;
+    background:rgba(0,0,0,0.5);
+}
+.share {
+    position:absolute;
+    right:7%;
+    top:5%;
+    width:225px;
+    height:144px;
+}
+.share img{
+    width:100%;
+}
+
+/*彈窗是否提交*/
+.main {
+    position:absolute;
+    top:50%;
+    margin-top:-146px;
+    width:100%;
+    height:293px;
+}
+.main img {
+    width:100%;
+}
+.close {
+    position:absolute;
+    right:16px;
+    top:-26px;
+    width:55px;
+    height:52px;
+    background:url('../img/close_04.png') no-repeat;
+    background-size:contain;
+}
+
+img.assign {
+    position:absolute;
+    left:50%;
+    top:50%;
+    margin:61px 0 0 -20%;
+    width:40%;
+    height:45px;
+
+}
+
+@media screen and (max-width: 350px) {
+    .arrow {
+        margin-top:396px;
+    }
+    @keyframes my-move {
+        0%   {margin-top:396px;}
+        50%  {margin-top:416px;}
+        100% {margin-top:396px;}
+    }
+    @-webkit-keyframes my-move {
+        0%   {margin-top:396px;}
+        50%  {margin-top:416px;}
+        100% {margin-top:396px;}
+    }
+    .play {
+        margin-left:27%;
+    }
+
+}
+
+@media screen and (min-width: 414px) {
+    .title {
+        margin-top:33px;
+    }
+    .arrow {
+        margin-top:656px;
+    }
+
+    @keyframes my-move {
+        0%   {margin-top:656px;}
+        50%  {margin-top:676px;}
+        100% {margin-top:656px;}
+    }
+    @-webkit-keyframes my-move {
+        0%   {margin-top:656px;}
+        50%  {margin-top:676px;}
+        100% {margin-top:656px;}
+    }
+    .play {
+        margin-left:27%;
+    }
+    .score {
+        padding-left:0;
+        margin:117px 0 0 34%;
+
+    }
+}
+
+.show {
+    display:block;
+}
+
+.red {
+    color:black;
+}
