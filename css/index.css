@@ -277,7 +277,7 @@ img{height:100%;}
     overflow:hidden;
 }
 .handred {
-    margin-top:120px;
+    margin-top:80px;
 }
 .left {
     width:50%;
@@ -383,7 +383,6 @@ img.assign {
     .arrow {
         margin-top:396px;
     }
-
     @keyframes my-move {
         0%   {margin-top:396px;}
         50%  {margin-top:416px;}
@@ -399,7 +398,7 @@ img.assign {
     }
     .score {
         padding-left:0;
-        margin:77px 0 0 34%;
+        margin:37px 0 0 34%;
 
     }
 
@@ -429,7 +428,7 @@ img.assign {
     }
     .score {
         padding-left:0;
-        margin:77px 0 0 34%;
+        margin:117px 0 0 34%;
 
     }
 }
