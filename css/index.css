@@ -216,13 +216,33 @@ img{height:100%;}
 }
 
 .assess {
-    margin:48px auto 0;
+    margin:43px auto 0;
     width:80%;
-    height:58px;
+    height:62px;
+    background:url('../img/chihuo.png') no-repeat;
+    background-position-x: 0px;
+    background-position-y: -18px;
 }
-.assess img {
-    width:100%;
+.chihuo1 {
+    background-position-x: -1403px;
 }
+.chihuo2 {
+    background-position-x: -1104px;
+}
+.chihuo4 {
+    background-position-x: -282px;
+}
+.chihuo6 {
+    background-position-x: -579px;
+}
+.chihuo5 {
+    background-position-x: -861px;
+}
+
+
+/*.assess img {*/
+    /*width:100%;*/
+/*}*/
 .score {
     width:32%;
     /*padding-top:6%;*/
