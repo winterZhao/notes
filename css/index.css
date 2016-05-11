@@ -235,8 +235,8 @@ img{height:100%;}
 .result {
     width:100%;
     display:none;
-    background:url('../img/final_03.png') no-repeat;
-    background-position-y: -45px;
+    background:url('../img/final_02.png') no-repeat;
+    /*background-position-y: -45px;*/
     background-size:100% auto;
 }
 
