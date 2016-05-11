@@ -144,6 +144,7 @@ var Games = {
 
         },
         shareToFriends:function(shareTitle,shareDesc,shareImg,url){
+            alert(2)
                 function share(){
                     WeixinJSBridge.on('menu:share:appmessage',function(argv){
                         WeixinJSBridge.invoke('sendAppMessage',{

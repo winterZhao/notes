@@ -22,8 +22,8 @@ img{height:100%;}
 }
 .yuansu {
     position:absolute;
-    left:20px;
-    top:20%;
+    left:0;
+    top:60px;
     width:100px;
     height:150px;
     background:url('../img/yuansu.png') no-repeat;
