@@ -117,7 +117,7 @@ var Games = {
                 str2 = '<div class="float-left left"> <img src="img/one_03.png" alt="img"/> </div> <div class="float-left left"> <img src="img/zero_02.png" alt="img"/></div>';
                 $('.assess').addClass('chihuo1');
             } else if(score == 0){
-                str2 = '<div class="float-left left"> <img src="img/one_03.png" alt="img"/> </div> <div class="float-left left"> <img src="img/zero_02.png" alt="img"/></div>';
+                str2 = '<div class="zero-img"><img src="img/zero_02.png" alt="img"/></div>';
                 $('.assess').addClass('chihuo1');
             }
 
