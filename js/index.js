@@ -83,7 +83,7 @@ var Games = {
             };
         },
         getCoupon:function(){
-            var _self = this,str1,str2;
+            var _self = this,str2;
             var score = _self.totalScore;
             if (score ==  100){
                 str2 ='<div class="float-left one-img"><img src="img/one_03.png" alt="img"/> </div><div class="float-left one-img"><img src="img/zero_02.png" alt="img"/></div><div class="float-left one-img"><img src="img/zero_02.png" alt="img"/></div>';
@@ -135,10 +135,51 @@ var Games = {
             });
             $('#share').on('touchend',function(){
                 $('.dialog').addClass('show');
-                setTimeout(function(){
-                    $('.dialog').removeClass('show');
-                },2000);
+                //setTimeout(function(){
+                //    $('.dialog').removeClass('show');
+                //},2000);
             });
+
+            _self.shareToFriends('hello world','乖孩子','https://github.com/winterZhao/notes/blob/gh-pages/img/yuansu.png','https://winterzhao.github.io/notes')
+
+        },
+        shareToFriends:function(shareTitle,shareDesc,shareImg,url){
+                function share(){
+                    WeixinJSBridge.on('menu:share:appmessage',function(argv){
+                        WeixinJSBridge.invoke('sendAppMessage',{
+                            "img_width":"120",
+                            "img_height":"120",
+                            "title":shareTitle,
+                            "link":url,
+                            "desc":shareDesc,
+                            "img_url":shareImg
+                        },function(res){
+                            $('.dialog').removeClass('show');
+                        });
+                    });
+                    WeixinJSBridge.on('menu:share:timeline',function(argv){
+                        WeixinJSBridge.invoke('shareTimeline',{
+                            "img_width":"120",
+                            "img_height":"120",
+                            "title":shareTitle,
+                            "link":url,
+                            "desc":shareDesc,
+                            "img_url":shareImg
+                        },function(res){
+                            $('.dialog').removeClass('show');
+                        });
+                    });
+                    WeixinJSBridge.on('menu:share:weibo',function(argv){
+                        WeixinJSBridge.invoke('shareWeibo',{
+                            "title":shareTitle,
+                            "link":url,
+                        },function(res){
+                            $('.dialog').removeClass('show');
+                        });
+                    });
+                }
+                share();
+
         }
     }
 Games.init();
