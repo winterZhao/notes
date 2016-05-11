@@ -44,7 +44,7 @@ img{height:100%;}
 
 /*题目通用*/
 .title{
-    margin-top:28px;
+    margin-top:30px;
     font-size:28px;
     color:#ff9000;
     text-align:center;
@@ -174,7 +174,7 @@ img{height:100%;}
 .five-title {
     width:67%;
     font-size:16px;
-    margin:24px auto 0;
+    margin:27px auto 0;
     font-weight:700;
 }
 /*第六题*/
@@ -188,6 +188,9 @@ img{height:100%;}
 .baxian {
     font-size:16px;
     line-height:4em;
+}
+.four-meal {
+    margin-top:25px;
 }
 /*第七题*/
 .seven-title {
@@ -220,23 +223,23 @@ img{height:100%;}
     width:80%;
     height:65px;
     background:url('../img/chihuo.png') no-repeat;
-    background-position-x: 12px;
+    background-position-x: 17px;
     background-position-y: -26px;
 }
 .chihuo1 {
-    background-position-x: -1414px;
+    background-position-x: -1409px;
 }
 .chihuo2 {
-    background-position-x: -1136px;
+    background-position-x: -1131px;
 }
 .chihuo4 {
-    background-position-x: -270px;
+    background-position-x: -265px;
 }
 .chihuo6 {
-    background-position-x: -564px;
+    background-position-x: -559px;
 }
 .chihuo5 {
-    background-position-x: -851px;
+    background-position-x: -845px;
 }
 
 
