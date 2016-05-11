@@ -135,7 +135,9 @@ var Games = {
             });
             $('#share').on('touchend',function(){
                 $('.dialog').addClass('show');
-                _self.shareToFriends('hello world','乖孩子',null,'https://winterzhao.github.io/notes');
+                //_self.shareToFriends('hello world','乖孩子',null,'https://winterzhao.github.io/notes');
+
+                weiXin.weixinShare('hello');
 
                 setTimeout(function(){
                     $('.dialog').removeClass('show');
