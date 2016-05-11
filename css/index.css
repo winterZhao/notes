@@ -237,7 +237,7 @@ img{height:100%;}
     display:none;
     background:url('../img/final_02.png') no-repeat;
     /*background-position-y: -45px;*/
-    background-size:100% auto;
+    background-size:100% 100%;
 }
 
 .assess {
@@ -299,6 +299,9 @@ img{height:100%;}
     height:100%;
     margin-top:-14px;
     margin-left:19%;
+}
+.zero-img img{
+    height:80%;
 }
 .play{
     margin-top: 20px;
