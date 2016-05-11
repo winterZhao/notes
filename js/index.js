@@ -86,53 +86,41 @@ var Games = {
             var _self = this,str1,str2;
             var score = _self.totalScore;
             if (score ==  100){
-                //str1 ='<img src="img/chihuo4_03.png" alt=""/>';
                 str2 ='<div class="float-left one-img"><img src="img/one_03.png" alt="img"/> </div><div class="float-left one-img"><img src="img/zero_02.png" alt="img"/></div><div class="float-left one-img"><img src="img/zero_02.png" alt="img"/></div>';
                 $('.score').addClass('handred');
                 $('.assess').addClass('chihuo4');
             }else  if (score == 90) {
-                //str1 = '<img src="img/chihuo3_03.png" alt=""/>';
                 str2 = '<div class="float-left left"> <img src="img/nine_03.png" alt="img"/> </div> <div class="float-left left"> <img src="img/zero_02.png" alt="img"/></div>';
 
             } else if (score == 80 ) {
-                //str1 = '<img src="img/chihuo6_02.png" alt=""/>';
                 str2 = '<div class="float-left left"> <img src="img/eight_03.png" alt="img"/> </div> <div class="float-left left"> <img src="img/zero_02.png" alt="img"/></div>';
                 $('.assess').addClass('chihuo6');
             } else if (score == 70) {
-                //str1 = '<img src="img/chihuo5_02.png" alt=""/>';
                 str2 = '<div class="float-left left"> <img src="img/seven_03.png" alt="img"/> </div> <div class="float-left left"> <img src="img/zero_02.png" alt="img"/></div>';
                 $('.assess').addClass('chihuo5');
             } else if (score == 60) {
-                //str1 = '<img src="img/chihuo5_02.png" alt=""/>';
                 str2 = '<div class="float-left left"> <img src="img/six_03.png" alt="img"/> </div> <div class="float-left left"> <img src="img/zero_02.png" alt="img"/></div>';
                 $('.assess').addClass('chihuo5');
             } else if (score == 50 ){
-                //str1 = '<img src="img/chihuo2_02.png" alt=""/>';
                 str2 = '<div class="float-left left"> <img src="img/five_03.png" alt="img"/> </div> <div class="float-left left"> <img src="img/zero_02.png" alt="img"/></div>'
                 $('.assess').addClass('chihuo2');
             } else if (score == 40) {
-                //str1 = '<img src="img/chihuo2_02.png" alt=""/>';
                 str2 = '<div class="float-left left"> <img src="img/four_03.png" alt="img"/> </div> <div class="float-left left"> <img src="img/zero_02.png" alt="img"/></div>';
                 $('.assess').addClass('chihuo2');
             } else if (score == 30) {
-                //str1 = '<img src="img/chihuo1_01.png" alt=""/>';
                 str2 = '<div class="float-left left"> <img src="img/three_03.png" alt="img"/> </div> <div class="float-left left"> <img src="img/zero_02.png" alt="img"/></div>';
                 $('.assess').addClass('chihuo2');
             } else if (score == 20) {
-                //str1 = '<img src="img/chihuo1_01.png" alt=""/>';
                 str2 = '<div class="float-left left"> <img src="img/two_03.png" alt="img"/> </div> <div class="float-left left"> <img src="img/zero_02.png" alt="img"/></div>';
                 $('.assess').addClass('chihuo1');
             } else if (score == 10) {
-                //str1 = '<img src="img/chihuo1_01.png" alt=""/>';
                 str2 = '<div class="float-left left"> <img src="img/one_03.png" alt="img"/> </div> <div class="float-left left"> <img src="img/zero_02.png" alt="img"/></div>';
                 $('.assess').addClass('chihuo1');
             } else if(score == 0){
-                //str1 = '<img src="img/chihuo1_01.png alt=""/>';
                 str2 = '<div class="float-left left"> <img src="img/one_03.png" alt="img"/> </div> <div class="float-left left"> <img src="img/zero_02.png" alt="img"/></div>';
                 $('.assess').addClass('chihuo1');
             }
 
-            //$('.assess').html(str1);
             $('.score').html(str2);
 
             $('.play').on('touchend',function(){
