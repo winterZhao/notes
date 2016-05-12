@@ -23,6 +23,10 @@
     </style>
 </head>;
 <body>
+
+<p>em主要是靠font-size作为子元素与父元素的沟通桥梁，如果子元素设置了font-size，则子元素高度宽度等的em的参照物为子元素的font-size;如果没
+有设置则为父元素的font-size</p>
+<p>rem的参照物恒为父元素的font-size</p>
 <div id="wrap">
     <h1>hello world</h1>
     <p>hello worldhello worldhello worldhello worldhello worldhello worldhello worldhello worldhello worldhello worldhello worldhello worldhello worldhello  worldhello worldhello world</p>
