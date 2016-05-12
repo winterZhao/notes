@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    
+    <style>
+        html{font-size:100%;}
+        body{font-size:1em;}
+        #wrap{float:left;width:10em;background:yellowgreen;}
+        #wrap h1{font-size:1.125em;line-height:1.778em;}
+        #wrap p{font-size:0.75em;line-height:1.5em;}
+
+        #wrap1{margin-left:100px;float:left;width:160px;background:yellowgreen;}
+        #wrap1 h1{font-size:18px;line-height:32px;}
+        #wrap1 p{font-size:12px;line-height:18px;}
+
+        #wrap2{margin-left:100px;float:left;width:10rem;background:yellowgreen;}
+        #wrap2 h1{font-size:1.125rem;line-height:2rem;}
+        #wrap2 p{font-size:0.75rem;line-height:1.125rem;}
+
+
+    </style>
+</head>;
+<body>
+<div id="wrap">
+    <h1>hello world</h1>
+    <p>hello worldhello worldhello worldhello worldhello worldhello worldhello worldhello worldhello worldhello worldhello worldhello worldhello worldhello  worldhello worldhello world</p>
+</div>
+
+<div id="wrap1">
+    <h1>hello world</h1>
+    <p>hello worldhello worldhello worldhello worldhello worldhello worldhello worldhello worldhello worldhello worldhello worldhello worldhello worldhello worldhello worldhello world</p>
+</div>
+
+<div id="wrap2">
+    <h1>hello world</h1>
+    <p>hello worldhello worldhello worldhello worldhello worldhello worldhello worldhello worldhello worldhello worldhello worldhello worldhello worldhello worldhello worldhello world</p>
+</div>
+</body>
+</html>
