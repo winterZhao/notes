@@ -32,6 +32,11 @@
 
 
 ## 远程协作 ##
+
+    git config user.name "用户名"                              //修改用户名
+    git config user.email '邮箱'                               //修改邮箱
+
+
     ssh-keygen -t rsa -C "邮箱名"                               创建SSH key
   
   将获得的public key添加在github账户上：
