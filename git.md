@@ -107,3 +107,29 @@
 
 ### git pull提示no tracking information时 本地分支与远程分支没有建立连接关系 ###
         git branch --set-upstream 分支名 origin/分支名
+
+**需求** : 工作和生活使用两台电脑，现要求在工作电脑上可以使用两个不同的git账号登录不同的仓库。
+**检验标准** : 可以使用两个不同的git账号从两个不同的仓库使用ssh协议克隆代码;
+**方法**: 
+    1. 将通过秘钥生成的文件进行备份;(换秘钥后可能不能使用了)
+    2. 将.ssh文件下的所有都删掉;
+    3. 先生成gitlab公秘钥，一路回车；
+    4. 后生成github公秘钥，起个绝对路径的名字,回车;
+    5. 分别将公钥放到gitlab和github上；
+    6. clone，碰见yes/no选项，打yes;  //此时可以clone了,但选用网上的方法测试"连接服务器"还是拒绝。【push需要添加账号密码】
+    6. 在`.ssh`文件夹下新建config文件,内容如下;
+```javascript
+# gitlab
+Host git.iboxpay.com
+    HostName gitlab.com  //这里填你们公司的git网址即可
+    PreferredAuthentications publickey
+    IdentityFile ~/.ssh/id_rsa_gitlab
+    User zhangjun
+
+# github
+Host github.com
+    HostName github.com
+    PreferredAuthentications publickey
+    IdentityFile ~/.ssh/id_rsa_github
+    User ZJsnowman
+```
