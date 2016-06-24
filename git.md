@@ -123,7 +123,7 @@
     
     6. clone，碰见yes/no选项，打yes;  //此时可以clone了,但选用网上的方法测试"连接服务器"还是拒绝。【push需要添加账号密码】
     
-    6. 在`.ssh`文件夹下新建config文件,内容如下;
+    7. 在`.ssh`文件夹下新建config文件,内容如下;
     
 ```javascript
 # gitlab
