@@ -1,6 +1,6 @@
 <!DOCTYPE html>
-<html>
-<head lang="en" style='font-size:64px;'>
+<html style='font-size:64px;'>
+<head lang="en" >
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1,user-scalable=no">
     <meta content="yes" name="apple-mobile-web-app-capable">
@@ -9,15 +9,24 @@
     <meta content="email=no" name="format-detection">
     <title>iphone5吃货节</title>
     <link href="//cdn.bootcss.com/Swiper/3.3.0/css/swiper.min.css" rel="stylesheet">
-    <style>
-         .bg{width:100%;background-repeat:no-repeat;background-size:100%;}
-         .start {background-image:url('./img/startbg.jpg');}
-         .ti {background-image:url('./img/tibg.jpg');}
-         .final {background-image:url('./img/final.jpg');}
-         .start-btn{margin:23rem auto;width:7rem;height:3.5rem;background:url('./img/start.png') no-repeat
-         ;background-size:100%;}
-         .start-btn img {width:100%;}
-    </style>
+<style>
+ *,*:before,*:after{margin:0;padding:0;}
+ ul,li {list-style:none;}
+ .bg{background-repeat:no-repeat;background-size:100%;text-align:center;}
+ .start {background-image:url('./img/startbg.jpg');}
+ .ti {background-image:url('./img/tibg.jpg');}
+ .final {background-image:url('./img/final.jpg');}
+ .start-btn{margin:6.1875rem auto;width:2.1875rem;height:1.125rem;background:url('./img/start.png') no-repeat;background-size:100%;animation: move 3s infinite;}
+ .start-btn img {width:100%;}
+  @keyframes move {
+      0%,100%{margin-top:6.3875rem;}
+      50% {margin-top:5.9875rem;}
+  }
+  .title {font-size:0.40625rem;margin-top:0.55rem;color:#ff9000;text-align:center;}
+  .score {font-size:0.25rem;color:#fff;margin-top:0.40625rem;}
+  .list {margin:0.9rem auto;width:80%;height:4.5625rem;display:flex;flex-flow:column;justify-content:space-between;align-items: center;}
+  .list li {height:1.1875rem;background-color:#fff;border:3px solid #ffba00;border-radius:5px;display:flex;flex-flow:row;}
+</style>
 </head>
 <body>
 <div class="swiper-container">
@@ -25,7 +34,15 @@
         <div class="swiper-slide bg start">
             <div class="start-btn"></div>
         </div>
-        <div class="swiper-slide bg ti">Slide 2</div>
+        <div class="swiper-slide bg ti">
+            <h3 class="title">又名"甸果"的是</h3>
+            <h6 class="score">本题为10分题</h6>
+            <ul class="list">
+                <li>1</li>
+                <li>2</li>
+                <li>3</li>
+            </ul>
+        </div>
         <div class="swiper-slide bg final"></div>
     </div>
 </div>
@@ -34,9 +51,7 @@
 <script>
     $(function(){
         var mySwiper = new Swiper ('.swiper-container', {
-            direction: 'vertical',
-            width : window.innerWidth,
-            height: window.innerHeight,
+            direction: 'vertical'
         })
     })
 
