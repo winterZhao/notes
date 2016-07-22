@@ -8,6 +8,23 @@
     <meta content="telephone=no" name="format-detection">
     <meta content="email=no" name="format-detection">
     <title>iphone5吃货节</title>
+    <script>
+        var w = screen.width;
+        var h = screen.height;
+        if( w == 320 ){
+            document.querySelector('html').style.fontSize = '64px';
+        } else if ( w == 360) {
+            document.querySelector('html').style.fontSize = '72px';
+        } else if ( w == 375 ) {
+            document.querySelector('html').style.fontSize = '75px';
+        } else if ( w == 411 ) {
+            document.querySelector('html').style.fontSize = '82.2px';
+        } else if ( w == 414 ) {
+            document.querySelector('html').style.fontSize = '82.8px';
+        } else if ( w == 435 ) {
+            document.querySelector('html').style.fontSize = '87px';
+        }
+    </script>
     <link href="//cdn.bootcss.com/Swiper/3.3.0/css/swiper.min.css" rel="stylesheet">
 <style>
  *,*:before,*:after{margin:0;padding:0;}
@@ -24,8 +41,13 @@
   }
   .title {font-size:0.40625rem;margin-top:0.55rem;color:#ff9000;text-align:center;}
   .score {font-size:0.25rem;color:#fff;margin-top:0.40625rem;}
-  .list {margin:0.9rem auto;width:80%;height:4.5625rem;display:flex;flex-flow:column;justify-content:space-between;align-items: center;}
-  .list li {height:1.1875rem;background-color:#fff;border:3px solid #ffba00;border-radius:5px;display:flex;flex-flow:row;}
+  .list {margin:0.2rem auto;width:80%;height:4.5625rem;display:flex;flex-flow:column;justify-content:space-between;align-items: center;}
+  .list li {width:100%;height:1.1875rem;background-color:#fff;border:3px solid #ffba00;border-radius:5px;display:flex;flex-flow:row;}
+  .options-list {flex:5;height:100%;background:url('./img/option.png') no-repeat;background-size:cover;}
+  .options-list-one {background-position-y:-17px;}
+  .options-list-two {background-position-y:-92px;}
+  .options-list-three {background-position-y:-179px;}
+ .options {flex:7;height:100%;}
 </style>
 </head>
 <body>
@@ -38,9 +60,17 @@
             <h3 class="title">又名"甸果"的是</h3>
             <h6 class="score">本题为10分题</h6>
             <ul class="list">
-                <li>1</li>
-                <li>2</li>
-                <li>3</li>
+                <li>
+                    <div class="options-list options-list-one"></div>
+                    <div class="options"></div>
+                </li>
+                <li>
+                    <div class="options-list options-list-two"></div>
+                    <div class="options"></div>
+                </li>
+                <li><div class="options-list options-list-three"></div>
+                    <div class="options"></div>
+                </li>
             </ul>
         </div>
         <div class="swiper-slide bg final"></div>
