@@ -39,15 +39,39 @@
       0%,100%{margin-top:6.3875rem;}
       50% {margin-top:5.9875rem;}
   }
-  .title {font-size:0.40625rem;margin-top:0.55rem;color:#ff9000;text-align:center;}
+  h3 {width:60%;font-size:0.40625rem;margin:0.55rem auto 0;color:#ff9000;text-align:center;}
   .score {font-size:0.25rem;color:#fff;margin-top:0.40625rem;}
-  .list {margin:0.2rem auto;width:80%;height:4.5625rem;display:flex;flex-flow:column;justify-content:space-between;align-items: center;}
-  .list li {width:100%;height:1.1875rem;background-color:#fff;border:3px solid #ffba00;border-radius:5px;display:flex;flex-flow:row;}
-  .options-list {flex:5;height:100%;background:url('./img/option.png') no-repeat;background-size:cover;}
-  .options-list-one {background-position-y:-17px;}
-  .options-list-two {background-position-y:-92px;}
-  .options-list-three {background-position-y:-179px;}
- .options {flex:7;height:100%;}
+  .list {margin:0.4rem auto;width:80%;height:4.5625rem;display:flex;flex-flow:column;justify-content:space-between;align-items: center;}
+  .list li {width:100%;height:1rem;background-color:#fff;border:3px solid #ffba00;border-radius:5px;display:flex;flex-flow:row;}
+  .options-left {flex:5;height:100%;background-color:#ef5232;}
+  .options-left img {width:80%;}
+  .options-right {flex:7;height:100%;background-color:#fff;display:inline-flex;}
+  .options-right span {flex:4;line-height:1rem;font-size:0.21875rem;color:#ef5232;font-weight:700;}
+  .options-right img {flex:7;height:100%;}
+  .ti3  h3{font-size:0.22625rem;line-height:0.3rem;}
+  .ti3 span {font-size:0.34375rem;}
+  .ti4 h3 {font-size:0.22325rem;line-height:0.3rem;}
+  .ti5 h3 {font-size:0.29625rem;line-height:0.3rem;}
+  .four-list {height:4.9625rem;}
+  .ti6 h3 {font-size:0.30625rem;line-height:0.3rem;}
+  .ti6 .mm {width:40%;}
+  .ti8 h3 {font-size:0.35375rem;}
+  .ti1 h3 {font-size:0.4375rem;}
+  .ti1 .picture {margin:0.2rem auto 0;width:70%;height:2.28125rem;}
+  .ti1 .picture img {width:100%;}
+  .ti1 .options-right img {width:100%;height:100%;}
+  .ti1 .list {height:4.0625rem;margin-top:0.06rem;}
+  .ti1 .list li {height:0.7rem;}
+  .ti1 .list .options {display:inline-flex;flex-flow:row nowrap;justify-content:center;align-items:center;}
+  .ti1 .list .options img {height:100%;}
+  .ti1 .list .options .and2{height:80%;}
+    @media (max-height:480px){
+        .ti1 .list {height:2.9625rem;margin-top:0.06rem;}
+        .ti1 .list li {height:0.5rem;}
+        .ti1 .list .options {display:inline-flex;flex-flow:row nowrap;justify-content:center;align-items:center;}
+        .ti1 .list .options img {height:100%;}
+        .ti1 .list .options .and2{height:80%;}
+    }
 </style>
 </head>
 <body>
@@ -56,20 +80,296 @@
         <div class="swiper-slide bg start">
             <div class="start-btn"></div>
         </div>
+        <div class="swiper-slide bg ti ti1">
+            <h3>看图猜零食</h3>
+            <h6 class="score">本题为10分题</h6>
+            <div class="picture">
+                <img src="./img/pic_03.png" alt=""/>
+            </div>
+            <ul class="list four-list">
+                <li>
+                    <div class="options-left options">
+                        <img src="./img/aface.png" alt=""/>
+                    </div>
+                    <div class="options-right options">
+                        <img class="and2" src="./img/3and2_02.png" alt=""/>
+                    </div>
+                </li>
+                <li>
+                    <div class="options-left options">
+                        <img src="./img/bface_02.png" alt=""/>
+                    </div>
+                    <div class="options-right options">
+                        <img src="./img/aoliao_03.jpg" alt=""/>
+                    </div>
+                </li>
+                <li>
+                    <div class="options-left options" >
+                        <img src="./img/cface_02.png" alt=""/>
+                    </div>
+                    <div class="options-right options">
+                        <img src="./img/cream_03.jpg" alt=""/>
+                    </div>
+                </li>
+                <li>
+                    <div class="options-left options">
+                        <img src="./img/dface_02.png" alt=""/>
+                    </div>
+                    <div class="options-right options">
+                        <img src="./img/liulian_07.jpg" alt=""/>
+                    </div>
+                </li>
+            </ul>
+        </div>
         <div class="swiper-slide bg ti">
-            <h3 class="title">又名"甸果"的是</h3>
+            <h3>又名"甸果"的是</h3>
             <h6 class="score">本题为10分题</h6>
             <ul class="list">
                 <li>
-                    <div class="options-list options-list-one"></div>
-                    <div class="options"></div>
+                    <div class="options-left">
+                        <img src="./img/aface.png" alt=""/>
+                    </div>
+                    <div class="options-right">
+                        <span>苹果</span>
+                        <img src="./img/apple_01.png" alt=""/>
+                    </div>
                 </li>
                 <li>
-                    <div class="options-list options-list-two"></div>
-                    <div class="options"></div>
+                    <div class="options-left">
+                        <img src="./img/bface_02.png" alt=""/>
+                    </div>
+                    <div class="options-right">
+                        <span>蓝莓</span>
+                        <img src="./img/lanmei.png" alt=""/>
+                    </div>
                 </li>
-                <li><div class="options-list options-list-three"></div>
-                    <div class="options"></div>
+                <li>
+                    <div class="options-left">
+                        <img src="./img/cface_02.png" alt=""/>
+                    </div>
+                    <div class="options-right">
+                        <span>枇杷</span>
+                        <img src="./img/pipa.png" alt=""/>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <div class="swiper-slide bg ti ti3">
+            <h3>四川麻婆豆腐好吃又有名，它的创始人是</h3>
+            <h6 class="score">本题为10分题</h6>
+            <ul class="list">
+                <li>
+                    <div class="options-left">
+                        <img src="./img/aface.png" alt=""/>
+                    </div>
+                    <div class="options-right">
+                        <span>王麻婆</span>
+                    </div>
+                </li>
+                <li>
+                    <div class="options-left">
+                        <img src="./img/bface_02.png" alt=""/>
+                    </div>
+                    <div class="options-right">
+                        <span>陈麻婆</span>
+                    </div>
+                </li>
+                <li>
+                    <div class="options-left">
+                        <img src="./img/cface_02.png" alt=""/>
+                    </div>
+                    <div class="options-right">
+                        <span>李麻婆</span>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <div class="swiper-slide bg ti ti4">
+            <h3>延缓脑神经衰老,增强记忆力,抗癌,减轻眼疲劳的水果是?</h3>
+            <h6 class="score">本题为10分题</h6>
+            <ul class="list">
+                <li>
+                    <div class="options-left">
+                        <img src="./img/aface.png" alt=""/>
+                    </div>
+                    <div class="options-right">
+                        <span>提子</span>
+                        <img src="./img/tizi_08.png" alt=""/>
+                    </div>
+                </li>
+                <li>
+                    <div class="options-left">
+                        <img src="./img/bface_02.png" alt=""/>
+                    </div>
+                    <div class="options-right">
+                        <span>莲雾</span>
+                        <img src="./img/lianwu.png" alt=""/>
+                    </div>
+                </li>
+                <li>
+                    <div class="options-left">
+                        <img src="./img/cface_02.png" alt=""/>
+                    </div>
+                    <div class="options-right">
+                        <span>蓝莓</span>
+                        <img src="./img/lanmei.png" alt=""/>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <div class="swiper-slide bg ti ti5">
+            <h3>以下四道名称属于全素菜的是</h3>
+            <h6 class="score">本题为10分题</h6>
+            <ul class="list four-list">
+                <li>
+                    <div class="options-left">
+                        <img src="./img/aface.png" alt=""/>
+                    </div>
+                    <div class="options-right">
+                        <span>童子敬观音</span>
+                    </div>
+                </li>
+                <li>
+                    <div class="options-left">
+                        <img src="./img/bface_02.png" alt=""/>
+                    </div>
+                    <div class="options-right">
+                        <span>八仙过海闹罗汉</span>
+                    </div>
+                </li>
+                <li>
+                    <div class="options-left">
+                        <img src="./img/cface_02.png" alt=""/>
+                    </div>
+                    <div class="options-right">
+                        <span>佛跳墙</span>
+                    </div>
+                </li>
+                <li>
+                    <div class="options-left">
+                        <img src="./img/dface_02.png" alt=""/>
+                    </div>
+                    <div class="options-right">
+                        <span>鼎湖罗汉斋</span>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <div class="swiper-slide bg ti ti6">
+            <h3>黄晓明代言了以下哪个零食品牌</h3>
+            <h6 class="score">本题为10分题</h6>
+            <ul class="list four-list">
+                <li>
+                    <div class="options-left">
+                        <img src="./img/aface.png" alt=""/>
+                    </div>
+                    <div class="options-right">
+                        <span>良品铺子</span>
+                        <img src="./img/liangpinpuzi_03.png" alt=""/>
+                    </div>
+                </li>
+                <li>
+                    <div class="options-left">
+                        <img src="./img/bface_02.png" alt=""/>
+                    </div>
+                    <div class="options-right">
+                        <span>可爱多</span>
+                        <img src="./img/keaiduo_03.png" alt=""/>
+                    </div>
+                </li>
+                <li>
+                    <div class="options-left">
+                        <img src="./img/cface_02.png" alt=""/>
+                    </div>
+                    <div class="options-right">
+                        <span>MM豆</span>
+                        <img class="mm" src="./img/mmdou_03.png" alt=""/>
+                    </div>
+                </li>
+                <li>
+                    <div class="options-left">
+                        <img src="./img/dface_02.png" alt=""/>
+                    </div>
+                    <div class="options-right">
+                        <span>百草味</span>
+                        <img src="./img/baicaowei_03.png" alt=""/>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <div class="swiper-slide bg ti ti5 ti7">
+            <h3>农夫山泉PH值在哪个范围内</h3>
+            <h6 class="score">本题为20分题</h6>
+            <ul class="list four-list">
+                <li>
+                    <div class="options-left">
+                        <img src="./img/aface.png" alt=""/>
+                    </div>
+                    <div class="options-right">
+                        <span>小于5</span>
+                    </div>
+                </li>
+                <li>
+                    <div class="options-left">
+                        <img src="./img/bface_02.png" alt=""/>
+                    </div>
+                    <div class="options-right">
+                        <span>大于6.8小于7.8</span>
+                    </div>
+                </li>
+                <li>
+                    <div class="options-left">
+                        <img src="./img/cface_02.png" alt=""/>
+                    </div>
+                    <div class="options-right">
+                        <span>大于8小于12.5</span>
+                    </div>
+                </li>
+                <li>
+                    <div class="options-left">
+                        <img src="./img/dface_02.png" alt=""/>
+                    </div>
+                    <div class="options-right">
+                        <span>大于12.5</span>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <div class="swiper-slide bg ti ti8">
+            <h3>以下说法错误的是</h3>
+            <h6 class="score">本题为20分题</h6>
+            <ul class="list four-list">
+                <li>
+                    <div class="options-left">
+                        <img src="./img/aface.png" alt=""/>
+                    </div>
+                    <div class="options-right">
+                        <span>夫妻肺片无肺</span>
+                    </div>
+                </li>
+                <li>
+                    <div class="options-left">
+                        <img src="./img/bface_02.png" alt=""/>
+                    </div>
+                    <div class="options-right">
+                        <span>北京炒肝无肝</span>
+                    </div>
+                </li>
+                <li>
+                    <div class="options-left">
+                        <img src="./img/cface_02.png" alt=""/>
+                    </div>
+                    <div class="options-right">
+                        <span>广东肠粉无肠</span>
+                    </div>
+                </li>
+                <li>
+                    <div class="options-left">
+                        <img src="./img/dface_02.png" alt=""/>
+                    </div>
+                    <div class="options-right">
+                        <span>太原头脑无脑</span>
+                    </div>
                 </li>
             </ul>
         </div>
