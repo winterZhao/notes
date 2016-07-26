@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html style='font-size:64px;'>
-<head lang="en" >
+<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1,user-scalable=no">
     <meta content="yes" name="apple-mobile-web-app-capable">
@@ -32,7 +32,7 @@
  .bg{background-repeat:no-repeat;background-size:100%;text-align:center;}
  .start {background-image:url('./img/startbg.jpg');}
  .ti {background-image:url('./img/tibg.jpg');}
- .final {background-image:url('./img/final.jpg');}
+ .final {position:relative;background-image:url('./img/final.jpg');}
  .start-btn{margin:6.1875rem auto;width:2.1875rem;height:1.125rem;background:url('./img/start.png') no-repeat;background-size:100%;animation: move 3s infinite;}
  .start-btn img {width:100%;}
   @keyframes move {
@@ -53,8 +53,10 @@
   .ti4 h3 {font-size:0.22325rem;line-height:0.3rem;}
   .ti5 h3 {font-size:0.29625rem;line-height:0.3rem;}
   .four-list {height:4.9625rem;}
+  .ti6 .options-right span {flex:7;}
   .ti6 h3 {font-size:0.30625rem;line-height:0.3rem;}
-  .ti6 .mm {width:40%;}
+  .mm {width:50%;display:flex;flex-flow:row;justify-content:center;align-items:center;}
+  .mm img {width:100%;}
   .ti8 h3 {font-size:0.35375rem;}
   .ti1 h3 {font-size:0.4375rem;}
   .ti1 .picture {margin:0.2rem auto 0;width:70%;height:2.28125rem;}
@@ -65,22 +67,75 @@
   .ti1 .list .options {display:inline-flex;flex-flow:row nowrap;justify-content:center;align-items:center;}
   .ti1 .list .options img {height:100%;}
   .ti1 .list .options .and2{height:80%;}
+  .assess {margin:1.8rem auto 0;width:256px;height:1.2rem;background:url('./img/chihuo.png') no-repeat;background-position-y:-17px;}
+  .final .number-outer {margin:0.825rem auto 0;width:100%;height:102px;}
+  .final .number {width:102px;height:102px;margin:0 auto;display:flex;flex-flow:row nowrap;}
+  .final .number-flex {flex:1;}
+  .number-left {height:100%;margin-right:1px;background-image:url('./img/num_01.png');background-repeat: no-repeat;}
+  .number-right {height:100%;margin-left:1px;background-image:url('./img/num_01.png');background-repeat: no-repeat;}
+  .final .lanmei-btn {height:0.875rem;width:2.328rem;margin:0.2rem auto 0;}
+  .final .lanmei-btn img {width:100%;}
+  .final .bottom {margin:2.5rem auto 0;width:100%;height:0.75rem;display:flex;flex-flow:row nowrap;}
+  .final .bottom .bottom-flex {flex:1;}
+  .final .bottom .bottom-btn {width:80%;height:100%;margin:0 auto;}
+  .final .only-zero {background-position:26px 10px;}
+  .zero {background-position-y : 10px}
+  .one {background-position-y : -96px;}
+  .two {background-position-y : -199px;}
+  .three {background-position-y : -304px; }
+  .four {background-position-y : -397px; }
+  .five {background-position-y : -493px; }
+  .six {background-position-y : -591px; }
+  .seven {background-position-y : -702px; }
+  .eight {background-position-y : -806px; }
+  .nine {background-position-y:-916px;}
+  .one-handred {background-position-y:-1025px;}
+  .final .chihuo1 {background-position-x : 7px; }
+  .final .chihuo2 {background-position-x : -275px; }
+  .final .chihuo3 {background-position-x : -570px; }
+  .final .chihuo4 {background-position-x : -856px; }
+  .final .chihuo5 {background-position-x : -1145px; }
+  .final .chihuo6 {background-position-x : -1424px; }
+  .shadow {display:none;position:absolute;left:0;top:0;width:100%;height:100%;background-color:rgba(0,0,0,0.3);}
+  .share-logo {margin:1.25rem 0 0 2rem;width:3rem;height:2rem;background:url('./img/share_02.png') no-repeat;background-size:100%;}
+  .swiper-wrapper{position:relative;}
+  .judge{display:none;position:absolute;left:0;top:0;width:100%;height:100%;background-color:rgba(0,0,0,0.3);}
+  .judge-inner{position:absolute;left:0;top:1.5rem;width:100%;}
+  .judge-inner img {width:100%;}
+
     @media (max-height:480px){
+        .final {background-position-y:-84px;}
+        .assess {margin-top:0.8rem;}
+        .final .number-outer{margin-top:0.5rem;}
+        .share-logo {margin-top:0.8rem;}
         .ti1 .list {height:2.9625rem;margin-top:0.06rem;}
         .ti1 .list li {height:0.5rem;}
         .ti1 .list .options {display:inline-flex;flex-flow:row nowrap;justify-content:center;align-items:center;}
         .ti1 .list .options img {height:100%;}
         .ti1 .list .options .and2{height:80%;}
+
+    }
+     @media (min-width:360px) and (max-width:360px) {
+         .final .number-outer {margin-top:0.9rem;}
+     }
+     @media (min-width:375px) and (max-width:375px) {
+         .final .lanmei-btn {margin-top:0.5rem;}
+     }
+     @media (min-width:411px) and (max-width:414px) {
+         .final .number-outer {margin-top:1rem;}
+     }
+    @media (min-width:435px){
+         .final .number-outer {margin-top:1.025rem;}
     }
 </style>
 </head>
 <body>
 <div class="swiper-container">
     <div class="swiper-wrapper">
-        <div class="swiper-slide bg start">
+        <div class="swiper-slide bg start swiper-no-swiping">
             <div class="start-btn"></div>
         </div>
-        <div class="swiper-slide bg ti ti1">
+        <div class="swiper-slide bg ti ti1 swiper-no-swiping" data-answer="2">
             <h3>看图猜零食</h3>
             <h6 class="score">本题为10分题</h6>
             <div class="picture">
@@ -91,7 +146,7 @@
                     <div class="options-left options">
                         <img src="./img/aface.png" alt=""/>
                     </div>
-                    <div class="options-right options">
+                    <div class="options-right options" data-ti="1">
                         <img class="and2" src="./img/3and2_02.png" alt=""/>
                     </div>
                 </li>
@@ -99,7 +154,7 @@
                     <div class="options-left options">
                         <img src="./img/bface_02.png" alt=""/>
                     </div>
-                    <div class="options-right options">
+                    <div class="options-right options" data-ti="2">
                         <img src="./img/aoliao_03.jpg" alt=""/>
                     </div>
                 </li>
@@ -107,7 +162,7 @@
                     <div class="options-left options" >
                         <img src="./img/cface_02.png" alt=""/>
                     </div>
-                    <div class="options-right options">
+                    <div class="options-right options" data-ti="3">
                         <img src="./img/cream_03.jpg" alt=""/>
                     </div>
                 </li>
@@ -115,13 +170,13 @@
                     <div class="options-left options">
                         <img src="./img/dface_02.png" alt=""/>
                     </div>
-                    <div class="options-right options">
+                    <div class="options-right options" data-ti="4">
                         <img src="./img/liulian_07.jpg" alt=""/>
                     </div>
                 </li>
             </ul>
         </div>
-        <div class="swiper-slide bg ti">
+        <div class="swiper-slide bg ti swiper-no-swiping" data-answer="2">
             <h3>又名"甸果"的是</h3>
             <h6 class="score">本题为10分题</h6>
             <ul class="list">
@@ -129,7 +184,7 @@
                     <div class="options-left">
                         <img src="./img/aface.png" alt=""/>
                     </div>
-                    <div class="options-right">
+                    <div class="options-right" data-ti="1">
                         <span>苹果</span>
                         <img src="./img/apple_01.png" alt=""/>
                     </div>
@@ -138,7 +193,7 @@
                     <div class="options-left">
                         <img src="./img/bface_02.png" alt=""/>
                     </div>
-                    <div class="options-right">
+                    <div class="options-right" data-ti="2">
                         <span>蓝莓</span>
                         <img src="./img/lanmei.png" alt=""/>
                     </div>
@@ -147,14 +202,14 @@
                     <div class="options-left">
                         <img src="./img/cface_02.png" alt=""/>
                     </div>
-                    <div class="options-right">
+                    <div class="options-right" data-ti="3">
                         <span>枇杷</span>
                         <img src="./img/pipa.png" alt=""/>
                     </div>
                 </li>
             </ul>
         </div>
-        <div class="swiper-slide bg ti ti3">
+        <div class="swiper-slide bg ti ti3 swiper-no-swiping" data-answer="2">
             <h3>四川麻婆豆腐好吃又有名，它的创始人是</h3>
             <h6 class="score">本题为10分题</h6>
             <ul class="list">
@@ -162,7 +217,7 @@
                     <div class="options-left">
                         <img src="./img/aface.png" alt=""/>
                     </div>
-                    <div class="options-right">
+                    <div class="options-right" data-ti="1">
                         <span>王麻婆</span>
                     </div>
                 </li>
@@ -170,7 +225,7 @@
                     <div class="options-left">
                         <img src="./img/bface_02.png" alt=""/>
                     </div>
-                    <div class="options-right">
+                    <div class="options-right" data-ti="2">
                         <span>陈麻婆</span>
                     </div>
                 </li>
@@ -178,13 +233,13 @@
                     <div class="options-left">
                         <img src="./img/cface_02.png" alt=""/>
                     </div>
-                    <div class="options-right">
+                    <div class="options-right" data-ti="3">
                         <span>李麻婆</span>
                     </div>
                 </li>
             </ul>
         </div>
-        <div class="swiper-slide bg ti ti4">
+        <div class="swiper-slide bg ti ti4 swiper-no-swiping" data-answer="2">
             <h3>延缓脑神经衰老,增强记忆力,抗癌,减轻眼疲劳的水果是?</h3>
             <h6 class="score">本题为10分题</h6>
             <ul class="list">
@@ -192,7 +247,7 @@
                     <div class="options-left">
                         <img src="./img/aface.png" alt=""/>
                     </div>
-                    <div class="options-right">
+                    <div class="options-right" data-ti="1">
                         <span>提子</span>
                         <img src="./img/tizi_08.png" alt=""/>
                     </div>
@@ -201,7 +256,7 @@
                     <div class="options-left">
                         <img src="./img/bface_02.png" alt=""/>
                     </div>
-                    <div class="options-right">
+                    <div class="options-right" data-ti="2">
                         <span>莲雾</span>
                         <img src="./img/lianwu.png" alt=""/>
                     </div>
@@ -210,14 +265,14 @@
                     <div class="options-left">
                         <img src="./img/cface_02.png" alt=""/>
                     </div>
-                    <div class="options-right">
+                    <div class="options-right" data-ti="3">
                         <span>蓝莓</span>
                         <img src="./img/lanmei.png" alt=""/>
                     </div>
                 </li>
             </ul>
         </div>
-        <div class="swiper-slide bg ti ti5">
+        <div class="swiper-slide bg ti ti5 swiper-no-swiping" data-answer="2">
             <h3>以下四道名称属于全素菜的是</h3>
             <h6 class="score">本题为10分题</h6>
             <ul class="list four-list">
@@ -225,7 +280,7 @@
                     <div class="options-left">
                         <img src="./img/aface.png" alt=""/>
                     </div>
-                    <div class="options-right">
+                    <div class="options-right" data-ti="1">
                         <span>童子敬观音</span>
                     </div>
                 </li>
@@ -233,7 +288,7 @@
                     <div class="options-left">
                         <img src="./img/bface_02.png" alt=""/>
                     </div>
-                    <div class="options-right">
+                    <div class="options-right" data-ti="2">
                         <span>八仙过海闹罗汉</span>
                     </div>
                 </li>
@@ -241,7 +296,7 @@
                     <div class="options-left">
                         <img src="./img/cface_02.png" alt=""/>
                     </div>
-                    <div class="options-right">
+                    <div class="options-right" data-ti="3">
                         <span>佛跳墙</span>
                     </div>
                 </li>
@@ -249,13 +304,13 @@
                     <div class="options-left">
                         <img src="./img/dface_02.png" alt=""/>
                     </div>
-                    <div class="options-right">
+                    <div class="options-right" data-ti="4">
                         <span>鼎湖罗汉斋</span>
                     </div>
                 </li>
             </ul>
         </div>
-        <div class="swiper-slide bg ti ti6">
+        <div class="swiper-slide bg ti ti6 swiper-no-swiping" data-answer="2">
             <h3>黄晓明代言了以下哪个零食品牌</h3>
             <h6 class="score">本题为10分题</h6>
             <ul class="list four-list">
@@ -263,7 +318,7 @@
                     <div class="options-left">
                         <img src="./img/aface.png" alt=""/>
                     </div>
-                    <div class="options-right">
+                    <div class="options-right" data-ti="1">
                         <span>良品铺子</span>
                         <img src="./img/liangpinpuzi_03.png" alt=""/>
                     </div>
@@ -272,7 +327,7 @@
                     <div class="options-left">
                         <img src="./img/bface_02.png" alt=""/>
                     </div>
-                    <div class="options-right">
+                    <div class="options-right" data-ti="2">
                         <span>可爱多</span>
                         <img src="./img/keaiduo_03.png" alt=""/>
                     </div>
@@ -281,23 +336,25 @@
                     <div class="options-left">
                         <img src="./img/cface_02.png" alt=""/>
                     </div>
-                    <div class="options-right">
+                    <div class="options-right" data-ti="3">
                         <span>MM豆</span>
-                        <img class="mm" src="./img/mmdou_03.png" alt=""/>
+                         <div class="mm">
+                             <img src="./img/mmdou_03.png" alt=""/>
+                         </div>
                     </div>
                 </li>
                 <li>
                     <div class="options-left">
                         <img src="./img/dface_02.png" alt=""/>
                     </div>
-                    <div class="options-right">
+                    <div class="options-right" data-ti="4">
                         <span>百草味</span>
                         <img src="./img/baicaowei_03.png" alt=""/>
                     </div>
                 </li>
             </ul>
         </div>
-        <div class="swiper-slide bg ti ti5 ti7">
+        <div class="swiper-slide bg ti ti5 ti7 swiper-no-swiping" data-answer="2">
             <h3>农夫山泉PH值在哪个范围内</h3>
             <h6 class="score">本题为20分题</h6>
             <ul class="list four-list">
@@ -305,7 +362,7 @@
                     <div class="options-left">
                         <img src="./img/aface.png" alt=""/>
                     </div>
-                    <div class="options-right">
+                    <div class="options-right" data-ti="1">
                         <span>小于5</span>
                     </div>
                 </li>
@@ -313,7 +370,7 @@
                     <div class="options-left">
                         <img src="./img/bface_02.png" alt=""/>
                     </div>
-                    <div class="options-right">
+                    <div class="options-right" data-ti="2">
                         <span>大于6.8小于7.8</span>
                     </div>
                 </li>
@@ -321,7 +378,7 @@
                     <div class="options-left">
                         <img src="./img/cface_02.png" alt=""/>
                     </div>
-                    <div class="options-right">
+                    <div class="options-right" data-ti="3">
                         <span>大于8小于12.5</span>
                     </div>
                 </li>
@@ -329,13 +386,13 @@
                     <div class="options-left">
                         <img src="./img/dface_02.png" alt=""/>
                     </div>
-                    <div class="options-right">
+                    <div class="options-right" data-ti="4">
                         <span>大于12.5</span>
                     </div>
                 </li>
             </ul>
         </div>
-        <div class="swiper-slide bg ti ti8">
+        <div class="swiper-slide bg ti ti8 swiper-no-swiping" data-answer="2">
             <h3>以下说法错误的是</h3>
             <h6 class="score">本题为20分题</h6>
             <ul class="list four-list">
@@ -343,15 +400,15 @@
                     <div class="options-left">
                         <img src="./img/aface.png" alt=""/>
                     </div>
-                    <div class="options-right">
+                    <div class="options-right" data-ti="1">
                         <span>夫妻肺片无肺</span>
                     </div>
                 </li>
                 <li>
-                    <div class="options-left">
+                    <div class="options-left" >
                         <img src="./img/bface_02.png" alt=""/>
                     </div>
-                    <div class="options-right">
+                    <div class="options-right" data-ti="2">
                         <span>北京炒肝无肝</span>
                     </div>
                 </li>
@@ -359,7 +416,7 @@
                     <div class="options-left">
                         <img src="./img/cface_02.png" alt=""/>
                     </div>
-                    <div class="options-right">
+                    <div class="options-right" data-ti="3">
                         <span>广东肠粉无肠</span>
                     </div>
                 </li>
@@ -367,13 +424,44 @@
                     <div class="options-left">
                         <img src="./img/dface_02.png" alt=""/>
                     </div>
-                    <div class="options-right">
+                    <div class="options-right" data-ti="4">
                         <span>太原头脑无脑</span>
                     </div>
                 </li>
             </ul>
         </div>
-        <div class="swiper-slide bg final"></div>
+        <div class="swiper-slide bg final">
+            <div class="assess"></div>
+            <div class="number-outer">
+                <div class="number">
+                    <div class="number-flex" >
+                        <div class="number-left"></div>
+                    </div>
+                    <div class="number-flex">
+                         <div class="number-right"></div>
+                    </div>
+                </div>
+                <div class="lanmei-btn">
+                    <img src="./img/again_02.png" alt=""/>
+                </div>
+            </div>
+            <div class="bottom">
+                <div class="bottom-flex">
+                    <div class="bottom-btn bottom-left"></div>
+                </div>
+                <div class="bottom-flex">
+                    <div class="bottom-btn bottom-right"></div>
+                </div>
+            </div>
+            <div class="shadow">
+                  <div class="share-logo"></div>
+            </div>
+        </div>
+        <div class="judge" >
+              <div class="judge-inner">
+                  <img src="./img/right_02.png" data-right="./img/right_02.png" data-wrong="./img/wrong_02.png" alt=""/>
+              </div>
+        </div>
     </div>
 </div>
 <script src="//cdn.bootcss.com/zepto/1.2.0/zepto.min.js"></script>
@@ -381,10 +469,148 @@
 <script>
     $(function(){
         var mySwiper = new Swiper ('.swiper-container', {
-            direction: 'vertical'
-        })
-    })
+            direction: 'vertical',
+            effect : 'fade',
+            lazyLoading : true,
+            lazyLoadingInPrevNext : true,
+            lazyLoadingInPrevNextAmount : 1,
+            lazyLoadingOnTransitionStart : true,
+            height : window.innerHeight,
+            noSwiping : false
+        });
+        var s = {
+            total:0,
+            init : function ( ){
+                var _self = this;
+                _self.bindEvent();
+                $('.options-right').on('tap',_self.calculate.bind(this));
 
+            },
+            calculate : function (e){
+                var answer,_self = this;
+
+                if($(e.target).attr('class') == 'options-right'){
+                    answer = $(e.target).data('ti');
+                } else {
+                    answer = $(e.target).parent('.options-right').data('ti');
+                }
+                if(answer == $('.swiper-slide-active').data('answer')){
+                    if(mySwiper.activeIndex ==7 || mySwiper.activeIndex ==8){
+                        _self.total+=20;
+                    } else {
+                        _self.total+=10;
+                    }
+                   $('.judge').find('img').attr('src',$('.judge').find('img').data('right'));
+                } else {
+                   $('.judge').find('img').attr('src',$('.judge').find('img').data('wrong'));
+                }
+                $('.judge').show();
+
+            },
+            showTotal : function(){
+                var total = this.total;
+                if(total == 0){
+                    $('.number-left').parent('.number-flex').remove();
+                    $('.number-right').addClass('only-zero');
+                    document.querySelector('.number-right').style.backgroundPositionX = '26px';
+                    $('.assess').addClass('chihuo6');
+                } else if (total == 10){
+                    $('.number-left').addClass('one');
+                    $('.number-right').addClass('zero');
+                    $('.assess').addClass('chihuo6');
+                } else if (total == 20){
+                    $('.number-left').addClass('two');
+                    $('.number-right').addClass('zero');
+                    $('.assess').addClass('chihuo6');
+                }else if (total == 30){
+                    $('.number-left').addClass('three');
+                    $('.number-right').addClass('zero');
+                    $('.assess').addClass('chihuo5');
+                }else if (total == 40){
+                    $('.number-left').addClass('four');
+                    $('.number-right').addClass('zero');
+                    $('.assess').addClass('chihuo1');
+                }else if (total == 50){
+                    $('.number-left').addClass('five');
+                    $('.number-right').addClass('zero');
+                    $('.assess').addClass('chihuo1');
+                }else if (total == 60){
+                    $('.number-left').addClass('six');
+                    $('.number-right').addClass('zero');
+                    $('.assess').addClass('chihuo4');
+                }else if (total == 70){
+                    $('.number-left').addClass('seven');
+                    $('.number-right').addClass('zero');
+                    $('.assess').addClass('chihuo4');
+                }else if (total == 80){
+                    $('.number-left').addClass('eight');
+                    $('.number-right').addClass('zero');
+                    $('.assess').addClass('chihuo3');
+                }else if (total == 90){
+                    $('.number-left').addClass('nine');
+                    $('.number-right').addClass('zero');
+                    $('.assess').addClass('chihuo3');
+                }else if (total == 100){
+                    $('.number-left').parent('.number-flex').remove();
+                    $('.number-right').addClass('one-handred');
+                    $('.assess').addClass('chihuo2');
+                }
+            },
+            bindEvent:function(){
+                this.slide();            //分享
+                this.bindSlide();       //点击按钮滑动到下一页;
+                this.bindSlideOne();     //点击'再玩一局'
+                this.bindShare();       //10s后滑动到下一秒；
+                this.bindJudge();       //点击判断消失;
+            },
+            bindJudge : function () {
+                var _self = this;
+                $('.judge-inner').on('tap',function(){
+                    $('.judge').hide();
+                    mySwiper.slideNext();
+                    if(mySwiper.activeIndex ==9){
+                        _self.showTotal();
+                    }
+                });
+            },
+            bindShare : function (){
+                $('.bottom-right').on('tap',function(){
+                    $('.shadow').show();
+                });
+                $('.shadow').on('tap',function(){
+                    $('.shadow').hide();
+                });
+            },
+            bindSlideOne : function () {
+                var _self = this;
+                $('.bottom-left').on('tap',function(){
+                    window.location.reload();
+//                    mySwiper.slideTo(0,100);
+//                    _self.total = 0;
+//                    document.querySelector('#assess').className='';
+//                    document.querySelector('#number-left').className='';
+//                    document.querySelector('#number-right').className='';
+//                    if( document.querySelector('#number-right').hide()){
+//                        document.querySelector('#number-right').show();
+//                    }
+                })
+            },
+            bindSlide : function (){
+              $('.start-btn').on('tap',function(){
+                  mySwiper.slideTo(1,1000);
+              })
+            },
+            //10s后自动切换到第二个
+            slide : function () {
+                setTimeout(function(){
+                  if(mySwiper.activeIndex == 0 ){
+                      mySwiper.slideTo(1,1000);
+                  }
+                },9000)
+            }
+        };
+        s.init ();
+    })
 </script>
 </body>
 </html>
