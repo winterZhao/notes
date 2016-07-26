@@ -483,7 +483,7 @@
             init : function ( ){
                 var _self = this;
                 _self.bindEvent();
-                $('.options-right').on('tap',_self.calculate.bind(this));
+                $('.options-right').on('touchend',_self.calculate.bind(this));
 
             },
             calculate : function (e){
@@ -565,7 +565,7 @@
             },
             bindJudge : function () {
                 var _self = this;
-                $('.judge-inner').on('tap',function(){
+                $('.judge-inner').on('touchend',function(){
                     $('.judge').hide();
                     mySwiper.slideNext();
                     if(mySwiper.activeIndex ==9){
@@ -574,16 +574,16 @@
                 });
             },
             bindShare : function (){
-                $('.bottom-right').on('tap',function(){
+                $('.bottom-right').on('touchend',function(){
                     $('.shadow').show();
                 });
-                $('.shadow').on('tap',function(){
+                $('.shadow').on('touchend',function(){
                     $('.shadow').hide();
                 });
             },
             bindSlideOne : function () {
                 var _self = this;
-                $('.bottom-left').on('tap',function(){
+                $('.bottom-left').on('touchend',function(){
                     window.location.reload();
 //                    mySwiper.slideTo(0,100);
 //                    _self.total = 0;
@@ -596,7 +596,7 @@
                 })
             },
             bindSlide : function (){
-              $('.start-btn').on('tap',function(){
+              $('.start-btn').on('touchend',function(){
                   mySwiper.slideTo(1,1000);
               })
             },
