@@ -142,3 +142,5 @@ Host github.com
     IdentityFile ~/.ssh/id_rsa_github
     User ZJsnowman
 ```
+### git如何解决linux和windows的空格冲突
+git config --global core.autocrlf false    不在windows电脑上将空格自动转换为CRLF，一直保持LF,适用于文件编码是UTF8并且包含中文文字;
