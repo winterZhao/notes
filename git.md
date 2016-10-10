@@ -144,3 +144,8 @@ Host github.com
 ```
 ### git如何解决linux和windows的空格冲突
 git config --global core.autocrlf false    不在windows电脑上将空格自动转换为CRLF，一直保持LF,适用于文件编码是UTF8并且包含中文文字;
+
+
+### git config的相关知识
+　　[config](http://www.oschina.net/p/git-extras/similar_projects?lang=0&sort=time)
+
