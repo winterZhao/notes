@@ -147,5 +147,5 @@ git config --global core.autocrlf false    不在windows电脑上将空格自�
 
 
 ### git config的相关知识
-　　[config](http://www.oschina.net/p/git-extras/similar_projects?lang=0&sort=time)
+　　[config](http://blog.csdn.net/u011240877/article/details/50033623)
 
