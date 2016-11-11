@@ -13,6 +13,10 @@
   npm config delete registry
   
   npm config delete disturl
+  
+### NPM查看当前用户
+
+  npm whoami     
 
 ### 查看配置文件
   
