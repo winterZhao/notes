@@ -16,4 +16,4 @@
 
 ### 查看配置文件
   
-  npm config edit
+  npm config edit                             //打开.npmrc文件;
