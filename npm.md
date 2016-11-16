@@ -21,3 +21,7 @@
 ### 查看配置文件
   
   npm config edit                             //打开.npmrc文件;
+
+### npm安装指定版本
+
+  npm install lodash@3.8.0
