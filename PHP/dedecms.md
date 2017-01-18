@@ -11,5 +11,4 @@
     
 1.4 启动'http://localhost/install/index.php';  默认值一路安装
 
-注:
-gbk版本会报错 `81323e93cd52ecce9f175b6aa46f5cfd.xml 不存在或不可读!`,忽略即可，可直接进入`localhost:dede`
+
