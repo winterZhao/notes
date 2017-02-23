@@ -45,5 +45,26 @@
 
 #### 定时爬取
 
+        // app.js; 起服务的页面
+        const fork = require('child_process').fork;
+        const CronJob = require('cron').CronJob;
+        
+        var job = new CronJob('5,10,15,20,25,30,35,40,45,50 * * * * *', function() {
+            fork('crawl.js')
+        });
+        job.start()
+
+        // crawl.js  子进程js;
+        const request = require('request');
+        const cheerio = require('cheerio');
+        
+        request('https://www.baidu.com/', function (error, response, body) {
+            if (!error && response.statusCode == 200) {
+                var $ = cheerio.load(body);
+                console.log( $('#su').val() )       // 百度一下
+            }
+        });
 
 #### 动态修改ip
+
+
