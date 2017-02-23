@@ -21,13 +21,9 @@
             if (!error && response.statusCode == 200) {
                 str = iconv.decode(body, 'gbk');
                 var $ = cheerio.load(str);
-                console.log( $('#_link_auto').text() ) // 汽车
-                
-            }
-            
+                console.log( $('#_link_auto').text() ) // 汽车
+            }
         })
-
-
 
 #### 爬取时伪造浏览器useragent以及请求头信息；
 
