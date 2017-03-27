@@ -3,15 +3,6 @@
 
 //将url参数中具有指定参数名的参数值返回;
 function GetQueryString(name){
-    var reg = new RegExp("(^|&)"+ name +"=([^&]*)(&|$)");
-    var r = window.location.search.substr(1).match(reg);
-    if(r != null){
-        return  decodeURI(r[2]);
-    }
-    return null;
-}
-
-function GetQueryString(name){
         var reg = new RegExp("(^|&)"+ name +"=([^&]*)(&|$)");
         var r = window.location.search.substr(1).match(reg);
         if(r != null){
