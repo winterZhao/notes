@@ -60,7 +60,7 @@ bin/kafka-console-consumer.sh --bootstrap-server localhost:9092 --topic MyTopic 
 #运行producter
 bin/kafka-console-producer.sh --broker-list localhost:9092 --topic MyTopic
 #运行consumer 
-bin/kafka-console-consumer.sh --bootstrap-server localhost:9092 --topic MyTopic --from-beginning (--group 'topic-group')
+bin/kafka-console-consumer.sh --bootstrap-server localhost:9092 --topic MyTopic --from-beginning --group 'topic-group'
 
 ## 4. node使用
 
@@ -88,6 +88,10 @@ bin/kafka-console-consumer.sh --bootstrap-server localhost:9092 --topic MyTopic 
 ## 8. kafka优化
 1.  其实对于producer/consumer/broker三者而言,CPU的开支应该都不大,因此启用消息压缩机制是一个良好的策略;压缩需要消耗少量的CPU资源,不过对于kafka而言,网络IO更应该需要考虑.可以将任何在网络上传输的消息都经过压缩.kafka支持gzip/snappy等多种压缩方式.
 2. 负载均衡: producer将会和Topic下所有partition leader保持socket连接;消息由producer直接通过socket发送到broker,中间不会经过任何"路由层".事实上,消息被路由到哪个partition上,有producer客户端决定.比如可以采用"random""key-hash""轮询"等,如果一个topic中有多个partitions,那么在producer端实现"消息均衡分发"是必要的.
+
+## 9. 问题
+1. 外网无法访问局域网里的kafka生产者/消费者(阿里云)
+修改`config/server.properties`的`listeners=PLAINTEXT://{ip}:9092`
 
 ## 9. 面试
 1.   
